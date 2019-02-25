@@ -8,5 +8,5 @@ app.set('views', path.join(__dirname, '/Site'));
 app.get('/', (req, res) => {
   res.render('Pages/index', {message: 'FOO'});
 });
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.use(express.static(__dirname + '/public'));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
