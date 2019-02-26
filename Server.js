@@ -28,15 +28,14 @@ app.get('/api/postcode/nearby/', (req, res) => {
             long: item.geometry.location.lng,
             name: item.name,
             rating: item.rating,
-            open: item.opening_hours.open_now,
             price: item.price_level, 
-            
+
           };
           console.log(data);
         re[key].push(data);
          
         });
-      res.json(body);
+      res.json(re);
      }
   })
   

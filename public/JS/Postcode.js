@@ -46,9 +46,10 @@ $( document ).ready(function() {
               long: pclong
             },
             success: function(response) {
-              response.forEach(result => {
-                  console.log(result);
-              });
+                $.each(response.Results, function(index, value) {
+                  $('#listholder').append("<p> " + value.name + " Price Rating "+ value.price +"</p>");
+                    console.log( value);
+                }); 
             },
             error: function(xhr) {
               //Do Something to handle error
@@ -58,3 +59,7 @@ $( document ).ready(function() {
 
 
 });
+
+function name(params) {
+    
+}
