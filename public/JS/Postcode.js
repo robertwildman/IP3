@@ -46,10 +46,13 @@ $( document ).ready(function() {
               long: pclong
             },
             success: function(response) {
+                var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
                 $.each(response.Results, function(index, value) {
-                  $('#listholder').append("<p> " + value.name + " Price Rating "+ value.price +"</p>");
+                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td></tr>";
                     console.log( value);
                 }); 
+                tableset += "</table>"
+                $('#listholder').append(tableset);
             },
             error: function(xhr) {
               //Do Something to handle error
