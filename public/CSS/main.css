@@ -3,3 +3,8 @@ body{
     background-image: url("Dark-Wallpaper-1.jpg");
     background-color:#ffffff;
 }
+.side-buttons
+{
+    float: left;
+    
+}

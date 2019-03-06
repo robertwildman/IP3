@@ -1,3 +1,5 @@
+var mymap;
+var atmMarkers;
 $( document ).ready(function() {
     var pclat;
     var pclong;
@@ -22,9 +24,8 @@ $( document ).ready(function() {
                 $("#simpletable").append("<tr><td> Long </td><td>"+ result.longitude +"</td></tr>");
                 $("#simpletable").append("<tr><td> Country </td><td>"+ result.country +"</td></tr>");
                 $("#simpletable").append("<tr><td> Parliamentary Constituency </td><td>"+ result.parliamentary_constituency +"</td></tr>");
-                $('#map').html('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyASgFJuBaUXGa3zhgSt3Lx1rDxHY1ZSB0w&center=' + result.latitude + ',' + result.longitude + '&zoom=16&maptype=satellite" allowfullscreen></iframe>');
-                //Working on Google Place API
-            } else {
+                createmap(result.latitude,result.longitude,result.postcode);
+             } else {
                 alert('error');
             }
         };
@@ -47,8 +48,12 @@ $( document ).ready(function() {
             },
             success: function(response) {
                 var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
+                atmMarkers = L.layerGroup().addTo(mymap);
                 $.each(response.Results, function(index, value) {
-                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td></tr>";
+                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td> <td> <button type='button' onclick='viewmarker(\"" + value.lat + "\",\""+ value.long +"\",\""+ value.name +"\")'class='btn table-button'>View</button></tr>";
+                   //Add markers to the maps 
+                    var marker = L.marker([value.lat, value.long]).addTo(atmMarkers);
+                    marker.bindPopup("<b>"+value.name+"</b>").openPopup();
                     console.log( value);
                 }); 
                 tableset += "</table>"
@@ -59,10 +64,27 @@ $( document ).ready(function() {
             }
         });
     });
-
-
+    $("#pcBAR").click(function()
+        {
+            mymap.removeLayer(atmMarkers);
+        });
 });
 
-function name(params) {
-    
+function createmap(lat,long,postcode) {
+    mymap = L.map('mapid').setView([lat, long], 15);
+    var marker = L.marker([lat, long]).addTo(mymap);
+    marker.bindPopup("<b>"+postcode+"</b>").openPopup();
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoicndpbGRtYW4iLCJhIjoiY2pzbjhtZDB4MDFlNzN5cW5iOHoyM3Z2aCJ9.FK-juz0mjxJjHNNXpoawHg'
+}).addTo(mymap);
+}
+
+function viewmarker(lat,long,name)
+{
+    mymap.setView([lat, long], 13);  
+    var marker = L.marker([lat, long]).addTo(mymap);
+    marker.bindPopup("<b>"+name+"</b>").openPopup();
 }
