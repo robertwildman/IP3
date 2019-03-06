@@ -1,5 +1,10 @@
 body{
     margin: 0;
     background-image: url("Dark-Wallpaper-1.jpg");
-    background-color:#424949;
+    background-color:#ffffff;
+}
+.side-buttons
+{
+    float: left;
+    
 }
