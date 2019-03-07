@@ -25,6 +25,7 @@ $( document ).ready(function() {
                 $("#simpletable").append("<tr><td> Country </td><td>"+ result.country +"</td></tr>");
                 $("#simpletable").append("<tr><td> Parliamentary Constituency </td><td>"+ result.parliamentary_constituency +"</td></tr>");
                 createmap(result.latitude,result.longitude,result.postcode);
+                displayinfo(result.postcode);
              } else {
                 alert('error');
             }
@@ -87,4 +88,29 @@ function viewmarker(lat,long,name)
     mymap.setView([lat, long], 13);  
     var marker = L.marker([lat, long]).addTo(mymap);
     marker.bindPopup("<b>"+name+"</b>").openPopup();
+}
+
+function displayinfo(postCode)
+{
+    $.ajax({
+        url: "/api/postcode/info",
+        type: "get", //send it through get method
+        data: { 
+          postcode: postCode
+        },
+        success: function(response) {
+            var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
+            tableset += "<tr><td> SIMD 2016 Rank </td><td>"+ response.SIMD16_rank +"/6,976</td></tr>";
+            tableset += "<tr><td> Domain Rank </td><td>"+ response.Domain_rank +"/6,976</td></tr>";
+            tableset += "<tr><td> Employment Rank </td><td>"+ response.Employment_rank +"/6,976</td></tr>";
+            tableset += "<tr><td> Health Rank </td><td>"+ response.Health_rank +"/6,976</td></tr>";
+            tableset += "<tr><td> Education Rank </td><td>"+ response.Education_rank +"/6,976</td></tr>";
+            tableset += "<tr><td> Housing Rank </td><td>"+ response.Housing_rank +"/6,976</td></tr>";
+            tableset += "<tr><td> Crime Rank </td><td>"+ response.Crime_rank +"/6,976</td></tr>";
+            $('#infoholder').append(tableset);
+        },
+        error: function(xhr) {
+          //Do Something to handle error
+        }
+    });
 }
