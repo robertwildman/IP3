@@ -22,3 +22,6 @@ node_modules
 # =========================
 # Operating System Files
 # =========================
+~$PCData.xlsx
+~$PCLookUp.xlsx
+~$PCRank.xlsx
