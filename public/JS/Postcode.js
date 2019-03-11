@@ -33,8 +33,7 @@ $( document ).ready(function() {
         request.send();
     });
     $("#pcATM").click(function(){
-        mymap.removeLayer(atmMarkers);
-        mymap.removeLayer(barMarkers);
+       
         var request = new XMLHttpRequest();
         var apir = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+ pclat +","+ pclong +"&radius=1500&type=restaurant&key=AIzaSyASgFJuBaUXGa3zhgSt3Lx1rDxHY1ZSB0w"
         var st = "/api/postcode/nearby/ATM/"+pclat+"/"+pclong;
@@ -49,10 +48,8 @@ $( document ).ready(function() {
               long: pclong
             },
             success: function(response) {
-                var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
                 atmMarkers = L.layerGroup().addTo(mymap);
                 $.each(response.Results, function(index, value) {
-                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td> <td> <button type='button' onclick='viewmarker(\"" + value.lat + "\",\""+ value.long +"\",\""+ value.name +"\")'class='btn table-button'>View</button></tr>";
                    //Add markers to the maps 
                     var marker = L.marker([value.lat, value.long]).addTo(atmMarkers);
                     marker.bindPopup("<b>"+value.name+"</b>").openPopup();
@@ -82,10 +79,8 @@ $( document ).ready(function() {
               long: pclong
             },
             success: function(response) {
-                var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
-                barMarkers = L.layerGroup().addTo(mymap);
+               barMarkers = L.layerGroup().addTo(mymap);
                 $.each(response.Results, function(index, value) {
-                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td> <td> <button type='button' onclick='viewmarker(\"" + value.lat + "\",\""+ value.long +"\",\""+ value.name +"\")'class='btn table-button'>View</button></tr>";
                    //Add markers to the maps 
                     var marker = L.marker([value.lat, value.long]).addTo(barMarkers);
                     if(value.rating != null)
@@ -105,7 +100,7 @@ $( document ).ready(function() {
             }
         });
             mymap.removeLayer(atmMarkers);
-        });
+    });
 });
 
 function createmap(lat,long,postcode) {
@@ -150,4 +145,15 @@ function displayinfo(postCode)
           //Do Something to handle error
         }
     });
+}
+function removemarkers()
+{
+    if(atmMarkers != undefined)
+    {
+        mymap.removeLayer(atmMarkers);
+    }
+    if(barMarkers != undefined)
+    {
+        mymap.removeLayer(barMarkers);
+    }
 }
