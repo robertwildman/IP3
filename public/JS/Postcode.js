@@ -99,7 +99,7 @@ function displayinfo(postCode)
           postcode: postCode
         },
         success: function(response) {
-            var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
+            var tableset = "<h3> Ranking for the Postcode Based on the SIMD Ranking </h3> <h6> For all ranks: 1st most deprived, 6,976 is least deprived. </h6> <table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
             tableset += "<tr><td> SIMD 2016 Rank </td><td>"+ response.SIMD16_rank +"/6,976</td></tr>";
             tableset += "<tr><td> Domain Rank </td><td>"+ response.Domain_rank +"/6,976</td></tr>";
             tableset += "<tr><td> Employment Rank </td><td>"+ response.Employment_rank +"/6,976</td></tr>";
