@@ -56,6 +56,33 @@ $( document ).ready(function() {
     {
         findnearby('supermarket');
     });
+    $("#pcHouse").click(function()
+    {
+        if(markergroup != undefined)
+        {
+            console.log("Removed");
+            mymap.removeLayer(markergroup);
+        }
+        $.ajax({
+            url: "/api/postcode/housing",
+            type: "get", //send it through get method
+            data: { 
+              lat: pclat, 
+              long: pclong
+            },
+            success: function(response) {
+                markergroup = L.layerGroup().addTo(mymap);
+                $.each(response.Results, function(index, value) {
+                   //Add markers to the maps 
+                    var marker = L.marker([value.latitude, value.longitude]).addTo(markergroup);
+                    marker.bindPopup("<b>"+value.title+"</b> <img src='"+value.img_url+"'style='width:200px;height:150px;'><p> Summary: " + value.summary + " <br> Price: "+ value.price +"</p> ").openPopup();
+                }); 
+            },
+            error: function(xhr) {
+              //Do Something to handle error
+            }
+        });
+    });
 });
 
 function findnearby(intype)
