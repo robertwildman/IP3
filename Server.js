@@ -131,7 +131,8 @@ app.get('/api/postcode/housing',(req,res) => {
               latitude: item.latitude, 
               longitude: item.longitude,
               summary: item.summary, 
-              price: item.price_formatted
+              price: item.price_formatted,
+              listing_url: item.lister_url
             };
             console.log(data);
           re[key].push(data);

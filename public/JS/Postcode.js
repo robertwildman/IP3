@@ -75,7 +75,7 @@ $( document ).ready(function() {
                 $.each(response.Results, function(index, value) {
                    //Add markers to the maps 
                     var marker = L.marker([value.latitude, value.longitude]).addTo(markergroup);
-                    marker.bindPopup("<b>"+value.title+"</b> <img src='"+value.img_url+"'style='width:200px;height:150px;'><p> Summary: " + value.summary + " <br> Price: "+ value.price +"</p> ").openPopup();
+                    marker.bindPopup("<b>"+value.title+"</b> <img src='"+value.img_url+"'style='width:200px;height:150px;'><p> Summary: " + value.summary + " <br> Price: "+ value.price +" <a href='" + value.listing_url + "'>View Listing</a></p>").openPopup();
                 }); 
             },
             error: function(xhr) {
