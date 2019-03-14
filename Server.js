@@ -4,6 +4,8 @@ var app = express();
 var port = 3000;
 var path = require("path");
 var XLSX = require('xlsx');
+var fs = require('fs');
+var devmode = true;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/Site'));
 
