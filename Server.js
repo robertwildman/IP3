@@ -46,7 +46,7 @@ app.get('/api/postcode/nearby/', (req, res) => {
       results.forEach(function(item) {
         var data = {
           lat: item.geometry.location.lat,
-          long: item.geometry.location. lng,
+          long: item.geometry.location.lng,
           name: item.name,
           rating: item.rating,
           price: item.price_level, 
