@@ -4,9 +4,6 @@ var app = express();
 var port = 3000;
 var path = require("path");
 var XLSX = require('xlsx');
-var fs = require('fs');
-var devmode = true;
-
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/Site'));
 
@@ -62,15 +59,17 @@ app.get('/api/postcode/nearby/', (req, res) => {
         var re = {};
         var key = 'Results';
         re[key] = []; 
+          re[key] = []; 
+        re[key] = []; 
         var bodyjson = JSON.parse(body);
         var results = bodyjson.results;
         results.forEach(function(item) {
             var data = {
               lat: item.geometry.location.lat,
-              long: item.geometry.location. lng,
+              long: item.geometry.location.lng,
               name: item.name,
               rating: item.rating,
-              price: item.price_level, 
+              price: item.price_level 
             };
             console.log(data);
           re[key].push(data);
@@ -80,7 +79,8 @@ app.get('/api/postcode/nearby/', (req, res) => {
       }
     });
   }
-  
+  //No options worked 
+  res.status(404).send("Not vaild type");
 });
 app.get('/api/postcode/info', (req, res) => { 
   var dataZone;
@@ -120,6 +120,3 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
 
-
-// Housing api 
-//Listing URL, Summary, Title, Price , Updated, img url
