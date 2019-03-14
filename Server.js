@@ -61,8 +61,6 @@ app.get('/api/postcode/nearby/', (req, res) => {
         var re = {};
         var key = 'Results';
         re[key] = []; 
-          re[key] = []; 
-        re[key] = []; 
         var bodyjson = JSON.parse(body);
         var results = bodyjson.results;
         results.forEach(function(item) {
@@ -114,6 +112,33 @@ app.get('/api/postcode/info', (req, res) => {
   });
   console.log(json);
   res.json(json);
+});
+app.get('/api/postcode/housing',(req,res) => {
+  console.log(req.query);
+  request("https://api.nestoria.co.uk/api?encoding=json&action=search_listings&country=uk&listing_type=buy&centre_point="+ req.query.lat +","+ req.query.long+"", function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        var re = {};
+        var key = 'Results';
+        re[key] = []; 
+        var bodyjson = JSON.parse(body);
+        var results = bodyjson.response;
+        results = results.listings;
+        console.log(results);
+        results.forEach(function(item) {
+            var data = {
+              title: item.title,
+              img_url: item.img_url,
+              latitude: item.latitude, 
+              longitude: item.longitude,
+              summary: item.summary, 
+              price: item.price_formatted
+            };
+            console.log(data);
+          re[key].push(data);
+          });
+        res.json(re);
+      }
+    });
 });
 app.use(express.static(__dirname + '/public'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
