@@ -81,8 +81,6 @@ app.get('/api/postcode/nearby/', (req, res) => {
       }
     });
   }
-  //No options worked 
-  res.status(404).send("Not vaild type");
 });
 app.get('/api/postcode/info', (req, res) => { 
   var dataZone;
