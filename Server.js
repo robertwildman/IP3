@@ -4,6 +4,8 @@ var app = express();
 var port = 3000;
 var path = require("path");
 var XLSX = require('xlsx');
+var fs = require('fs');
+var devmode = true;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/Site'));
 
@@ -33,29 +35,50 @@ app.get('/postcode', (req, res) => {
   res.render('Pages/postcode', {message: 'Postcode'});
 });
 app.get('/api/postcode/nearby/', (req, res) => {
-  request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+ req.query.lat +","+ req.query.long +"&radius=1500&type="+req.query.type+"&key=AIzaSyASgFJuBaUXGa3zhgSt3Lx1rDxHY1ZSB0w", function (error, response, body) {
-    if (!error && response.statusCode == 200) {
+  if(devmode == true)
+  {
+      var bodyjson = JSON.parse(fs.readFileSync('Catched/'+req.query.type+'.json', 'utf8'));
+      //Read the catched version from the file system! 
       var re = {};
       var key = 'Results';
       re[key] = []; 
-      var bodyjson = JSON.parse(body);
       var results = bodyjson.results;
       results.forEach(function(item) {
-          var data = {
-            lat: item.geometry.location.lat,
-            long: item.geometry.location.lng,
-            name: item.name,
-            rating: item.rating,
-            price: item.price_level, 
+        var data = {
+          lat: item.geometry.location.lat,
+          long: item.geometry.location. lng,
+          name: item.name,
+          rating: item.rating,
+          price: item.price_level, 
           };
-          console.log(data);
         re[key].push(data);
-         
-        });
+      });
       res.json(re);
-     }
-  })
-  
+  }else 
+  {
+    request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+ req.query.lat +","+ req.query.long +"&radius=1500&type="+req.query.type+"&key=AIzaSyASgFJuBaUXGa3zhgSt3Lx1rDxHY1ZSB0w", function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        var re = {};
+        var key = 'Results';
+        re[key] = []; 
+        var bodyjson = JSON.parse(body);
+        var results = bodyjson.results;
+        results.forEach(function(item) {
+            var data = {
+              lat: item.geometry.location.lat,
+              long: item.geometry.location.lng,
+              name: item.name,
+              rating: item.rating,
+              price: item.price_level 
+            };
+            console.log(data);
+          re[key].push(data);
+          
+          });
+        res.json(re);
+      }
+    });
+  }
 });
 app.get('/api/postcode/info', (req, res) => { 
   var dataZone;
@@ -90,7 +113,36 @@ app.get('/api/postcode/info', (req, res) => {
   console.log(json);
   res.json(json);
 });
+app.get('/api/postcode/housing',(req,res) => {
+  console.log(req.query);
+  request("https://api.nestoria.co.uk/api?encoding=json&action=search_listings&country=uk&listing_type=buy&centre_point="+ req.query.lat +","+ req.query.long+"", function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        var re = {};
+        var key = 'Results';
+        re[key] = []; 
+        var bodyjson = JSON.parse(body);
+        var results = bodyjson.response;
+        results = results.listings;
+        console.log(results);
+        results.forEach(function(item) {
+            var data = {
+              title: item.title,
+              img_url: item.img_url,
+              latitude: item.latitude, 
+              longitude: item.longitude,
+              summary: item.summary, 
+              price: item.price_formatted,
+              listing_url: item.lister_url
+            };
+            console.log(data);
+          re[key].push(data);
+          });
+        res.json(re);
+      }
+    });
+});
 app.use(express.static(__dirname + '/public'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
 
 

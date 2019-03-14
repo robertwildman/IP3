@@ -1,8 +1,8 @@
 var mymap;
-var atmMarkers,barMarkers;
+var markergroup;
+var pclat;
+var pclong;
 $( document ).ready(function() {
-    var pclat;
-    var pclong;
     //Jquery ready
     $("#pcsearch").click(function(){
         var request = new XMLHttpRequest();
@@ -32,62 +32,79 @@ $( document ).ready(function() {
         };
         request.send();
     });
-    $("#pcATM").click(function(){
-        mymap.removeLayer(atmMarkers);
-        mymap.removeLayer(barMarkers);
-        var request = new XMLHttpRequest();
-        var apir = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+ pclat +","+ pclong +"&radius=1500&type=restaurant&key=AIzaSyASgFJuBaUXGa3zhgSt3Lx1rDxHY1ZSB0w"
-        var st = "/api/postcode/nearby/ATM/"+pclat+"/"+pclong;
-        console.log(pclat);
-        console.log(pclong);
+    $("#pcBAR").click(function()
+    {
+        findnearby('bar');
+    });
+    $("#pcCafe").click(function()
+    {
+        findnearby('cafe');
+    });
+    $("#pcRestaurant").click(function()
+    {
+        findnearby('restaurant');
+    });
+    $("#pcTransit").click(function()
+    {
+        findnearby('transit_station');
+    });
+    $("#pcDepartment").click(function()
+    {
+        findnearby('department_store');
+    });
+    $("#pcSupermarket").click(function()
+    {
+        findnearby('supermarket');
+    });
+    $("#pcHouse").click(function()
+    {
+        if(markergroup != undefined)
+        {
+            console.log("Removed");
+            mymap.removeLayer(markergroup);
+        }
         $.ajax({
-            url: "/api/postcode/nearby",
+            url: "/api/postcode/housing",
             type: "get", //send it through get method
             data: { 
-              type: 'ATM', 
               lat: pclat, 
               long: pclong
             },
             success: function(response) {
-                var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
-                atmMarkers = L.layerGroup().addTo(mymap);
+                markergroup = L.layerGroup().addTo(mymap);
                 $.each(response.Results, function(index, value) {
-                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td> <td> <button type='button' onclick='viewmarker(\"" + value.lat + "\",\""+ value.long +"\",\""+ value.name +"\")'class='btn table-button'>View</button></tr>";
                    //Add markers to the maps 
-                    var marker = L.marker([value.lat, value.long]).addTo(atmMarkers);
-                    marker.bindPopup("<b>"+value.name+"</b>").openPopup();
-                    console.log( value);
+                    var marker = L.marker([value.latitude, value.longitude]).addTo(markergroup);
+                    marker.bindPopup("<b>"+value.title+"</b> <img src='"+value.img_url+"'style='width:200px;height:150px;'><p> Summary: " + value.summary + " <br> Price: "+ value.price +" <a href='" + value.listing_url + "'>View Listing</a></p>").openPopup();
                 }); 
-                tableset += "</table>"
-                $('#listholder').append(tableset);
             },
             error: function(xhr) {
               //Do Something to handle error
             }
         });
     });
-    $("#pcBAR").click(function()
-        {
-            var request = new XMLHttpRequest();
-        var apir = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+ pclat +","+ pclong +"&radius=1500&type=restaurant&key=AIzaSyASgFJuBaUXGa3zhgSt3Lx1rDxHY1ZSB0w"
-        var st = "/api/postcode/nearby/ATM/"+pclat+"/"+pclong;
-        console.log(pclat);
-        console.log(pclong);
+});
+
+function findnearby(intype)
+{
+    if(markergroup != undefined)
+    {
+        console.log("Removed");
+        mymap.removeLayer(markergroup);
+    }
         $.ajax({
             url: "/api/postcode/nearby",
             type: "get", //send it through get method
             data: { 
-              type: 'bar', 
+              type: intype, 
               lat: pclat, 
               long: pclong
             },
             success: function(response) {
-                var tableset = "<table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
-                barMarkers = L.layerGroup().addTo(mymap);
+                markergroup = L.layerGroup().addTo(mymap);
                 $.each(response.Results, function(index, value) {
-                    tableset += "<tr><td> Name </td><td>"+ value.name +"</td> <td> <button type='button' onclick='viewmarker(\"" + value.lat + "\",\""+ value.long +"\",\""+ value.name +"\")'class='btn table-button'>View</button></tr>";
                    //Add markers to the maps 
-                    var marker = L.marker([value.lat, value.long]).addTo(barMarkers);
+                    var marker = L.marker([value.lat, value.long]).addTo(markergroup);
                     if(value.rating != null)
                     {
                         marker.bindPopup("<b>"+value.name+"</b><p> Rating: " + value.rating + "</p>").openPopup();
@@ -95,19 +112,13 @@ $( document ).ready(function() {
 
                         marker.bindPopup("<b>"+value.name+"</b>").openPopup();
                     }
-                    console.log( value);
                 }); 
-                tableset += "</table>"
-                $('#listholder').append(tableset);
             },
             error: function(xhr) {
               //Do Something to handle error
             }
         });
-            mymap.removeLayer(atmMarkers);
-        });
-});
-
+}
 function createmap(lat,long,postcode) {
     mymap = L.map('mapid').setView([lat, long], 15);
     var marker = L.marker([lat, long]).addTo(mymap);

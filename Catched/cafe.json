@@ -1,0 +1,1064 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CqQCGwEAALn-TFMIEvvRIkzZp1tKJpE55u-TACMWGuGNkcksucTT6XOqnGu2Tm2tkARFXDXIhJMbecrFaCc1EOmQK3iuZ7IrFclE7vqlcskLxI31BoniMD-qgAuC7jN8Yfa0l3fCNNe-wobqNbhnKOUly0aDIuQVBJKCRbtpGNWj-kMVloOFsBWL-x3eslmQbmq_-2fAFJUxePhHu31mxk4xA9R0hTyDCEhr0U7hZ8ZgxZYpMH8TzwqsAdUkkBt4UlLWJcwwxRH6yTlS70eiqJmhzTeiEERhTlj_IJRpc_CyAhh-R9Jr7zwBYSftGZfI0vn1UnL1DL7MQWANEF2V0pVIL-CsWKhJT2EVwZDOwvA77G4pvHd8AYy4xvp-aVMVXv5Wp4NiyBIQUfR615Jp4V8YVdeq-B24ZxoUPsMidNWFwgUMekQv265WKYDDoco",
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8650174,
+                    "lng": -4.260092800000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8663355802915,
+                        "lng": -4.258755469708499
+                    },
+                    "southwest": {
+                        "lat": 55.8636376197085,
+                        "lng": -4.261453430291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "4e8c7638119deba6423c7aaa8ef81d65362370aa",
+            "name": "Costa Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112381190303508405418/photos\">Christian Betschel</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAFJvgBO0ONtoDg0EJZnOPDYyjEbIfexDT-wOTiP9gIJwKD5ShzU_KLRouveTkhdK2BsSzhukUTkJ9rBc80N_kNtGkcRLdSREBw6U7fyOJkt6gQmG7EuqYMQxMS8omdMshEhD0JARksAg_Oum7NFh9IO86GhQ0ALRqYJXaySYDr56tNYaSZAmq0A",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJA9psICdEiEgRhdDa4WD9QpI",
+            "plus_code": {
+                "compound_code": "VP8Q+2X Glasgow, United Kingdom",
+                "global_code": "9C7QVP8Q+2X"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJA9psICdEiEgRhdDa4WD9QpI",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 621,
+            "vicinity": "208/212 Sauchiehall Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8638167,
+                    "lng": -4.2617276
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8651175302915,
+                        "lng": -4.260396469708498
+                    },
+                    "southwest": {
+                        "lat": 55.8624195697085,
+                        "lng": -4.263094430291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "5d39d7e709b109484af66b8bd295777cd4d8bdf4",
+            "name": "Where The Monkey Sleeps",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3366,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116624072862940724204/photos\">Laura Hook</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAYFs13eFrH0cFxx8w5YkZqY7Smsz6QuKQ54yoLbFiIPj-qGHo7OMFaNgcFvkCqRLUtmery4u1HdaNBh6vjebnG1XBfAxImUgOwziubQYVSHEaeILDbL4MHFcA1TXi_fvWEhB4psIu4GnoDMnsYkoePbUYGhQGgN7CxTkJYgSjbd8UfrwcKtp0xQ",
+                    "width": 5984
+                }
+            ],
+            "place_id": "ChIJs-uEEydEiEgRo4zZMsNDLew",
+            "plus_code": {
+                "compound_code": "VP7Q+G8 Glasgow, United Kingdom",
+                "global_code": "9C7QVP7Q+G8"
+            },
+            "rating": 4.6,
+            "reference": "ChIJs-uEEydEiEgRo4zZMsNDLew",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "meal_takeaway",
+                "store",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 161,
+            "vicinity": "182 West Regent Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.864074,
+                    "lng": -4.259562999999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.86549408029149,
+                        "lng": -4.258188619708497
+                    },
+                    "southwest": {
+                        "lat": 55.86279611970849,
+                        "lng": -4.260886580291501
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "33faa9d507cf2b27ee30ea4d7ded348353356b0e",
+            "name": "Sarti (Bath St)",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114827377457807788286/photos\">Gordon Suttie</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAaZ1MNJ218Bv7g2xWfn7iKBMgaGmWKouWshct-3OUc2Ymkj9ezR19YGkXREG6ghqpp-jEGvITlYtPMImJuHRQ_JX-D7RXIx0nzEW1G068nzJaQZC4FoDaWBlmz6H85qZ2EhChrbUWZmpsf5bgIwMBFXcgGhQaIFxkLyQDTjANcCAppFUvnaIabg",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJkwe0NCdEiEgRdtEJ14TAy8Q",
+            "plus_code": {
+                "compound_code": "VP7R+J5 Glasgow, United Kingdom",
+                "global_code": "9C7QVP7R+J5"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJkwe0NCdEiEgRdtEJ14TAy8Q",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "liquor_store",
+                "bar",
+                "meal_takeaway",
+                "store",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 317,
+            "vicinity": "121 Bath Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8556568,
+                    "lng": -4.2461166
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8570057802915,
+                        "lng": -4.244767619708497
+                    },
+                    "southwest": {
+                        "lat": 55.8543078197085,
+                        "lng": -4.247465580291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "a256de94973e0b172ae3738b73bf0c2931da44ac",
+            "name": "Mono",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100243728089204504743/photos\">Swm&#39;r &#39;N Wtr</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAu4k7NdQDCpJqX08Ni86uLjbcCPDjNp7T0YmHM0mVWFjodone47QemOXXcds8xSWJWemMyDTHkEVr5oA3aBqgn2Kfi7U578VhZmE9-ZdeFpNgJNEFECKKlnDCJabFp6_NEhCDNqsTUTUviAs-JOxqOoVZGhT8djrKwc5C6L1ib0ft2Y0mvZ6I5g",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJWYXQsqNGiEgRGKJ56_bUl2Y",
+            "plus_code": {
+                "compound_code": "VQ43+7H Glasgow, United Kingdom",
+                "global_code": "9C7QVQ43+7H"
+            },
+            "price_level": 1,
+            "rating": 4.4,
+            "reference": "ChIJWYXQsqNGiEgRGKJ56_bUl2Y",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "bar",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 720,
+            "vicinity": "Kings Court, 12"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8642411,
+                    "lng": -4.2543565
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8656361802915,
+                        "lng": -4.252989819708497
+                    },
+                    "southwest": {
+                        "lat": 55.8629382197085,
+                        "lng": -4.255687780291501
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "634faefc84458b099e6d4e6916a3837ac4a30d3d",
+            "name": "Starbucks Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4608,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102720910032808174157/photos\">Raymond Fyfe</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA96w270CjhQYhuP06XqYZXNrb-r8Zsuw_Ht3NvpzlQBKvWTrPbhRUlmw-uO-b8HPlOCeu3tYKmxE0jtUe7bzyDTyBnx6TlBEfxt_mhWRNPlXzvR6QyySXYrmKMyOiPSlZEhCR6dEi2PT3SFa2yzY_a0B7GhQKKP0EnADl2PSraC3iD8ONhezm3Q",
+                    "width": 3456
+                }
+            ],
+            "place_id": "ChIJl-q7RiBEiEgR0oobCg_FC9g",
+            "plus_code": {
+                "compound_code": "VP7W+M7 Glasgow, United Kingdom",
+                "global_code": "9C7QVP7W+M7"
+            },
+            "price_level": 2,
+            "rating": 4,
+            "reference": "ChIJl-q7RiBEiEgR0oobCg_FC9g",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 411,
+            "vicinity": "27 Sauchiehall Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8604294,
+                    "lng": -4.252334600000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8617422802915,
+                        "lng": -4.250998719708498
+                    },
+                    "southwest": {
+                        "lat": 55.8590443197085,
+                        "lng": -4.253696680291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "ec7272453e9c7a62dc394559afbe552e0393ea77",
+            "name": "Costa Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109750469366410612129/photos\">Gaurav Shah</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAqDWqJWXD6dR93HxpWZixjZ7M2HOXxWqMsLzx-kxtyz53MIAd5tHLJ4yvapn_eWlB4mcAZbWES_Lchti_wdOkPqWq1quTsqdH6swHpS8PER6iawxnkkL2JkSzvmoTz19YEhBLo9E0yEQbGN1u2F9SqBBRGhQi5ryA0xEU_ifmFJLN1RXaBW21Sg",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ3y1BBCBEiEgRnHWjD-72qqA",
+            "plus_code": {
+                "compound_code": "VP6X+53 Glasgow, United Kingdom",
+                "global_code": "9C7QVP6X+53"
+            },
+            "price_level": 2,
+            "rating": 4,
+            "reference": "ChIJ3y1BBCBEiEgRnHWjD-72qqA",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 275,
+            "vicinity": "Royal Exchange Square, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.857506,
+                    "lng": -4.2547183
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8588549802915,
+                        "lng": -4.253369319708497
+                    },
+                    "southwest": {
+                        "lat": 55.8561570197085,
+                        "lng": -4.256067280291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "e7e09404ef4769dce473929f1963dbaf43ee04fc",
+            "name": "Costa",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4608,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116203268071095725052/photos\">Jacques Fernandes</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAkGWdCPrn6x7dv5JfohMtXPHwN4c95BrM_avci4EKycggXxyICX8pWdPYHgYy3vYVcDnW9NE1FxibwD2rRkUeS32Fv0UoKjzg54-FaYi5aIRg4bIJ3tj_WXXsg0Jri7PLEhBopDAaA-gbbfAgMD-eOfLRGhSeimyUC9_L4Pn-pFEmipUWYPFDEg",
+                    "width": 2592
+                }
+            ],
+            "place_id": "ChIJT7H22iBEiEgRcIeTFr0RY0g",
+            "plus_code": {
+                "compound_code": "VP5W+24 Glasgow, United Kingdom",
+                "global_code": "9C7QVP5W+24"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJT7H22iBEiEgRcIeTFr0RY0g",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 239,
+            "vicinity": "Unit 233, 143 Argyle Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.861126,
+                    "lng": -4.25795
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.86244343029149,
+                        "lng": -4.256612319708498
+                    },
+                    "southwest": {
+                        "lat": 55.8597454697085,
+                        "lng": -4.259310280291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+            "id": "5a8c046c550c26435fd5933f8aed158f26a01e72",
+            "name": "Stereo",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1075,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103821698435338662493/photos\">Stereo</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAjkvZ-2bkKLwj3JOuvUGWgUFzFbNnb4ibbIJhHu6czdqxyzB3reMopHBEsT4S17ZdclRX2WCZYKVppRclWEqKaceKliy0FpUbn2V2hvVbdOGSyuRWhDPRMRcfT8AjM5IpEhCKaLk8FTLDP27s_ww4DrfBGhR-GPRO24atJjwbowSF1AJNEkdfLQ",
+                    "width": 2924
+                }
+            ],
+            "place_id": "ChIJDdVUEp5GiEgRTLVPln2lor4",
+            "plus_code": {
+                "compound_code": "VP6R+FR Glasgow, United Kingdom",
+                "global_code": "9C7QVP6R+FR"
+            },
+            "price_level": 2,
+            "rating": 4.3,
+            "reference": "ChIJDdVUEp5GiEgRTLVPln2lor4",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "night_club",
+                "bar",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 1032,
+            "vicinity": "22-28 Renfield Lane, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8642595,
+                    "lng": -4.2611928
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.86567988029149,
+                        "lng": -4.259817219708498
+                    },
+                    "southwest": {
+                        "lat": 55.8629819197085,
+                        "lng": -4.262515180291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "b773c9a698af631e1d24b083341272bd44962d67",
+            "name": "The butterfly and the pig",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108313227190953592708/photos\">The butterfly and the pig</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAgTuyOu5O9jdn-EqVmVpDaVCDAlNWEDw79S4_ZWQp8GhVwxw-dgJ1x4cd9vmShe4DyJBKcAaOFsxMFA_UzzwXSpC346cerHCLN8DY144rPOaBf7ByacQSEhbf5P0fk226EhAeXnRI3afxpexZ776jU8YIGhQ91pXuUFh2yPcJYwOiGJGMrT9E4A",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJI-wPPSdEiEgRZoIZTd8PpIQ",
+            "plus_code": {
+                "compound_code": "VP7Q+PG Glasgow, United Kingdom",
+                "global_code": "9C7QVP7Q+PG"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJI-wPPSdEiEgRZoIZTd8PpIQ",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "cafe",
+                "bar",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 1104,
+            "vicinity": "153 Bath Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8600341,
+                    "lng": -4.254452199999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8610455802915,
+                        "lng": -4.253461719708498
+                    },
+                    "southwest": {
+                        "lat": 55.8583476197085,
+                        "lng": -4.256159680291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "4f1085e49e5960c5dd9eafb120122b044fc3a72f",
+            "name": "The Willow Tea Rooms",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2142,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102392192021235599351/photos\">The Willow Tea Rooms</a>"
+                    ],
+                    "photo_reference": "CmRaAAAADWTFZqmks_RvE2YyNDQUluMUPLBublk5LbVI-W61GT-BCYr2eQXahadBDiRbbcVHmrxhwabMAvp4txfGl9HuGTbcK7nfk37x_NsNud3VAFDVCQUP6moh1p-nBPNAiyKZEhCXLud3w0-gOScpytjt-dWwGhR3lw1HXi_doN5sEDvFMQWGd6blLA",
+                    "width": 3600
+                }
+            ],
+            "place_id": "ChIJA9psICdEiEgR2QSsNm30N8A",
+            "plus_code": {
+                "compound_code": "VP6W+26 Glasgow, United Kingdom",
+                "global_code": "9C7QVP6W+26"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJA9psICdEiEgR2QSsNm30N8A",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 625,
+            "vicinity": "97 Buchanan Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.86000869999999,
+                    "lng": -4.2533222
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8613785302915,
+                        "lng": -4.251906369708498
+                    },
+                    "southwest": {
+                        "lat": 55.8586805697085,
+                        "lng": -4.254604330291501
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "87a57e621d4692e94a6bc739ca400ed1db8c5dee",
+            "name": "The Social",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1335,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100961834498970869585/photos\">The Social</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAmDgwXpLK053Dz5hmnZwcZUdD_LyYDhlfE2k91tyCfVxSumtK5zybxtoLWaXNqv_CFfSzsN0butxYNMcYyTjEr1rBY61pF5guF0HAAkaIm3_SMYT6L-s3DB2HO8UbOZqZEhDEy2xe_eNkxLKGm84pOXEYGhSjAql_VUxNGl2jki1ek8w44g8E-w",
+                    "width": 2000
+                }
+            ],
+            "place_id": "ChIJjc5Tnp9GiEgRUvAyFL30ql8",
+            "plus_code": {
+                "compound_code": "VP6W+2M Glasgow, United Kingdom",
+                "global_code": "9C7QVP6W+2M"
+            },
+            "price_level": 2,
+            "rating": 3.9,
+            "reference": "ChIJjc5Tnp9GiEgRUvAyFL30ql8",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "bar",
+                "store",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 791,
+            "vicinity": "27 Royal Exchange Square, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.86143799999999,
+                    "lng": -4.253522
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.86280053029149,
+                        "lng": -4.252283119708498
+                    },
+                    "southwest": {
+                        "lat": 55.86010256970849,
+                        "lng": -4.254981080291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "e7bcba7b45d1c24e093ddff2dad74f2304c4ac24",
+            "name": "Starbucks Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107639128231242362696/photos\">Jen Allish</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAcG4nTfgcITXCfaWc-abBHdK9JSpJh4mHb010JnB1cCmJwp7Nk86F4j9vvpRP5vCE04jaRXFHlw8useN_K67OWT2RSMm17EVX2XiXtnNMu3ZP_Tk_NQDo3dS37QMyHCOnEhB_T1P_w815kAN_YalmmzaEGhTgqxV4f2RNHvUM2rI4sWMBEICBzA",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJ6-POwZ9GiEgReRFY5nu-R_Y",
+            "plus_code": {
+                "compound_code": "VP6W+HH Glasgow, United Kingdom",
+                "global_code": "9C7QVP6W+HH"
+            },
+            "price_level": 2,
+            "rating": 3.8,
+            "reference": "ChIJ6-POwZ9GiEgReRFY5nu-R_Y",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 882,
+            "vicinity": "136-140 Buchanan Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.86174519999999,
+                    "lng": -4.249776100000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8629932302915,
+                        "lng": -4.248466569708499
+                    },
+                    "southwest": {
+                        "lat": 55.8602952697085,
+                        "lng": -4.251164530291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "dfc8580fdc05881223af10349725ba1433924bbd",
+            "name": "Costa Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109415712816329231113/photos\">ないとうもえ</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAlhg3vB6nuYV6hH1Qut9IeVmAgfaFfQ9Cvd9-TdftAnPAGFhRl0Cspfxy2ADpMRWQk81UE9WSCL9RkX-w-HPzfEqCsuqwRciwaOhiKOMr4kSrup1ZaUHS9mJhtqxe8x5UEhDtervt-UDPjIc31naUhS2XGhTK2xC4VfCJkB8yRembZZKkB7sQRQ",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJa9TBvp9GiEgRTp9PY_mPo_0",
+            "plus_code": {
+                "compound_code": "VQ62+M3 Glasgow, United Kingdom",
+                "global_code": "9C7QVQ62+M3"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJa9TBvp9GiEgRTp9PY_mPo_0",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 126,
+            "vicinity": "50 George Square, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8591689,
+                    "lng": -4.2537749
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8605608802915,
+                        "lng": -4.252825469708498
+                    },
+                    "southwest": {
+                        "lat": 55.8578629197085,
+                        "lng": -4.255523430291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+            "id": "23f2a34992bc738357edd8b17963eb402f5127f4",
+            "name": "Darcy's",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 667,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103898814079319969512/photos\">Darcy&#39;s</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA6-vAm9ItWOR2e8fOcm_3gBmgwYx15KDERyo0laRftFN5BM4TFQSVbs2DvfhVai3FOEE-nsoiDM_9fmdhPg92sGyXShQS_-1acqkP8c_GQ1CEe2KYr9NKfwLD0rKxwYK6EhB-m8HSiWOwbU5bLBXPqRMyGhQVuip5sAPLGj2zg3IrbY1JiJPdig",
+                    "width": 1000
+                }
+            ],
+            "place_id": "ChIJFdm3DZ9GiEgRiNY5cP_kXAE",
+            "plus_code": {
+                "compound_code": "VP5W+MF Glasgow, United Kingdom",
+                "global_code": "9C7QVP5W+MF"
+            },
+            "price_level": 2,
+            "rating": 3.8,
+            "reference": "ChIJFdm3DZ9GiEgRiNY5cP_kXAE",
+            "scope": "GOOGLE",
+            "types": [
+                "bar",
+                "cafe",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 114,
+            "vicinity": "Princes Square, 48 Buchanan Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8600557,
+                    "lng": -4.253556300000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8614407302915,
+                        "lng": -4.252194319708498
+                    },
+                    "southwest": {
+                        "lat": 55.8587427697085,
+                        "lng": -4.254892280291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "651b5d392de9d4ed523afadcd50c98d48f26c498",
+            "name": "Starbucks Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4160,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105802637169162379385/photos\">Campbell Porter</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA1Z8aaoOjm5ObJYpILli8oZqTITQ3v5cioZ3T1KFsA7tXZgx4fXkpScMXBDFCR049LQzbKKkZkdAPdd0OULs_7WA9gIbLIeBb8n0t_h1sZ6f0rLQACJ-mt6ns0PBO8hItEhAAJ1aY2iuEeye17DMvcO8MGhQGjI5x4qDFJRIxppWJOwbgKsv8IA",
+                    "width": 2340
+                }
+            ],
+            "place_id": "ChIJUwt8pp9GiEgR4bHPXhnaYAw",
+            "plus_code": {
+                "compound_code": "VP6W+2H Glasgow, United Kingdom",
+                "global_code": "9C7QVP6W+2H"
+            },
+            "price_level": 2,
+            "rating": 4.1,
+            "reference": "ChIJUwt8pp9GiEgR4bHPXhnaYAw",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 172,
+            "vicinity": "9 Exchange Place, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8663093,
+                    "lng": -4.256792
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8673484302915,
+                        "lng": -4.255678019708498
+                    },
+                    "southwest": {
+                        "lat": 55.8646504697085,
+                        "lng": -4.258375980291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "4a7a6c173142a01106521e102d623d33923dc360",
+            "name": "Cafe Hula",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115382645956845323484/photos\">Tong Aromsook</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA6oI4scpjD_uWGnfKiQ_Vynz__aPVZ-TbT9Npb9yW2wrC8I54S1fzzBJfnbo3eqd4Z7_1u9c4Hkhh00bEI9CKcHwZ0VQ-lJ6DwfNEYxtsSWg2FzsYMcaEUu2-H7RbBaGIEhDKOLNJism7SAFkeQLA1PbuGhTyDTxG67pmawXqWmU5sYkbMEMzxQ",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJlc4HDyFEiEgRJmk79KiBKHk",
+            "plus_code": {
+                "compound_code": "VP8V+G7 Glasgow, United Kingdom",
+                "global_code": "9C7QVP8V+G7"
+            },
+            "price_level": 2,
+            "rating": 4.4,
+            "reference": "ChIJlc4HDyFEiEgRJmk79KiBKHk",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 95,
+            "vicinity": "321 Hope Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.86104599999999,
+                    "lng": -4.260570200000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8624614302915,
+                        "lng": -4.259197419708499
+                    },
+                    "southwest": {
+                        "lat": 55.8597634697085,
+                        "lng": -4.261895380291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "4c02b0a6ed4070cc301d2f800916f75b9a8ca042",
+            "name": "Starbucks Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4048,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105793795956264837378/photos\">Kenneth Gordon</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAGuVpvqLekl_hI-0xXM7OFacAMUM5l9oyExVE4YruBwOCVae1TQvJ248pzNLnPHPDTL9cApd-GWYNW1pDT0nNxa_CNp_ZBSgWR87CYmgTa0xyl71yfiMmtjoMKy31ulOaEhC20pCJEaL_F-wfURgGH2S4GhSMNczXTBqQj3bdkYo49UPA6-4leg",
+                    "width": 3036
+                }
+            ],
+            "place_id": "ChIJDxUa651GiEgR2GvooxXhNqI",
+            "plus_code": {
+                "compound_code": "VP6Q+CQ Glasgow, United Kingdom",
+                "global_code": "9C7QVP6Q+CQ"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJDxUa651GiEgR2GvooxXhNqI",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 83,
+            "vicinity": "33 Bothwell Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8622083,
+                    "lng": -4.256116399999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8635744302915,
+                        "lng": -4.254915519708498
+                    },
+                    "southwest": {
+                        "lat": 55.8608764697085,
+                        "lng": -4.257613480291503
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "a3e34ca5e5b95e99cff062305b4d2a943180173b",
+            "name": "Sarti",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1786,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105388188181799660096/photos\">Foodie Explorers</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAuNdck5M55kpV930UrkA_9P0EsBrNf52b5zhIUgq7YrlW2ZoMzesivKIsRcVR3CxnRwgh0XMppMbMtFcXMKbGToomrhMJWR2JqdfWXPEdyph6vqyw9xg6FGDqTvUdaD2qEhDSxgU2iC0p8SjN93mGlcH0GhR5EX1cZmJteaEuSyEd0uZzNz0J4w",
+                    "width": 3948
+                }
+            ],
+            "place_id": "ChIJ7YAMKJ5GiEgRPT09UQ3KP5E",
+            "plus_code": {
+                "compound_code": "VP6V+VH Glasgow, United Kingdom",
+                "global_code": "9C7QVP6V+VH"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJ7YAMKJ5GiEgRPT09UQ3KP5E",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "liquor_store",
+                "grocery_or_supermarket",
+                "bar",
+                "meal_takeaway",
+                "store",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 345,
+            "vicinity": "42 Renfield Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.85904,
+                    "lng": -4.259361
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.8603845802915,
+                        "lng": -4.257932819708499
+                    },
+                    "southwest": {
+                        "lat": 55.8576866197085,
+                        "lng": -4.260630780291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "1d07b6e7552eaf70bc57883f899ac05901fc98fb",
+            "name": "The Solid Rock Cafe",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3096,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108215853257382376139/photos\">Gerald Gorman</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA4sjhfxEOmmVzFqEIRZIetaXoljnsz6sZAR79bYYa3gjqVfqn5qSo03BzdCYBDcPjLSNG34A7vgCbQ4mL5eXQGfc_O--DpLHL3D0xNyUIlRhW--ecnao-ecmX1BDpJRcPEhAn1sqNk82IGEMkylcCPtY9GhR4gRVOBQ4IQrciA_iITH3QnEuQXw",
+                    "width": 4128
+                }
+            ],
+            "place_id": "ChIJ8webMZxGiEgR-VxeBhQatRo",
+            "plus_code": {
+                "compound_code": "VP5R+J7 Glasgow, United Kingdom",
+                "global_code": "9C7QVP5R+J7"
+            },
+            "price_level": 2,
+            "rating": 4.5,
+            "reference": "ChIJ8webMZxGiEgR-VxeBhQatRo",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "cafe",
+                "bar",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 491,
+            "vicinity": "19 Hope Street, Glasgow"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 55.8665113,
+                    "lng": -4.270661
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 55.86785508029151,
+                        "lng": -4.269475269708497
+                    },
+                    "southwest": {
+                        "lat": 55.86515711970851,
+                        "lng": -4.272173230291502
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+            "id": "26c93477870c59830b3fee32a94a8035955acfe0",
+            "name": "Starbucks Coffee",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112448747715036023789/photos\">Rebecca M</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAt1t2fAGpReAjUEB9uZJ6Xt5NA-JbXN76hqYpigQDwEWUhHsA7LFMwV77BRczaxh1pA-UAT9Tgkecg9DVaqUDnoByC6NAPS5YQYWgTfi1cuBWf-vXGUVhqoRepGVpzJzjEhAPIVOCaMJ0k4gm3xV-xu2gGhSrrz3npJDxSQ0pZPCb0FTjQ5rBOQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJCQDp2ChEiEgRlXCUbxJpIzs",
+            "plus_code": {
+                "compound_code": "VP8H+JP Glasgow, United Kingdom",
+                "global_code": "9C7QVP8H+JP"
+            },
+            "price_level": 2,
+            "rating": 4,
+            "reference": "ChIJCQDp2ChEiEgRlXCUbxJpIzs",
+            "scope": "GOOGLE",
+            "types": [
+                "cafe",
+                "store",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 211,
+            "vicinity": "10 Saint George's Road, Mansions, Glasgow"
+        }
+    ],
+    "status": "OK"
+}
