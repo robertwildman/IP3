@@ -34,6 +34,9 @@ app.get('/', (req, res) => {
 app.get('/postcode', (req, res) => {
   res.render('Pages/postcode', {message: 'Postcode'});
 });
+app.get('/citybikes', (req, res) => {
+  res.render('Pages/citybikes', {message: 'City Bikes'});
+});
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
   {
