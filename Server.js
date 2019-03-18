@@ -167,23 +167,48 @@ app.get('/api/train/station', (req, res) => {
   fs.createReadStream('station_codes.csv')  
     .pipe(csv())
     .on('data', (row) => {
-      console.log(row);
       if(row.stationname.toUpperCase() === req.query.station.toUpperCase())
       {
         station = row.crscode;
       }
     })
     .on('end', () => {
-      console.log('CSV file successfully processed');
       if(station == undefined)
       {
         res.send("Error not found");
       }else
       {
-        res.send(station);
+        request("http://transportapi.com/v3/uk/train/station/"+ station +"/live.json?app_id=5fa2da4b&app_key=c31b495f35dd25555591bbab273f5396", function (error, response, body) {
+          if (!error && response.statusCode == 200) {
+            var re = {};
+            var key = 'Results';
+            re[key] = []; 
+            var bodyjson = JSON.parse(body);
+            re["Station_Name"] = bodyjson.station_name;
+            var results = bodyjson.departures;
+            results = results.all;
+            console.log(results);
+            results.forEach(function(item) {
+                var timetable = item.service_timetable;
+                var data = {
+                  mode: item.mode,
+                  platform: item.platform,
+                  operator_name: item.operator_name, 
+                  aimed_departure: item.aimed_departure_time,
+                  destination_name: item.destination_name, 
+                  expected_departure: item.expected_departure_time,
+                  status: item.status,
+                  timetable_id: timetable.id
+                };
+                console.log(data);
+              re[key].push(data);
+              });
+            res.json(re);
+          }
+        });
       }
     });
-  console.log("Done Loading in the Station Code Table");
+  
   
 });
 app.use(express.static(__dirname + '/public'));
