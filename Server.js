@@ -53,7 +53,7 @@ app.get('/crypto', (req, res) => {
   res.render('Pages/index', {message: 'Crypto'});
 });
 app.get('/train', (req, res) => {
-  res.render('Pages/train', {message: 'Crypto'});
+  res.render('Pages/transport', {message: 'Trains'});
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
