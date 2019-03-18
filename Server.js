@@ -5,6 +5,7 @@ var port = 3000;
 var path = require("path");
 var XLSX = require('xlsx');
 var fs = require('fs');
+var csv = require('csv-parser'); 
 var devmode = true;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/Site'));
@@ -26,7 +27,6 @@ var pcrworkbook = XLSX.readFile('PCRank.xlsx');
 var pcr_sheet_name_list = pcrworkbook.SheetNames;
 var all_postcodes_rank = XLSX.utils.sheet_to_json(pcrworkbook.Sheets[pcr_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Rank Table");
-
 
 app.get('/', (req, res) => {
   res.render('Pages/index', {message: 'FOO'});
@@ -51,6 +51,9 @@ app.get('/weather', (req, res) => {
 });
 app.get('/crypto', (req, res) => {
   res.render('Pages/index', {message: 'Crypto'});
+});
+app.get('/train', (req, res) => {
+  res.render('Pages/train', {message: 'Crypto'});
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
@@ -158,6 +161,30 @@ app.get('/api/postcode/housing',(req,res) => {
         res.json(re);
       }
     });
+});
+app.get('/api/train/station', (req, res) => {
+  var station;
+  fs.createReadStream('station_codes.csv')  
+    .pipe(csv())
+    .on('data', (row) => {
+      console.log(row);
+      if(row.stationname.toUpperCase() === req.query.station.toUpperCase())
+      {
+        station = row.crscode;
+      }
+    })
+    .on('end', () => {
+      console.log('CSV file successfully processed');
+      if(station == undefined)
+      {
+        res.send("Error not found");
+      }else
+      {
+        res.send(station);
+      }
+    });
+  console.log("Done Loading in the Station Code Table");
+  
 });
 app.use(express.static(__dirname + '/public'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
