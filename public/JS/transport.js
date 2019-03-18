@@ -26,7 +26,7 @@ $( document ).ready(function() {
 function viewextra(url)
 {
     $.ajax({
-        url: "url",
+        url: url,
         type: "get", //send it through get method
         success: function(response) {
             console.log(response);
