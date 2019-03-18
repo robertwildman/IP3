@@ -37,6 +37,21 @@ app.get('/postcode', (req, res) => {
 app.get('/citybikes', (req, res) => {
   res.render('Pages/citybikes', {message: 'City Bikes'});
 });
+app.get('/authors', (req, res) => {
+  res.render('Pages/authors', {message: 'Authors'});
+});
+app.get('/earthquakes', (req, res) => {
+  res.render('Pages/earthquakes', {message: 'Earthquakes'});
+});
+app.get('/tutorial', (req, res) => {
+  res.render('Pages/tutorial', {message: 'Tutorial'});
+});
+app.get('/weather', (req, res) => {
+  res.render('Pages/weather', {message: 'Weather'});
+});
+app.get('/crypto', (req, res) => {
+  res.render('Pages/index', {message: 'Crypto'});
+});
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
   {
