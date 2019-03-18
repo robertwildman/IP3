@@ -1,3 +1,8 @@
+
+/*The map div needs to have width and height defined,
+  otherwise the google maps element wont get displayed.
+  I left this other shit here as a placeholder but apart from this first #map div, 
+  nothing else is needed for functionality of the page*/
 #map{
   width: 100%;
   height: 450px;
@@ -68,6 +73,5 @@
     justify-self: center;
     align-self: center;
   }
-
-
+  
 }
