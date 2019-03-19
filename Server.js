@@ -175,7 +175,7 @@ app.get('/api/train/station', (req, res) => {
     .on('end', () => {
       if(station == undefined)
       {
-        res.send("Error not found");
+        res.status(500).send("Error not found");
       }else
       {
         request("http://transportapi.com/v3/uk/train/station/"+ station +"/live.json?app_id=5fa2da4b&app_key=c31b495f35dd25555591bbab273f5396", function (error, response, body) {
