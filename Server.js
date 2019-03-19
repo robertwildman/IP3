@@ -28,6 +28,10 @@ var pcr_sheet_name_list = pcrworkbook.SheetNames;
 var all_postcodes_rank = XLSX.utils.sheet_to_json(pcrworkbook.Sheets[pcr_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Rank Table");
 
+console.log("Loading earthquake data feeds");
+let datafeeds = JSON.parse(fs.readFileSync('feeds.json','utf8'));
+console.log("Done Loading earthquake data feeds");
+
 app.get('/', (req, res) => {
   res.render('Pages/index', {message: 'FOO'});
 });
@@ -54,6 +58,10 @@ app.get('/crypto', (req, res) => {
 });
 app.get('/train', (req, res) => {
   res.render('Pages/transport', {message: 'Trains'});
+});
+app.get('/earthdatafeeds', (req, res) => {
+  console.log(datafeeds);
+  res.send(datafeeds);
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
