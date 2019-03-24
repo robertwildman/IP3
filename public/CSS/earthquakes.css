@@ -1,7 +1,7 @@
 #map{
   grid-area: map;
   width: 100%;
-  height: 100%x;
+  height: 100%;
 }
 
 .wrapper{
@@ -84,5 +84,5 @@
   margin: 4px;
   padding: 5px;
   font-weight: bold;
-  color: rgb(18, 28, 168);
+  color: rgb(18, 28, 168);5
 }
