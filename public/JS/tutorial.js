@@ -1,5 +1,10 @@
 $(function(){
 
+  /**
+   * Variables used throughout app.
+   * Storing tutorials in a tutorial array, for easy and automatic creation of new tutorials.
+   */
+  let index = 0;
   const tutorials = {
     tutorialArray: [
       {
@@ -36,4 +41,41 @@ $(function(){
     ]
   };
 
+  /**
+   * Calling createTutorial method for every tutorial in tutorial array
+   */
+  tutorials.tutorialArray.forEach(tutorial => {
+    createTutorial(tutorial);
+  })
+
+  /**
+   * Create and append a tutorial on the page for every tutorial in the tutorial array 
+   */
+  function createTutorial(tutorial){
+    let tutorialContent = `
+                            <div class='tutorial'>
+                              <h3>${tutorial.name}</h3>
+                              <h5>${tutorial.description}</h5>
+                              <p class='content' id='content${index}'>${tutorial.content}</p>
+                            </div>
+                          `
+    $('#tutorials').append(tutorialContent);     
+    
+    index++;
+  }
+
+  /**
+   * Add a listener to show the tutorial content once clicked
+   */
+
+  $('.tutorial').click(function (){
+    showContent($(this).children('p').attr('id'));
+  })
+
+  /**
+   * Function to show the content of a tutorial
+   */
+  function showContent(contentId){
+    $('#'+contentId).fadeToggle(200);
+  }
 })
