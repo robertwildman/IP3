@@ -121,7 +121,7 @@ $(function(){
                                   <div>
                                     <h3>${feature.properties.place}</h3>
                                     <a href="../index.html?latLng=${latLng}"/>${latLng}</a>
-                                    <button onclick="window.open('https://www.google.com/${latLng}')">t</button>
+                                    <button onclick="window.open('/latloninfo?latlng=${latLng.lat() +','+ latLng.lng()}')">t</button>
                                   </div>
                                   `
           /**

@@ -60,8 +60,10 @@ app.get('/train', (req, res) => {
   res.render('Pages/transport', {message: 'Trains'});
 });
 app.get('/earthdatafeeds', (req, res) => {
-  console.log(datafeeds);
   res.send(datafeeds);
+});
+app.get('/latloninfo', (req, res) => {
+  res.render('Pages/latloninfo', {message: 'Lat Lon info'})
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
