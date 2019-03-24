@@ -120,8 +120,7 @@ $(function(){
           let infowindowcontent = `
                                   <div>
                                     <h3>${feature.properties.place}</h3>
-                                    <a href="../index.html?latLng=${latLng}"/>${latLng}</a>
-                                    <button onclick="window.open('/latloninfo?latlng=${latLng.lat() +','+ latLng.lng()}')">t</button>
+                                    <button onclick="window.open('/latloninfo?latlng=${latLng.lat() +','+ latLng.lng()}')">Open page in a new tab!</button>
                                   </div>
                                   `
           /**
