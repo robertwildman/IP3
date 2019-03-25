@@ -32,8 +32,8 @@ console.log("Loading earthquake data feeds");
 let datafeeds = JSON.parse(fs.readFileSync('feeds.json','utf8'));
 console.log("Done Loading earthquake data feeds");
 
-app.get('/', (req, res) => {
-  res.render('Pages/index', {message: 'FOO'});
+app.get('/crypto', (req, res) => {
+  res.render('Pages/crypto', {message: 'Cryptocurrency'});
 });
 app.get('/postcode', (req, res) => {
   res.render('Pages/postcode', {message: 'Postcode'});
@@ -41,7 +41,7 @@ app.get('/postcode', (req, res) => {
 app.get('/citybikes', (req, res) => {
   res.render('Pages/citybikes', {message: 'City Bikes'});
 });
-app.get('/authors', (req, res) => {
+app.get('/', (req, res) => {
   res.render('Pages/authors', {message: 'Authors'});
 });
 app.get('/earthquakes', (req, res) => {
