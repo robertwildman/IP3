@@ -59,6 +59,9 @@ app.get('/crypto', (req, res) => {
 app.get('/train', (req, res) => {
   res.render('Pages/transport', {message: 'Trains'});
 });
+app.get('/petition', (req, res) => {
+  res.render('Pages/petition', {message: 'Petition'});
+});
 app.get('/earthdatafeeds', (req, res) => {
   res.send(datafeeds);
 });
