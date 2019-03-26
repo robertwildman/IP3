@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <% include ../Sections/head%>
-
+    <style>
+    body {
+            padding: 0;
+            margin: 0;
+        }
+    html, body {
+            height: 100%-30px;
+            width: 100vw;
+    }
+    .leaflet-container {
+        position: absolute;
+        height: calc(100% - 70px);
+        width: 100%;
+        background-color:rgba(255,0,0,0.0);
+    }
+    .petition_info
+    {
+        float:left;
+        margin-top:70px;
+        margin-left:10px;
+        background-color: #19AA19; 
+    }
+    </style>
 </head>
 <body>
     <% include ../Sections/nav%>
-    <h1><%= message %> </h1>
-    <h3 id="con"> </h3>
-<div id="mapid" style="height: 700px; width:900px;"></div>
+    <div class="petition_info">
+        <h1><%= message %> </h1>
+        <p id="con">
+        </p>
+    </div>
+    
+<div id="mapid" style=""></div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

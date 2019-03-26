@@ -42,7 +42,7 @@ function style(feature) {
         fillColor: getColor(colornum),
         weight: 0.5,
         opacity: 1,
-        color: 'white',
+        color: '#a0a0a0',
         dashArray: '3',
         fillOpacity: 0.7
     };
