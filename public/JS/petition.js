@@ -4,6 +4,25 @@ var geo;
 var max;
 $( document ).ready(function() {
 //Get Petition data from Gov 
+$.ajax({
+    url: "http://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer&_pageSize=500&_sort=-numberOfSignatures&_page=0",
+    type: "get", //send it through get method
+    success: function(response) {
+        console.log(response);
+        $.each(response.result.items, function(index, value) {
+            console.log(value.label);
+            //Adding it to the petition array
+            var drop = '<option value="'+value.identifier._value+'">'+ value.label._value +'</option>'
+            $('#petitiondrop').append(drop);
+        }); 
+        
+    },
+    error: function(xhr) {
+      console.log(xhr);
+    }
+});
+
+
     $.ajax({
         url: "https://petition.parliament.uk/petitions/243319.json",
         type: "get", //send it through get method
@@ -24,6 +43,7 @@ $( document ).ready(function() {
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FED976"></div> <p class="ranking-text"> ' +[max*1] + ' - ' + ([max*2] - 1) +' </p></div>');
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FFEDA0"></div> <p class="ranking-text"> 0 - '+ ([max*1] - 1) +' </p> </div>');
             loadmap();
+
         },
         error: function(xhr) {
         //Do Something to handle error
