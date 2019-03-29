@@ -21,18 +21,49 @@
     .petition_info
     {
         float:left;
+        width: 300px;
         margin-top:70px;
         margin-left:10px;
         background-color: #19AA19; 
+    }
+    .peition_ranking
+    {
+        float:right;
+        width: 190px;
+        margin-top:70px;
+        margin-right:10px;
+        background-color: #dee2e6; 
+    }
+    .pettionname
+    {
+        text-align: center;
+    }
+    .color-box
+    {
+        width: 30px;
+        height: 30px;
+        float: left;
+    }
+    .ranking-row{
+        height: 30px;
+        margin-bottom: 2px;
+    }
+    .ranking-text
+    {
+        margin-left:40px;
     }
     </style>
 </head>
 <body>
     <% include ../Sections/nav%>
     <div class="petition_info">
-        <h1><%= message %> </h1>
-        <p id="con">
-        </p>
+        <h1 class="pettionname"><%= message %> </h1>
+        <p id="mp"> </p>
+        <p id="cons"> </p>
+        <p id="signs"> </p>
+    </div>
+    <div class="peition_ranking" id="legend">
+        
     </div>
     
 <div id="mapid" style=""></div>

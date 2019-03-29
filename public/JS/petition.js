@@ -1,6 +1,7 @@
 var mymap;
 var petitionData = [];
 var geo;
+var max;
 $( document ).ready(function() {
 //Get Petition data from Gov 
     $.ajax({
@@ -13,6 +14,15 @@ $( document ).ready(function() {
                 petitionData.push(value);
             }); 
             //Call loading in the map
+            max = gethigh()/8;
+            $("#legend").append('<div class="ranking-row"> <div class ="color-box" style="background-color: #800026"></div> <p class="ranking-text"> '+[max*7] + '+ </p> </div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #BD0026"></div> <p class="ranking-text"> '+[max*6] + ' - ' + ([max*7] - 1) +'</p></div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #E31A1C"></div> <p class="ranking-text"> '+[max*5] + ' - ' + ([max*6] - 1) +'</p></div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FC4E2A"></div> <p class="ranking-text"> '+[max*4] + ' - ' + ([max*5] - 1) +'</p></div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FD8D3C"></div> <p class="ranking-text"> '+[max*3] + ' - ' + ([max*4] - 1) +'</p></div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FEB24C"></div> <p class="ranking-text"> '+[max*2] + ' - ' + ([max*3] - 1) +'</p></div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FED976"></div> <p class="ranking-text"> ' +[max*1] + ' - ' + ([max*2] - 1) +' </p></div>');
+            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FFEDA0"></div> <p class="ranking-text"> 0 - '+ ([max*1] - 1) +' </p> </div>');
             loadmap();
         },
         error: function(xhr) {
@@ -48,7 +58,7 @@ function style(feature) {
     };
 }
 function getColor(d) {
-    var max = gethigh()/8;
+    
     return d > [max*7] ? '#800026' :
            d > [max*6]  ? '#BD0026' :
            d > [max*5]  ? '#E31A1C' :
@@ -74,7 +84,9 @@ function highlightFeature(e) {
     $.each(petitionData, function(index, value) {
         if(value.ons_code == layer.feature.properties.PCON13CD)
         {
-            $("#con").text(value.mp + ", " + value.name + " , " + value.signature_count);
+            $("#mp").text("MP: " + value.mp);
+            $("#cons").text("Constituency: " + value.name);
+            $("#signs").text("Signatures: " + value.signature_count);
     
         }
     });
