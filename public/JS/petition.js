@@ -3,6 +3,7 @@ var petitionData = [];
 var geo;
 var max;
 $( document ).ready(function() {
+
 //Get Petition data from Gov 
 $.ajax({
     url: "http://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer&_pageSize=500&_sort=-numberOfSignatures&_page=0",
@@ -21,10 +22,35 @@ $.ajax({
       console.log(xhr);
     }
 });
+//Load in the map 
+loadmap();
+//Add to dropdown
+$('#petitiondrop').change(function () {
+    $( "select option:selected" ).each(function() {
+        console.log("Changing the Petition ID to: " + $( this ).val());
+        console.log($(this).text());
+        $("#pettiontitle").html($(this).text());
+        loadPetition($( this ).val());
+    });
+    
+  })
+  .change();
+//Styling the map
+//Showing popup
+$('#petitionModal').modal('show');
+});
 
 
+
+
+
+
+
+function loadPetition(id)
+{
+    petitionData = [];
     $.ajax({
-        url: "https://petition.parliament.uk/petitions/243319.json",
+        url: "https://petition.parliament.uk/petitions/"+id+".json",
         type: "get", //send it through get method
         success: function(response) {
             //Looping through all constituency in the JSON file
@@ -34,6 +60,7 @@ $.ajax({
             }); 
             //Call loading in the map
             max = gethigh()/8;
+            $("#legend").empty();
             $("#legend").append('<div class="ranking-row"> <div class ="color-box" style="background-color: #800026"></div> <p class="ranking-text"> '+[max*7] + '+ </p> </div>');
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #BD0026"></div> <p class="ranking-text"> '+[max*6] + ' - ' + ([max*7] - 1) +'</p></div>');
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #E31A1C"></div> <p class="ranking-text"> '+[max*5] + ' - ' + ([max*6] - 1) +'</p></div>');
@@ -42,23 +69,13 @@ $.ajax({
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FEB24C"></div> <p class="ranking-text"> '+[max*2] + ' - ' + ([max*3] - 1) +'</p></div>');
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FED976"></div> <p class="ranking-text"> ' +[max*1] + ' - ' + ([max*2] - 1) +' </p></div>');
             $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FFEDA0"></div> <p class="ranking-text"> 0 - '+ ([max*1] - 1) +' </p> </div>');
-            loadmap();
-
+            reloadmap();
         },
         error: function(xhr) {
         //Do Something to handle error
         }
     });
-//Styling the map
-});
-
-
-
-
-
-
-
-
+}
 function style(feature) {
     var colornum = 1;
     $.each(petitionData, function(index, value) {
@@ -137,6 +154,13 @@ function onEachFeature(feature, layer) {
 function loadmap()
 {
     mymap = L.map('mapid').setView([54.527457, -2.911369], 5);
+    $.getJSON( "topo_wpc.json", function(topology) {
+        geo = L.geoJSON(topojson.feature(topology, topology.objects.wpc), {style: style,onEachFeature: onEachFeature}).addTo(mymap);
+    });
+}
+function reloadmap()
+{
+    mymap.removeLayer(L.geoJson);
     $.getJSON( "topo_wpc.json", function(topology) {
         geo = L.geoJSON(topojson.feature(topology, topology.objects.wpc), {style: style,onEachFeature: onEachFeature}).addTo(mymap);
     });
