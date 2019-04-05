@@ -50,8 +50,8 @@ function loadgraphwithcoin(type)
         labels: days,
         datasets: [{
             data: value,
-            backgroundColor: "#FFD700",
-            borderColor:"#BF5700"
+            backgroundColor: "#D4aF37",
+            borderColor:"white"
         }]
     },
     options: {
