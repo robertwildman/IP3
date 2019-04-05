@@ -168,7 +168,10 @@ body{
     page-id-005 - Petition [Adrian]
     ---------------------
 */
-
+.page-id-005 
+{
+    color:#000;
+}
 /*
     page-id-006 - Postcode [Adrian]
     ----------------------

@@ -11,25 +11,25 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/Site'));
 
 console.log("Loading in the Postcode Look up Table");
-var pcworkbook = XLSX.readFile('PCLookUp.xlsx');
+var pcworkbook = XLSX.readFile('Data/PCLookUp.xlsx');
 var pc_sheet_name_list = pcworkbook.SheetNames;
 var all_postcodes = XLSX.utils.sheet_to_json(pcworkbook.Sheets[pc_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Look up Table");
 
 console.log("Loading in the Postcode Data Table");
-var pcdworkbook = XLSX.readFile('PCData.xlsx');
+var pcdworkbook = XLSX.readFile('Data/PCData.xlsx');
 var pcd_sheet_name_list = pcdworkbook.SheetNames;
 var all_postcodes_data = XLSX.utils.sheet_to_json(pcdworkbook.Sheets[pcd_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Data Table");
 
 console.log("Loading in the Postcode Rank Table");
-var pcrworkbook = XLSX.readFile('PCRank.xlsx');
+var pcrworkbook = XLSX.readFile('Data/PCRank.xlsx');
 var pcr_sheet_name_list = pcrworkbook.SheetNames;
 var all_postcodes_rank = XLSX.utils.sheet_to_json(pcrworkbook.Sheets[pcr_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Rank Table");
 
 console.log("Loading earthquake data feeds");
-let datafeeds = JSON.parse(fs.readFileSync('feeds.json','utf8'));
+let datafeeds = JSON.parse(fs.readFileSync('Data/feeds.json','utf8'));
 console.log("Done Loading earthquake data feeds");
 
 app.get('/crypto', (req, res) => {
