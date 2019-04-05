@@ -64,7 +64,7 @@ $(function(){
                                   </div>
                                   <div class="buttonfeeds">
                                     <ul id=${element.name}>
-                                    </ul>
+                                  </ul>
                                   </div>
                                 </div>
                                 `
@@ -77,9 +77,9 @@ $(function(){
     element.feeds.forEach(feed => {
       let singlebutton = `
                           <li>
-                          <button class='dynamic' data-feedurl='${feed.url}'>${feed.name}</button>
+                            <button class='dynamic' data-feedurl='${feed.url}'>${feed.name}</button>
                           </li>
-                          `
+                        `
       $('#' + element.name).append(singlebutton);
       })
     })

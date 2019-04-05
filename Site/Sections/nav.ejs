@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/css/nav.css"/>
+<script src="/JS/nav.js"></script>
 <div class="horizontal_nav_bar" id="nav_bar">
         <a href="/">Home</a>
         <a href="/earthquakes">Earthquakes</a>
@@ -18,18 +19,6 @@
               <a href="Not Implemented">Tutorial 6</a>
           </div>
         </div> 
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsive()">&#9776;</a>
       </div>
 </div>
-
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("nav_bar");
-        if (x.className === "horizontal_nav_bar") {
-            x.className += " responsive";
-        } else {
-            x.className = "horizontal_nav_bar";
-        }
-    }
-</script>

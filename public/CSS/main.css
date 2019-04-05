@@ -13,59 +13,33 @@ body{
     page-id-001 - Earthquakes
     ---------------------
 */
-
-.page-id-001 #map{
-    grid-area: map;
-    width: 100%;
-    height: 100%;
-}
   
 .page-id-001 .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column wrap;
     flex-wrap: wrap;
     padding-top: 3%;
+    text-align: center;
 }
-  
-.page-id-001 .headercontainer{
-    grid-area: header;
-    display: grid;
-    width: 100%;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: 
-      " title "
-      " navbar "
+
+.page-id-001 #map{
+    width: calc(100vw - 275px);
+    height: auto;
 }
   
 .page-id-001 #title{
-    grid-area: title;
     align-self: center;
     justify-self: center;
 }
   
 .page-id-001 #buttons{
-    grid-area: content;
-    display: grid;
     grid-template-rows: repeat(4, auto);
-  
+    padding-right: 3%;
 }
   
 .page-id-001 .buttonbyfeed{
-    display: grid;
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    justify-items: center;
-    grid-template-areas: 
-    " title "
-    " buttons ";
-}
-  
-.page-id-001 .page-id-002 .labelcontainer{
-    grid-area: title;
-}
-  
-.page-id-001 .buttonfeeds{
-    grid-area: buttons;
+    align-self: center;
+    justify-self: center;
 }
   
 .page-id-001 .buttonfeeds li{
@@ -76,9 +50,31 @@ body{
     background-color: #3d3c3c;
     border: solid #3d3c3c;
     border-radius: 20px;
-    margin: 4px;
-    padding: 5px;
+    margin: 2px;
+    padding: 3px;
     color: #fff;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .page-id-001 .buttonbyfeed{
+        overflow: hidden;
+        display: block;
+        text-align: center;
+        float: left;
+    }
+
+    .page-id-001 .flex-container {
+        display: flex;
+        flex-direction: column wrap;
+    }
+
+    .page-id-001 #map{
+        width: 800px;
+        height: 600px;
+        margin: 10px;
+    }
+
 }
 
 /*
@@ -86,59 +82,26 @@ body{
     ---------------------
 */
 
-.page-id-002 #map{
-    width: 100%;
-    height: 450px;
-}
-  
-.page-id-002 .wrapper{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 2em auto 6fr 4fr 2em;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-    " paddingstart header header header paddingend "
-    " paddingstart content map map paddingend ";
-}
-  
-.page-id-002 .headercontainer{
-    grid-area: header;
-    display: grid;
-    grid-gap: 0px;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: 
-    " title "
-    " navbar ";
-}
-  
-.page-id-002 #title{
-    grid-area: title;
-    align-self: center;
-    justify-self: center;
-}
-  
-.page-id-002 #navbar{
-    grid-area: navbar;
-    align-self: start;
-    justify-self: end;
-}
-  
-.page-id-002 #navbar ul li a{
-    text-decoration: none;
-    color: red;
-}
-  
-.page-id-002 #navbar ul li{
-    display: inline-block;
-    padding: 0px 10px 0px 10px;
-    color: red;
-}
-  
-.page-id-002 .mapcontainer{
-    grid-area: map;
+.page-id-002 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 1%;
+    padding-left: 3%;
+    text-align: center;
 }
 
-.page-id-002 .latlon {
+.page-id-002 .controlpanel {
+    padding-right: 10px;
+}
+
+.page-id-002 #map{
+    width: calc(99vw - 280px);
+    height: 100%;
+    position: absolute;
+}
+
+.page-id-002 .latlon, #location {
     border-radius: 25px;
     border: solid #3d3c3c;
     background-color: #3d3c3c;
@@ -152,24 +115,21 @@ body{
     background-color: #3d3c3c;
     color: white;
 }
+  
+@media (max-width: 850px) {
+    .page-id-002 .flex-container {
+        display: flex;
+        flex-direction: column wrap;
+    }
 
-.page-id-002 .controlpanel{
-    grid-area: content;
-}
-  
-@media (max-width: 700px) {
-    .page-id-002 .wrapper {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr 1fr;
-      grid-template-areas:
-        "header header header"
-        " map map map "
-        " content content content "
-    }   
-  
-    .page-id-002 .controlpanel{
-        justify-self: center;
-        align-self: center;
+    .page-id-002 .mapcontainer {
+        height: auto;
+        width: auto;
+
+    }
+
+    .page-id-002 #map {
+        height: 90%;
     }
 }
 
