@@ -20,15 +20,11 @@ body{
     height: 100%;
 }
   
-.page-id-001 .wrapper{
-    display:grid;
-    grid-gap: 10px;
-    grid-template-columns: 2em 2fr 5fr 2em;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    grid-template-areas: 
-      " sp header header ep "
-      " sp content map ep "
+.page-id-001 .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 3%;
 }
   
 .page-id-001 .headercontainer{
@@ -86,7 +82,7 @@ body{
 }
 
 /*
-    page-id-002 - Weather [Adrian]
+    page-id-002 - Weather
     ---------------------
 */
 
@@ -178,7 +174,7 @@ body{
 }
 
 /*
-    page-id-003 - Crypto Currencies [Lewis]
+    page-id-003 - Crypto Currencies
     ---------------------
 */
 
@@ -202,36 +198,36 @@ body{
 /*
     page-id-006 - Postcode [Adrian]
     ----------------------
-    CSS Grid
+    Flexbox
 */
 
-.page-id-006 .grid-container {
-    display: grid ;
-    grid-template-columns: auto auto auto;
-    grid-auto-rows: auto auto auto;
-    grid-gap: 10px;
-    color: #999;
-    padding: 2%;
+.page-id-006 .flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 800px;
+    padding-top: 5%; 
 }
 
-.page-id-006 .item1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
+.page-id-006 .PCform {
+    padding-bottom: 30px;
+    padding-left: 3%; 
+    padding-right: 3%; 
 }
 
-.page-id-006 .item2 {
-    grid-column-start: 3;
-    grid-column-end: 4;
+.page-id-006 .buttons {
+    padding-left: 3%; 
+    align-self: center;
+    padding-bottom: 400px;
+}
+.page-id-006 #mapid {
+    
 }
 
-.page-id-006 .item3 {
-    grid-column-start: 5;
-    grid-column-end: 5;
-}
-
-.page-id-006 .item9{
-    color: #fff;
-    margin-top: 5px; 
+.page-id-006 .mapinfo {
+    padding-top: 3%; 
+    align-self: center;
 }
 
 /*
@@ -239,7 +235,9 @@ body{
     Postcode Search Bar and Button
 */
 
-.page-id-006 .item6 .pc_sidebuttons{
+
+
+.page-id-006 .buttons .pc_sidebuttons{
     display: block;
     background-color: #3d3c3c;
     padding: 5px 12px;

@@ -1,25 +1,35 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/css/nav.css"/>
-<nav class="horizontal_nav_bar">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/earthquakes">Earthquakes</a></li>
-        <li><a href="/weather">Weather</a></li>
-        <li><a href ="/crypto">Crypto Currencies</a></li>
-        <li><a href="/citybikes">City Bikes</a></li>
-        <li><a href="Government thing instead of trains">TEMP</a></li>
-        <li><a href="/postcode">Postcode</a></li>
-        <li><a href="Need to actually implement an about page">About</a></li>
-        <li>
-            <div class="dropdown-menu">
-                <button class="dropdwn">Tutorial</button>
-                <div class="dropdown-item">
-                    <a href="Not Implemented">Tutorial 1</a>
-                    <a href="Not Implemented">Tutorial 2</a>
-                    <a href="Not Implemented">Tutorial 3</a>
-                    <a href="Not Implemented">Tutorial 4</a>
-                    <a href="Not Implemented">Tutorial 6</a>
-                </div>
-            </div>
-        </li>
-    </ul>
-</nav>
+<div class="horizontal_nav_bar" id="nav_bar">
+        <a href="/">Home</a>
+        <a href="/earthquakes">Earthquakes</a>
+        <a href="/weather">Weather</a>
+        <a href ="/crypto">Crypto Currencies</a>
+        <a href="/citybikes">City Bikes</a>
+        <a href="Government thing instead of trains">TEMP</a>
+        <a href="/postcode">Postcode</a>
+        <a href="Need to actually implement an about page">About</a>
+        <div class="dropdown-menu">
+          <button class="dropdwn">Tutorial</button>
+          <div class="dropdown-item">
+              <a href="Not Implemented">Tutorial 1</a>
+              <a href="Not Implemented">Tutorial 2</a>
+              <a href="Not Implemented">Tutorial 3</a>
+              <a href="Not Implemented">Tutorial 4</a>
+              <a href="Not Implemented">Tutorial 6</a>
+          </div>
+        </div> 
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+</div>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("nav_bar");
+        if (x.className === "horizontal_nav_bar") {
+            x.className += " responsive";
+        } else {
+            x.className = "horizontal_nav_bar";
+        }
+    }
+</script>
