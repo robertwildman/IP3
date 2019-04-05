@@ -174,9 +174,23 @@ body{
 }
 
 /*
-    page-id-003 - Crypto Currencies
+    page-id-003 - Crypto Currencies [Lewis]
     ---------------------
 */
+.page-id-003 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    padding-left: 3%;
+    text-align: center;
+}
+
+.page-id-003 .cctitle {
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
 
 .page-id-003 .buttonCC {
     border-radius: 25px;
