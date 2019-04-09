@@ -50,7 +50,7 @@ app.get('/postcode', (req, res) => {
 app.get('/citybikes', (req, res) => {
   res.render('Pages/citybikes', {title: 'City Bikes'});
 });
-app.get('/', (req, res) => {
+app.get('/authors', (req, res) => {
   res.render('Pages/authors', {title: 'Authors'});
 });
 app.get('/earthquakes', (req, res) => {
@@ -78,7 +78,7 @@ app.get('/latloninfo', (req, res) => {
   res.render('Pages/latloninfo', {title: 'Lat Lon info'})
 });
 app.get('/', (req, res) => {
-  res.render('Pages/overview', {message: 'Overview'})
+  res.render('Pages/overview', {title: 'Overview'})
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
