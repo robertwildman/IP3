@@ -1,34 +1,24 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="/postcode">Postcode</a>
-                        <a class="dropdown-item" href="/authors">Authors</a>
-                        <a class="dropdown-item" href="/citybikes">Citybikes</a>
-                        <a class="dropdown-item" href="/">Crypto currencies</a>
-                        <a class="dropdown-item" href="/weather">Weather</a>
-                        <a class="dropdown-item" href="/tutorial">Tutorials</a>
-                        <a class="dropdown-item" href="/transport">Transport</a>
-                        <a class="dropdown-item" href="/earthquakes">Earthquakes</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+<link rel="stylesheet" type="text/css" media="screen" href="/css/nav.css"/>
+<script src="/JS/nav.js"></script>
+<div class="horizontal_nav_bar" id="nav_bar">
+        <a href="/">Home</a>
+        <a href="/earthquakes">Earthquakes</a>
+        <a href="/weather">Weather</a>
+        <a href ="/crypto">Crypto Currencies</a>
+        <a href="/citybikes">City Bikes</a>
+        <a href="/petition">Petition</a>
+        <a href="/postcode">Postcode</a>
+        <a href="Need to actually implement an about page">About</a>
+        <div class="dropdown-menu">
+          <button class="dropdwn">Tutorial</button>
+          <div class="dropdown-item">
+              <a href="Not Implemented">Tutorial 1</a>
+              <a href="Not Implemented">Tutorial 2</a>
+              <a href="Not Implemented">Tutorial 3</a>
+              <a href="Not Implemented">Tutorial 4</a>
+              <a href="Not Implemented">Tutorial 6</a>
+          </div>
+        </div> 
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsive()">&#9776;</a>
+      </div>
+</div>

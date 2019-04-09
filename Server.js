@@ -1,69 +1,81 @@
+//Declaring packcages needed and setting them up
 var express = require('express');
 var request = require('request');
 var app = express();
-var port = 3000;
 var path = require("path");
 var XLSX = require('xlsx');
 var fs = require('fs');
 var csv = require('csv-parser'); 
+//Port for the server
+var port = 3000;
+//Toggle on and off for catched google place data
 var devmode = true;
+//Setting the view enging
 app.set('view engine', 'ejs');
+//Setting where the views will be
 app.set('views', path.join(__dirname, '/Site'));
 
+//Loading in the excel file to the server with the postcode infomation
 console.log("Loading in the Postcode Look up Table");
-var pcworkbook = XLSX.readFile('PCLookUp.xlsx');
+var pcworkbook = XLSX.readFile('Data/PCLookUp.xlsx');
+//Getting list of sheets
 var pc_sheet_name_list = pcworkbook.SheetNames;
+//Grabbing the first sheet and loading the data into a variable 
 var all_postcodes = XLSX.utils.sheet_to_json(pcworkbook.Sheets[pc_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Look up Table");
 
+//Loading in the data to with the postcode infomaion 
 console.log("Loading in the Postcode Data Table");
-var pcdworkbook = XLSX.readFile('PCData.xlsx');
+var pcdworkbook = XLSX.readFile('Data/PCData.xlsx');
 var pcd_sheet_name_list = pcdworkbook.SheetNames;
 var all_postcodes_data = XLSX.utils.sheet_to_json(pcdworkbook.Sheets[pcd_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Data Table");
 
 console.log("Loading in the Postcode Rank Table");
-var pcrworkbook = XLSX.readFile('PCRank.xlsx');
+var pcrworkbook = XLSX.readFile('Data/PCRank.xlsx');
 var pcr_sheet_name_list = pcrworkbook.SheetNames;
 var all_postcodes_rank = XLSX.utils.sheet_to_json(pcrworkbook.Sheets[pcr_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Rank Table");
 
 console.log("Loading earthquake data feeds");
-let datafeeds = JSON.parse(fs.readFileSync('feeds.json','utf8'));
+let datafeeds = JSON.parse(fs.readFileSync('Data/feeds.json','utf8'));
 console.log("Done Loading earthquake data feeds");
 
-app.get('/', (req, res) => {
-  res.render('Pages/index', {message: 'FOO'});
+app.get('/crypto', (req, res) => {
+  res.render('Pages/crypto', {title: 'Cryptocurrency'});
 });
 app.get('/postcode', (req, res) => {
-  res.render('Pages/postcode', {message: 'Postcode'});
+  res.render('Pages/postcode', {title: 'Postcode'});
 });
 app.get('/citybikes', (req, res) => {
-  res.render('Pages/citybikes', {message: 'City Bikes'});
+  res.render('Pages/citybikes', {title: 'City Bikes'});
 });
 app.get('/authors', (req, res) => {
   res.render('Pages/authors', {title: 'Authors'});
 });
 app.get('/earthquakes', (req, res) => {
-  res.render('Pages/earthquakes', {message: 'Earthquakes'});
+  res.render('Pages/earthquakes', {title: 'Earthquakes'});
 });
 app.get('/tutorial', (req, res) => {
-  res.render('Pages/tutorial', {message: 'Tutorial'});
+  res.render('Pages/tutorial', {title: 'Tutorial'});
 });
 app.get('/weather', (req, res) => {
-  res.render('Pages/weather', {message: 'Weather'});
+  res.render('Pages/weather', {title: 'Weather'});
 });
 app.get('/crypto', (req, res) => {
-  res.render('Pages/index', {message: 'Crypto'});
+  res.render('Pages/index', {title: 'Crypto'});
 });
 app.get('/train', (req, res) => {
-  res.render('Pages/transport', {message: 'Trains'});
+  res.render('Pages/transport', {title: 'Trains'});
+});
+app.get('/petition', (req, res) => {
+  res.render('Pages/petition', {title: 'Petition'});
 });
 app.get('/earthdatafeeds', (req, res) => {
   res.send(datafeeds);
 });
 app.get('/latloninfo', (req, res) => {
-  res.render('Pages/latloninfo', {message: 'Lat Lon info'})
+  res.render('Pages/latloninfo', {title: 'Lat Lon info'})
 });
 app.get('/', (req, res) => {
   res.render('Pages/overview', {title: 'Overview'})
@@ -188,7 +200,7 @@ app.get('/api/train/station', (req, res) => {
     .on('end', () => {
       if(station == undefined)
       {
-        res.send("Error not found");
+        res.status(500).send("Error not found");
       }else
       {
         request("http://transportapi.com/v3/uk/train/station/"+ station +"/live.json?app_id=5fa2da4b&app_key=c31b495f35dd25555591bbab273f5396", function (error, response, body) {
