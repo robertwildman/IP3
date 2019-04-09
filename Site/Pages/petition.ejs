@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <% include ../Sections/head%>
-    <style>
+<% include ../Sections/head%>
+<style>
     body {
             padding: 0;
             margin: 0;
@@ -67,26 +66,26 @@
     }
     </style>
 </head>
-<body>
+<body class="page-id-005">
+    <% include ../Sections/error_catch%>
+    <% include ../Sections/nav%>
     <div class="modal fade" id="petitionModal" tabindex="-1" role="dialog" aria-labelledby="petitionModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Pick a Petition </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <select class="custom-select" id="petitiondrop">
-                    <option selected>Select Petition</option>
-                </select>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pick a Petition </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select class="custom-select" id="petitiondrop">
+                        <option value="0" selected>Select Petition</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-
-    <% include ../Sections/nav%>
     <div class="wrapper">
         <div class="petition_info">
             <h4 class="pettionname" id="pettiontitle"></h4>

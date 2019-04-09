@@ -1,0 +1,40 @@
+{
+  "urls": [
+    { "name": "Hour", 
+      "feeds": [ 
+        {"name": "Significant Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson" },
+        {"name": "M4.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_hour.geojson" },
+        {"name": "M2.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"},
+        {"name": "M1.0+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_hour.geojson"},
+        {"name": "All Earthquakes", "url":"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"}
+      ]
+    },
+    { "name": "Day", 
+      "feeds": [
+        {"name": "Significant Earthquakes", "url":" https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson"},
+        {"name": "M4.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_hour.geojson" },
+        {"name": "M2.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"},
+        {"name": "M1.0+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_hour.geojson"},
+        {"name": "All Earthquakes", "url":"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"}
+      ]
+    },
+    { "name": "Week", 
+      "feeds": [
+        {"name": "Significant Earthquakes", "url":" https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson"},
+        {"name": "M4.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson" },
+        {"name": "M2.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson"},
+        {"name": "M1.0+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson"},
+        {"name": "All Earthquakes", "url":"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"}
+      ]
+    }, 
+    { "name": "Month", 
+      "feeds": [
+        {"name": "Significant Earthquakes", "url":"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson" },
+        {"name": "M4.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson" },
+        {"name": "M2.5+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"},
+        {"name": "M1.0+ Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.geojson"},
+        {"name": "All Earthquakes", "url":"https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"}
+      ]
+    }
+  ]
+}
