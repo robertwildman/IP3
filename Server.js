@@ -42,7 +42,11 @@ app.get('/citybikes', (req, res) => {
   res.render('Pages/citybikes', {message: 'City Bikes'});
 });
 app.get('/authors', (req, res) => {
+<<<<<<< Updated upstream
   res.render('Pages/authors', {message: 'Authors'});
+=======
+  res.render('Pages/authors', {title: 'Authors'});
+>>>>>>> Stashed changes
 });
 app.get('/earthquakes', (req, res) => {
   res.render('Pages/earthquakes', {message: 'Earthquakes'});
@@ -66,7 +70,7 @@ app.get('/latloninfo', (req, res) => {
   res.render('Pages/latloninfo', {message: 'Lat Lon info'})
 });
 app.get('/', (req, res) => {
-  res.render('Pages/overview', {message: 'Overview'})
+  res.render('Pages/overview', {title: 'Overview'})
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
