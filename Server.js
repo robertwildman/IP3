@@ -65,6 +65,9 @@ app.get('/earthdatafeeds', (req, res) => {
 app.get('/latloninfo', (req, res) => {
   res.render('Pages/latloninfo', {message: 'Lat Lon info'})
 });
+app.get('/', (req, res) => {
+  res.render('Pages/overview', {message: 'Overview'})
+});
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
   {
