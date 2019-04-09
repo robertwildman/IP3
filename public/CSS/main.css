@@ -8,7 +8,10 @@ body{
     background-size: cover;
     color: #fff;
 }
-
+.modal
+{
+    color:#000;
+}
 /*
     page-id-001 - Earthquakes
     ---------------------

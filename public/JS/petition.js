@@ -19,7 +19,7 @@ $.ajax({
     },
     error: function(xhr) {
         //Error with the request
-        alert("Issue with request!");
+        error("Issue with request!");
         console.log(xhr);
     }
 });

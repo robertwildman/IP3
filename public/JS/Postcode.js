@@ -19,6 +19,7 @@ $( document ).ready(function() {
                 console.log(result);
                 pclat = result.latitude;
                 pclong = result.longitude;
+                $("#simpletable").empty();
                 $("#simpletable").append("<tr><td> Postcode </td><td>"+ result.postcode +"</td></tr>");
                 $("#simpletable").append("<tr><td> Lat </td><td>"+ result.latitude +"</td></tr>");
                 $("#simpletable").append("<tr><td> Long </td><td>"+ result.longitude +"</td></tr>");
@@ -27,7 +28,7 @@ $( document ).ready(function() {
                 createmap(result.latitude,result.longitude,result.postcode);
                 displayinfo(result.postcode);
              } else {
-                alert('error');
+                error('Not a Valid postcode!');
             }
         };
         request.send();
