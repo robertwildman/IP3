@@ -42,11 +42,7 @@ app.get('/citybikes', (req, res) => {
   res.render('Pages/citybikes', {message: 'City Bikes'});
 });
 app.get('/authors', (req, res) => {
-<<<<<<< Updated upstream
-  res.render('Pages/authors', {message: 'Authors'});
-=======
   res.render('Pages/authors', {title: 'Authors'});
->>>>>>> Stashed changes
 });
 app.get('/earthquakes', (req, res) => {
   res.render('Pages/earthquakes', {message: 'Earthquakes'});
