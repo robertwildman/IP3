@@ -42,7 +42,7 @@ function displaynetworks()
         },
         error: function(xhr) {
           //Display error message to the user
-          alert("Issue connecting to the citybikes!");
+          error("Issue connecting to the citybikes!");
         }
     });
 
@@ -79,7 +79,7 @@ function displaystations(id)
         },
         error: function(xhr) {
           //Display error message to the user
-          alert("Issue connecting to the citybikes!");
+          error("Issue connecting to the citybikes!");
         }
     });
 }

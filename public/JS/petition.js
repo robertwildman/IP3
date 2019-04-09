@@ -74,7 +74,7 @@ function loadPetition(id)
         },
         error: function(xhr) {
             //Let the users know that the request failed
-            alert("Error with loading in petition data!");
+            error("Error with loading in petition data!");
         }
     });
 }
