@@ -80,6 +80,18 @@ app.get('/latloninfo', (req, res) => {
 app.get('/', (req, res) => {
   res.render('Pages/overview', {title: 'Overview'})
 });
+app.get('/geojsontutorial', (req, res) => {
+  res.render('Pages/geojsontutorial', {title: 'GeoJson Tutorial'})
+});
+app.get('/earthquaketutorial', (req, res) => {
+  res.render('Pages/earthquaketutorial', {title: 'Earthquake Tutorial'})
+});
+app.get('/weathertutorial', (req, res) => {
+  res.render('Pages/weathertutorial', {title: 'Weather Tutorial'})
+});
+app.get('/javascripttutorial', (req, res) => {
+  res.render('Pages/javascripttutorial', {title: 'JavaScript Tutorial'})
+});
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
   {
