@@ -10,33 +10,21 @@ $(function(){
       {
         name: 'Geo Json', 
         description: 'A page that introduces GeoJSON', 
-        content:'so many conso many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontentstents', 
-        images: [
-          {url:'../src/Logos/NRE_Powered_logo.jpg'}
-        ]
+        url:'/', 
       },
       {
         name: 'Earthquake data fundamentals', 
         description: 'A page that explains earthquake data fundamentals', 
-        content:'so many wefwef so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents, so many wefwef so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents, so many wefwef so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents, so many wefwef so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents', 
-        images: [
-          {url:'../src/Logos/NRE_Powered_logo.jpg'}
-        ]
+        url:'/', 
       },{
         name: 'Weather data fundamentals', 
         description: 'A page that explains weather data fundamentals', 
-        content:'so many contents so many wefwef fcontentsso many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents', 
-        images: [
-          {url:'../src/Logos/NRE_Powered_logo.jpg'}
-        ]
+        url:'/'
       },
       {
         name: 'Javascript data processing', 
         description: 'A page that explains specific JavaScript techniques used to access and process data', 
-        content:'so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents so many wefwef fcontents', 
-        images: [
-          {url:'../src/Logos/NRE_Powered_logo.jpg'}
-        ] 
+        url:'/'
       }
     ]
   };
@@ -54,9 +42,11 @@ $(function(){
   function createTutorial(tutorial){
     let tutorialContent = `
                             <div class='tutorial'>
-                              <h3>${tutorial.name}</h3>
-                              <h5>${tutorial.description}</h5>
-                              <p class='content' id='content${index}'>${tutorial.content}</p>
+                              <a href='${tutorial.url}'>
+                                <h3>${tutorial.name}</h3>
+                                <h5>${tutorial.description}</h5>
+                                <p class='content' id='content${index}'>${tutorial.content}</p>
+                              </a>
                             </div>
                           `
     $('#tutorials').append(tutorialContent);     
