@@ -7,7 +7,6 @@ $( document ).ready(function() {
     $("#pcsearch").click(function(){
         var request = new XMLHttpRequest();
         var apir = "https://api.postcodes.io/postcodes/" + $("#pc").val();
-
         request.open('GET', apir, true);
         request.onload = function () 
         {
@@ -80,7 +79,7 @@ $( document ).ready(function() {
                 }); 
             },
             error: function(xhr) {
-              //Do Something to handle error
+              error("Error connecting to the server!");
             }
         });
     });
@@ -116,7 +115,7 @@ function findnearby(intype)
                 }); 
             },
             error: function(xhr) {
-              //Do Something to handle error
+                error("Error connecting to the server!");
             }
         });
 }
@@ -159,7 +158,7 @@ function displayinfo(postCode)
             $('#infoholder').append(tableset);
         },
         error: function(xhr) {
-          //Do Something to handle error
+            error("Error connecting to the server!");
         }
     });
 }
