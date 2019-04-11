@@ -175,6 +175,10 @@ body{
 {
     color:#000;
 }
+.gauage
+{
+    float: left;
+}
 /*
     page-id-006 - Postcode [Adrian]
     ----------------------

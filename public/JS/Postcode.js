@@ -147,6 +147,60 @@ function displayinfo(postCode)
           postcode: postCode
         },
         success: function(response) {
+            var g1 = new JustGage({
+                id: "simdgauge",
+                value: response.SIMD16_rank,
+                min: 1,
+                max: 6976,
+                title: "SIMD Rank",
+                valueFontColor: "#fff",
+                levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
+              });
+            var g2 = new JustGage({
+                id: "employgauge",
+                value: response.Employment_rank,
+                min: 1,
+                max: 6976,
+                title: "Employment Rank",
+                valueFontColor: "#fff",
+                levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
+            });
+            var g3 = new JustGage({
+                id: "healthgauge",
+                value: response.Health_rank,
+                min: 1,
+                max: 6976,
+                title: "Health Rank",
+                valueFontColor: "#fff",
+                levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
+            });
+            var g4 = new JustGage({
+                id: "educationgauge",
+                value: response.Education_rank,
+                min: 1,
+                max: 6976,
+                title: "Education Rank",
+                valueFontColor: "#fff",
+                levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
+            });
+            var g5 = new JustGage({
+                id: "housinggauge",
+                value: response.Housing_rank,
+                min: 1,
+                max: 6976,
+                title: "Housing Rank",
+                valueFontColor: "#fff",
+                levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
+            });
+            var g6 = new JustGage({
+                id: "crimegauge",
+                value: response.Crime_rank,
+                min: 1,
+                max: 6976,
+                title: "Crime Rank",
+                valueFontColor: "#fff",
+                levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
+            });
             var tableset = "<h3> Ranking for the Postcode Based on the SIMD Ranking </h3> <h6> For all ranks: 1st most deprived, 6,976 is least deprived. </h6> <table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
             tableset += "<tr><td> SIMD 2016 Rank </td><td>"+ response.SIMD16_rank +"/6,976</td></tr>";
             tableset += "<tr><td> Domain Rank </td><td>"+ response.Domain_rank +"/6,976</td></tr>";
