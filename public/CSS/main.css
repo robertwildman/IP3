@@ -21,6 +21,7 @@ body{
     display: flex;
     flex-direction: column wrap;
     flex-wrap: wrap;
+
     padding-top: 2%;
     text-align: center;
 }
@@ -171,7 +172,6 @@ body{
     page-id-005 - Petition [Adrian]
     ---------------------
 */
-
 .page-id-005 
 {
     color:#000;
@@ -180,7 +180,6 @@ body{
 .page-id-005 .Background {
     background-color: #3d3c3c;
 }
-
 
 /*
     page-id-006 - Postcode [Adrian]
@@ -302,6 +301,7 @@ body{
 .page-id-007 .Tut-Cont{
 }
 
+
 /*
     page-id-008 - Tutorial 01
     ---------------------
@@ -339,3 +339,4 @@ body{
     padding-left: 3%;
     text-align: center;
 }
+

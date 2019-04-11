@@ -5,7 +5,7 @@ var max;
 $( document ).ready(function() {
 //Get Petition data from Gov 
 $.ajax({
-    url: "http://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer&_pageSize=500&_sort=-numberOfSignatures&_page=0",
+    url: "https://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer&_pageSize=500&_sort=-numberOfSignatures&_page=0",
     type: "get", //send it through get method
     success: function(response) {
         console.log(response);
@@ -74,7 +74,8 @@ function loadPetition(id)
         },
         error: function(xhr) {
             //Let the users know that the request failed
-            alert("Error with loading in petition data!");
+            error("Error with loading in petition data!");
+
         }
     });
 }
