@@ -83,6 +83,9 @@ app.get('/', (req, res) => {
 app.get('/geojsontutorial', (req, res) => {
   res.render('Pages/geojsontutorial', {title: 'GeoJson Tutorial'})
 });
+app.get('/datasets', (req, res) => {
+  res.render('Pages/datasets', {title: 'Data Sets Tutorial'})
+});
 app.get('/earthquaketutorial', (req, res) => {
   res.render('Pages/earthquaketutorial', {title: 'Earthquake Tutorial'})
 });

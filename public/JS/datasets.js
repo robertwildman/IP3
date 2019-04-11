@@ -1,0 +1,30 @@
+$(document).ready(function(){
+    $("#cryptodiv").hide();
+    $("#bikesdiv").hide();
+    $("#petitiondiv").hide();
+    $("#postcodediv").hide();
+    $("#cryptolink").click(function(){
+        $("#cryptodiv").show();
+        $("#bikesdiv").hide();
+        $("#petitiondiv").hide();
+        $("#postcodediv").hide();
+    }); 
+    $("#bikeslink").click(function(){
+        $("#cryptodiv").hide();
+        $("#bikesdiv").show();
+        $("#petitiondiv").hide();
+        $("#postcodediv").hide();
+    }); 
+    $("#petitionlink").click(function(){
+        $("#cryptodiv").hide();
+        $("#bikesdiv").hide();
+        $("#petitiondiv").show();
+        $("#postcodediv").hide();
+    }); 
+    $("#postcodelink").click(function(){
+        $("#cryptodiv").hide();
+        $("#bikesdiv").hide();
+        $("#petitiondiv").hide();
+        $("#postcodediv").show();
+    }); 
+});
