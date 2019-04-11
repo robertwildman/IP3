@@ -249,7 +249,7 @@ app.get('/api/train/station', (req, res) => {
   
 });
 app.use(express.static(__dirname + '/public'));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen((process.env.PORT || port), () => console.log(`Example app listening on port ${port}!`));
 
 
 
