@@ -80,6 +80,7 @@ function displaystations(id)
         error: function(xhr) {
           //Display error message to the user
           error("Issue connecting to the citybikes!");
+
         }
     });
 }
