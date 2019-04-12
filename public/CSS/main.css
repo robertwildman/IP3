@@ -7,11 +7,21 @@ body{
     background-image: url("../Images/Dark-Wallpaper-1.jpg");
     background-size: cover;
     color: #fff;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+h2 {
+    border-style: solid;
+    border-color: #D4aF37;
+    border-width: 0px 0px 3px 0px;
 }
 .modal
 {
     color:#000;
 }
+
+
+
 /*
     page-id-001 - Earthquakes
     ---------------------
@@ -260,15 +270,22 @@ body{
     flex-wrap: wrap;
     padding-top: 0.5%;
     padding-left: 3%;
+    padding-right: 3%;
     text-align: center;
 }
 
+.page-id-007 a{
+    color: #fff
+}
+
 .page-id-007 .Sect1{
+    padding:1%;
     width: 50%;
     float: left;
 }
 
 .page-id-007 .Sect2{
+    padding:1%;
     width: 50%;
     float: left;
 }
@@ -280,10 +297,22 @@ body{
 
 .page-id-007 .visualisation-container{
     width: 100%;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    margin: 0.5%;
 }
 
 .page-id-007 .tutorial-container{
     width: 100%;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    margin: 0.5%;
 } 
 
 .page-id-007 .Vis-Head{
@@ -291,7 +320,16 @@ body{
 }
 
 .page-id-007 .Vis-Cont{
-    width: 100%;
+    width: 50%;
+    margin: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+ .page-id-007 .Vis-Cont:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
 }
 
 .page-id-007 .Tut-Head{
@@ -299,6 +337,15 @@ body{
 }
 
 .page-id-007 .Tut-Cont{
+    width: 50%;
+    margin: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.page-id-007 .Tut-Cont:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
 }
 
 
@@ -336,7 +383,13 @@ body{
     flex-direction: column wrap;
     flex-wrap: wrap;
     padding-top: 0.5%;
+    padding-bottom: 0.5%;
     padding-left: 3%;
+    padding-bottom: 3%;
     text-align: center;
 }
+
+.page-id-013 img{
+    border-radius: 50%;
+  }
 
