@@ -21,7 +21,8 @@ body{
     display: flex;
     flex-direction: column wrap;
     flex-wrap: wrap;
-    padding-top: 3%;
+
+    padding-top: 2%;
     text-align: center;
 }
 
@@ -144,7 +145,7 @@ body{
     display: flex;
     flex-direction: column wrap;
     flex-wrap: wrap;
-    padding-top: 3%;
+    padding-top: 0.5%;
     padding-left: 3%;
     text-align: center;
 }
@@ -175,6 +176,11 @@ body{
 {
     color:#000;
 }
+
+.page-id-005 .Background {
+    background-color: #3d3c3c;
+}
+
 /*
     page-id-006 - Postcode [Adrian]
     ----------------------
@@ -245,9 +251,56 @@ body{
 }
 
 /*
-    page-id-007 - About [Lewis]
+    page-id-007 - Overview/Splashscreen [Lewis]
     ---------------------
 */
+.page-id-007 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 0.5%;
+    padding-left: 3%;
+    text-align: center;
+}
+
+.page-id-007 .Sect1{
+    width: 50%;
+    float: left;
+}
+
+.page-id-007 .Sect2{
+    width: 50%;
+    float: left;
+}
+
+
+@media screen and (max-width: 850px){
+
+}
+
+.page-id-007 .visualisation-container{
+    width: 100%;
+}
+
+.page-id-007 .tutorial-container{
+    width: 100%;
+} 
+
+.page-id-007 .Vis-Head{
+    width: 100%;
+}
+
+.page-id-007 .Vis-Cont{
+    width: 100%;
+}
+
+.page-id-007 .Tut-Head{
+    width: 100%;
+}
+
+.page-id-007 .Tut-Cont{
+}
+
 
 /*
     page-id-008 - Tutorial 01
@@ -273,3 +326,17 @@ body{
     page-id-012 - Tutorial 05
     ---------------------
 */
+
+/* page-id-013 - Authors [Lewis]
+
+*/
+
+.page-id-013 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 0.5%;
+    padding-left: 3%;
+    text-align: center;
+}
+

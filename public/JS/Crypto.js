@@ -87,7 +87,6 @@ function loadgraphwithcoin(type)
     }); 
     },
     error: function(xhr) {
-      error("Unable to access the server!");
-    }
+      error("Unable to access the server!");    }
   });
 }
