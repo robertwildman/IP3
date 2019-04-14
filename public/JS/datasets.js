@@ -1,37 +1,12 @@
 $(document).ready(function(){
-    $("#cryptodiv").hide();
-    $("#bikesdiv").hide();
-    $("#petitiondiv").hide();
-    $("#postcodediv").hide();
-    $("#cryptolink").click(function(){
-        $("#cryptodiv").show();
-        $("#bikesdiv").hide();
-        $("#petitiondiv").hide();
-        $("#postcodediv").hide();
-    }); 
-    $("#bikeslink").click(function(){
-        $("#cryptodiv").hide();
-        $("#bikesdiv").show();
-        $("#petitiondiv").hide();
-        $("#postcodediv").hide();
-    }); 
-    $("#petitionlink").click(function(){
-        $("#cryptodiv").hide();
-        $("#bikesdiv").hide();
-        $("#petitiondiv").show();
-        $("#postcodediv").hide();
-    }); 
-    $("#postcodelink").click(function(){
-        $("#cryptodiv").hide();
-        $("#bikesdiv").hide();
-        $("#petitiondiv").hide();
-        $("#postcodediv").show();
-    }); 
-    
     $("#di1").hide();
-        $("#dt1").hide();
-        $("#do1").hide();
-        $("#du1").hide();
+    $("#dt1").hide();
+    $("#do1").hide();
+    $("#du1").hide();
+    $("#di2").hide();
+    $("#dt2").hide();
+    $("#do2").hide();
+    $("#du2").hide();
     
 
 });

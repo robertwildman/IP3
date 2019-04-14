@@ -404,6 +404,10 @@ h2 {
 */
 .page-id-011 .dataitem {
     width:400px;
+    float:left; 
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-bottom: 25px;
     background: #fff;
     color: #000;
 }
@@ -415,6 +419,9 @@ h2 {
 }
 .page-id-011 .datahead {
     text-align: center;
+}
+.page-id-011 .dataholder {
+    margin-top: 10px;
 }
 /*
     page-id-012 - Tutorial 05

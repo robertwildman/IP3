@@ -6,36 +6,6 @@
 <body class="page-id-011">
     <% include ../Sections/error_catch%>
     <% include ../Sections/nav%>
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Page
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#" id="cryptolink">Crypto</a></li>
-            <li><a href="#" id="bikeslink">City Bikes</a></li>
-            <li><a href="#" id="petitionlink">Petition</a></li>
-            <li><a href="#" id="postcodelink">Postcode</a></li>
-        </ul>
-    </div>
-    <div id="cryptodiv">
-        <h3> Cryptocurreny </h3>
-    </div>
-    <div id="bikesdiv">
-        <h3> City Bikes </h3>
-        <a href="https://api.citybik.es/v2/"> API Documentation</a> <br>
-        <div class="dataset">
-            <h4> API endpoint: <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a><h4>
-                Input: No inputs needed. <br> 
-                Output layout: </p>
-                <p> Output: </p>
-
-        </div>
-    </div>
-    <div id="petitiondiv">
-        <h3> Petition </h3>
-    </div>
-    <div id="postcodediv">
-        <h3> Postcode </h3>
-    </div>
     <div class="dataholder">
         <div class="dataitem">
             <div class="datahead"> 
@@ -108,6 +78,111 @@
                 </ul>
             </div>
         </div>
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h5>City Bikes - Stations </h5>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.citybik.es/v2/"> API Documentation</a>
+                <br> 
+                API Endpoint:  <a href="https://api.citybik.es/v2/networks/visa-frankfurt"> https://api.citybik.es/v2/networks/{ID} </a>
+                </p>
+            </div>
+            <div class="databuttonholder"> 
+                <button type="button" class="databutton" onclick="iclick(2);"> Input </button>
+                <button type="button" class="databutton"  onclick="tclick(2);"> Template</button>
+                <button type="button" class="databutton"  onclick="oclick(2);"> Output </button>
+                <button type="button" class="databutton"  onclick="uclick(2);"> Project Use </button>
+            </div>
+            <div class="datainfo datainput" id="di2">
+                <p> The input for the request is ID. This is the ID of the network your looking to get the stations for. <br> Can be found by using City Bikes Network api call. </p> 
+            </div>
+            <div class="datainfo datatemplate" id="dt2">
+                <pre> 
+    "network": {
+         "company": [
+                "Company Name(s) in array"
+            ],
+            "href": "Link to information of network",
+            "id": "Network ID",
+            "location": {
+                "city": "City name",
+                "country": "Country in 2 Letter Form",
+                "latitude": Latitude,
+                "Longitude": Longitude
+            },
+            "name": "Name of the network",,
+        "stations": [
+            {
+                "empty_slots": Number of free slots / Null if none,
+                "extra": {
+                    "bike_uids": [
+                        "UID of bikes in the station”
+                    ],
+                    "number": "Station Number"
+                },
+                "free_bikes": How many Bikes can be rented,
+                "id": "ID of station",
+                "latitude": Latitude of Station ,
+                "longitude": Longitude of Station,
+                "name": "Name of Station",
+                "timestamp": "UTC Timecode of last update!"
+            }
+        ]
+        </pre>
+            </div>
+            <div class="datainfo dataoutput" id="do2">
+            <pre>
+             "network": {
+        "company": [
+            "Nextbike GmbH"
+        ],
+        "href": "/v2/networks/visa-frankfurt",
+        "id": "visa-frankfurt",
+        "location": {
+            "city": "Frankfurt",
+            "country": "DE",
+            "latitude": 50.1072,
+            "longitude": 8.66375
+        },
+        "name": "VISA",
+        "stations": [
+            {
+                "empty_slots": null,
+                "extra": {
+                    "bike_uids": [
+                        "38046",
+                        "38206",
+                        "38979",
+                        "38865"
+                    ],
+                    "number": "4260",
+                    "uid": "46"
+                },
+                "free_bikes": 4,
+                "id": "a1500c71e6a60e8e6ce616e9446d69af",
+                "latitude": 50.099554541956,
+                "longitude": 8.6850410699844,
+                "name": "4260 - Südbahnhof / Hedderichstr.",
+                "timestamp": "2019-04-11T21:09:42.960000Z"
+            }
+        ]
+            </pre>
+            </div>
+            <div class="datainfo datause" id="du2">
+                <p>We use this call to get all the stations in a network. We then display the stations on a map based on the location given by the API.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Station Name </li>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Free Bikes(Number) </li>
+                    <li> Empty Slots </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
 

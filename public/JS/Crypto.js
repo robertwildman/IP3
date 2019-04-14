@@ -34,7 +34,7 @@ function loadgraphwithcoin(type)
   days = [];
   value = [];
   $.ajax({
-    url: "https://api.coinpaprika.com/v1/coins/"+type+"/ohlcv/historical?start=2019-01-01&limit=200",
+    url: "https://api.coinpaprika.com/v1/coins/"+type+"/ohlcv/historical?start=2019-01-01",
     type: "get", //send it through get method
     success: function(response) {
       // Begin accessing JSON data here
