@@ -1,26 +1,35 @@
 var ctx = document.getElementById("myChart").getContext('2d');
 var chart;
+var currentcoin;
 var days = [];
 var value = [];
 Chart.defaults.global.defaultFontColor = "#fff";
 
 $( document ).ready(function() {
-  loadgraphwithcoin('btc-bitcoin');
+  currentcoin = 'btc-bitcoin';
+  loadgraphwithcoin(currentcoin);
     $("#bitcoin").click(function()
     {
+      currentcoin = 'btc-bitcoin';
       loadgraphwithcoin('btc-bitcoin');
     });
     $("#ethereum").click(function()
     {
+      currentcoin = 'eth-ethereum';
       loadgraphwithcoin('eth-ethereum');
     });
     $("#xrp").click(function()
     {
+      currentcoin = 'xrp-xrp';
       loadgraphwithcoin('xrp-xrp');
     });
     $("#dogecoin").click(function()
     {
+      currentcoin = 'doge-dogecoin';
       loadgraphwithcoin('doge-dogecoin');
+    });
+    $('#cryptodate').on('change', function() {
+      loadgraphwithcoin(currentcoin);
     });
  });
 
@@ -34,7 +43,7 @@ function loadgraphwithcoin(type)
   days = [];
   value = [];
   $.ajax({
-    url: "https://api.coinpaprika.com/v1/coins/"+type+"/ohlcv/historical?start=2019-01-01",
+    url: "https://api.coinpaprika.com/v1/coins/"+type+"/ohlcv/historical?start="+getdate()+"&limit=366",
     type: "get", //send it through get method
     success: function(response) {
       // Begin accessing JSON data here
@@ -91,4 +100,11 @@ function loadgraphwithcoin(type)
     error: function(xhr) {
       error("Unable to access the server!");    }
   });
+}
+function getdate()
+{
+  var datenum = $("#cryptodate").val();
+  var d = new Date();
+  d.setDate(d.getDate()-datenum);
+  return d.toISOString().slice(0,10);
 }
