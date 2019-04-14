@@ -5,12 +5,142 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" media="screen" href="CSS\earthquaketutorial.css"/>
   <title>Tutorial</title>
 </head>
 <body>
   <% include ../Sections/nav%>
   <div class="wrapper">
+      <h1>Earthquake data fundamentals</h1>
 
+      <h4>
+        The purpose of this page is to introduce earthquakes, earthquake data fundamentals and where to source earthquake data.
+      </h4>
+
+      <br/>
+
+      <p>
+        The free dictionary defines earthquake as "A sudden movement of the earth's crust caused by the release of stress accumulated along geologic faults or by volcanic activity" The Free Dictionary (2019).
+        Faults are cracks in the crust of the earth that occur between continental plates.
+        Earthquakes can be caused by a wide variety of reasons but the most common reason is when there is action within faults. 
+        There are three main types of earthquakes caused by this action within faults called Normal Faulting, Strike-slip and Reverse Faulting.
+      </p>
+
+      <br/>
+    
+      <ul>
+        <li>
+          <img src="./IMAGES/normal.jpg" alt="Normal" style="width: 80px; height: 80px;"> <br/>
+          <p style="font-size: x-small;">Dorling Kindersley/Getty Images </p>
+          <h5>Normal Faulting</h5>
+          <p>Continental plates are moving apart and earth between the plates falls down causing an earthquake</p>
+        </li>
+        <li><img src="./IMAGES/slip.jpg" alt="Normal" style="width: 80px; height: 80px;"><br/>
+          <p style="font-size: x-small;">Mike Dunning/Dorling Kindersle/Getty Images </p> 
+          <h5>Strike-Slip</h5>
+          <p>Continental plates move away from eachother on a horizontal plane causing earthquakes</p></li>
+        <li><img src="./IMAGES/reverse.jpg" alt="Normal" style="width: 80px; height: 80px;"> <br/>
+          <p style="font-size: x-small;">jack0m/DigitalVision Vectors/Getty Images</p>
+          <h5>Reverse Faulting</h5>
+          <p>Continental plates move together pushing the fault line upwards causing earthquakes</p>
+        </li>
+      </ul>
+      
+      <br/>
+
+      <h3>Earthquake data fundamentals</h3>
+
+      <br/>
+
+      <p>
+          The United States Geological Survey hosts a wide variety of information regarding earthquakes on the website <a href="https://earthquake.usgs.gov/">earthquake.usgs.gov</a>.
+          This tutorial will be looking at the near real time geoJson summary of past earthquakes found <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">here</a>.
+          The data about past earthquakes is provided as geoJson. The format provides easily accessible and readible information. The key pieces of information provided for every earthquake includes magnitude, location, time and geographic coordinates.
+      </p>
+
+      <pre>
+        <code style="color:brown">
+            {
+              "type": "FeatureCollection",
+              "metadata": {
+                "generated": 1555164657000,
+                "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_hour.geojson",
+                "title": "USGS Magnitude 1.0+ Earthquakes, Past Hour",
+                "status": 200,
+                "api": "1.8.1",
+                "count": 6
+              },
+              "features": [
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "mag": 2.7,
+                    "place": "8km WSW of Shingletown, CA",
+                    "time": 1555163795470,
+                    "updated": 1555164184554,
+                    "tz": -480,
+                    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73165255",
+                    "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc73165255.geojson",
+                    "felt": null,
+                    "cdi": null,
+                    "mmi": null,
+                    "alert": null,
+                    "status": "automatic",
+                    "tsunami": 0,
+                    "sig": 112,
+                    "net": "nc",
+                    "code": "73165255",
+                    "ids": ",nc73165255,",
+                    "sources": ",nc,",
+                    "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                    "nst": 24,
+                    "dmin": 0.1433,
+                    "rms": 0.21,
+                    "gap": 42,
+                    "magType": "md",
+                    "type": "earthquake",
+                    "title": "M 2.7 - 8km WSW of Shingletown, CA"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -121.972168,
+                      40.4511681,
+                      11.47
+                    ]
+                  },
+                  "id": "nc73165255"
+                }
+        </code>
+      </pre>
+
+
+      <p>
+        An example of a single earthquake event provided by USGS datafeeds.
+        The data has two key parts, the first is the metadata that provides information aboutthe api used as well as the api response and other relevant information.
+        The second part is an array called features. This array has all the earthquakes for the given data feed. In this case for readabilitys sake we are only showing a single feature instead of all of them.
+      </p>
+
+      
+      <br/>
+
+      <h3>How to access earthquake data</h3>
+
+      <br/>
+
+      <p>
+        The data that was demonstrated above can be found at the USGS website linked above.
+        A direct link to the feeds can be found <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">here.</a>
+      </p>
+      
+      <br/>
+
+      <h3>References</h3>
+
+      <br/>
+
+      <p>https://www.thoughtco.com/fault-types-with-diagrams-3879102</p>
+      <p>https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php</p>
   </div>
 </body>
 </html>

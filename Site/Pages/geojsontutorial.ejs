@@ -12,9 +12,91 @@
   <div class="wrapper">
       <h1>GeoJson</h1>
 
+      <h4>
+        The purpose of this page is to introduce GeoJson and explain its key characteristics.
+      </h4>
+    <br/>
       <p>
-        The purpose of this page is to introduce GeoJson
+        GeoJson is a standardised format used to convey geographical information within Javascript object notation.
+        The newest form of GeoJson was published in 2016, by the Internet Egineering Task Force, with the aim of helping to convey complex geometrical information in a understandable format 
+        and ease the development of web applications.  
       </p>
+    <br/>
+      <p>
+        A GeoJson object supports a wide variety of geometric data types. These data types are Points, LineStrings, Polygons
+        , MultiPoints, MultilineStrings and MultiPolygons. The support for additional information with the geographic data is provided via Feature objects.
+        GeoJson does not strictly define what can or can not be considered GeoJson, the documentation defines that anything that operates within geographic space
+        can be conveyed as a feature within GeoJson.
+      </p>
+
+      <br/>
+
+      <p>
+        The values for GeoJson are based on World Geodetic System 1984 decimal degrees.
+      </p>
+
+      <pre>
+        <code style="color:brown">
+          {
+            "type": "Feature",
+            "properties": {
+              "mag": 1.4,
+              "place": "46km NE of Lone Pine, California",
+              "time": 1554991455300,
+              "type": "earthquake",
+              "title": "M 1.4 - 46km NE of Lone Pine, California"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -117.7552,
+                36.9392,
+                2.4
+              ]
+            },
+            "id":"230435"
+          }
+        </code>  
+      </pre>
+
+      <p>An example of a feature from the USG Earthquake feed</p>
+
+      <br/>
+
+      <p>
+        A feature object has certain characteristics that that can be seen in the above example.
+      </p>
+
+      <ul>
+        <li>Type assigned to the value of feature</li>
+        <li>Geometry object providing the geological data as defined in the GeoJson documentation, or in case of no value a null object</li>
+        <li>Properties object showing information related to the feature, or a null object</li>
+        <li>An optional id field containing text or a number if necessary for the application</li>
+      </ul>
+
+
+      <br/>
+       
+      <p>
+        The GeoJson standard is an useful tool for developers working with geographical information. The standardised rules make it easy and concistent 
+        to implement geography based functionality to various projects. 
+      </p>
+
+      <br/>
+       
+      <p>
+        For more information about GeoJson you can look at the IETF proposed standard for GeoJson <a href="https://tools.ietf.org/html/rfc7946">Here!</a>. 
+        If you are interested in datasources using GeoJson take at <a href="http://geojson.xyz/"> GeoJson.xyz page</a>.
+      </p>
+
+      <br/>
+
+      <h3>References</h3>
+      <br/>
+      <p>http://geojson.org/</p>
+      <p>https://tools.ietf.org/html/rfc7946</p>
+      <p>https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php</p>
+      
   </div>
 </body>
 </html>
