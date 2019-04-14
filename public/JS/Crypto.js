@@ -2,6 +2,8 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var chart;
 var days = [];
 var value = [];
+Chart.defaults.global.defaultFontColor = "#fff";
+
 $( document ).ready(function() {
   loadgraphwithcoin('btc-bitcoin');
     $("#bitcoin").click(function()

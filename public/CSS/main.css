@@ -67,6 +67,13 @@ h2 {
     margin: 2px;
     padding: 3px;
     color: #fff;
+
+    /* ALT to look like overview page buttons 
+            border-radius: 25px;
+        border: solid #D4aF37;
+        background-color: #333232;
+        color: white;
+        */
 }
 
 @media screen and (max-width: 850px) {
@@ -168,15 +175,40 @@ h2 {
 
 .page-id-003 .buttonCC {
     border-radius: 25px;
-    border: solid #3d3c3c;
-    background-color: #3d3c3c;
+    border: solid #D4aF37;
+    background-color: #333232;
     color: white;
+}
+
+.page-id-003 .Graph-Cont{
+    position: relative;
+    width: 100%;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    margin: 0.5%;
 }
 
 /*
     page-id-004 - City Bikes
     ---------------------
 */
+
+.page-id-004 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 0.5%;
+    text-align: center;
+}
+
+/* .page-id-004 .cbtitle { --OPTIONAL TITLE--
+    width: 100%;
+    text-align: left;
+    margin: 1%;
+} */
 
 /*
     page-id-005 - Petition [Adrian]
@@ -385,11 +417,11 @@ h2 {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     padding-left: 3%;
-    padding-bottom: 3%;
+    padding-right: 3%;
     text-align: center;
 }
 
 .page-id-013 img{
-    border-radius: 50%;
+    border-radius: 100%;
   }
 
