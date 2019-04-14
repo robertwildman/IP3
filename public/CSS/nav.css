@@ -31,12 +31,6 @@
     color: #D4aF37;
 } 
 
-/* .active {
-    text-decoration: none;
-    background-color: #D4aF37;
-    color: white;
-} */
-
 .horizontal_nav_bar .dropdown-menu{
     float: left;
     overflow: hidden;
