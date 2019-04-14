@@ -3,7 +3,7 @@
 <head>
     <% include ../Sections/head%>
 </head>
-<body>
+<body class="page-id-011">
     <% include ../Sections/error_catch%>
     <% include ../Sections/nav%>
     <div class="dropdown">
@@ -26,6 +26,38 @@
             <h4> API endpoint: <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a><h4>
                 Input: No inputs needed. <br> 
                 Output layout: </p>
+                <p> Output: </p>
+
+        </div>
+    </div>
+    <div id="petitiondiv">
+        <h3> Petition </h3>
+    </div>
+    <div id="postcodediv">
+        <h3> Postcode </h3>
+    </div>
+    <div class="dataholder">
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h5> City Bikes - Networks </h5>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.citybik.es/v2/"> API Documentation</a>
+                <br> 
+                API Endpoint:  <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a>
+                </p>
+            </div>
+            <div class="databuttonholder"> 
+                <button type="button" class="databutton" onclick="iclick(1);"> Input </button>
+                <button type="button" class="databutton"  onclick="tclick(1);"> Template</button>
+                <button type="button" class="databutton"  onclick="oclick(1);"> Output </button>
+                <button type="button" class="databutton"  onclick="uclick(1);"> Project Use </button>
+            </div>
+            <div class="datainfo datainput" id="di1">
+                <p> No input is needed for this request to take place </p> 
+            </div>
+            <div class="datainfo datatemplate" id="dt1">
                 <pre>
  "networks" : [
      {
@@ -44,8 +76,9 @@
         }
  ]
                 </pre>
-                <p> Output: </p>
-                <pre>
+            </div>
+            <div class="datainfo dataoutput" id="do1">
+                            <pre>
 "networks": [
     {
         "company": [
@@ -63,15 +96,19 @@
     }
 ]
             </pre>
+            </div>
+            <div class="datainfo datause" id="du1">
+                <p>In this project we use this api to get the following data and then display this data onto a map for the user to pick a network from.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Network Name </li>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Network ID </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div id="petitiondiv">
-        <h3> Petition </h3>
-    </div>
-    <div id="postcodediv">
-        <h3> Postcode </h3>
-    </div>
-
 
 
 

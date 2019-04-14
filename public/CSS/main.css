@@ -19,9 +19,6 @@ h2 {
 {
     color:#000;
 }
-pre{
-    color:#fff;
-}
 
 /*
     page-id-001 - Earthquakes
@@ -405,7 +402,20 @@ pre{
     page-id-011 - Tutorial 04
     ---------------------
 */
-
+.page-id-011 .dataitem {
+    width:400px;
+    background: #fff;
+    color: #000;
+}
+.page-id-011 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-011 .databutton {
+    width: 180px;
+}
+.page-id-011 .datahead {
+    text-align: center;
+}
 /*
     page-id-012 - Tutorial 05
     ---------------------
