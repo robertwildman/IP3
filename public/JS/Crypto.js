@@ -2,6 +2,8 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var chart;
 var days = [];
 var value = [];
+Chart.defaults.global.defaultFontColor = "#fff";
+
 $( document ).ready(function() {
   loadgraphwithcoin('btc-bitcoin');
     $("#bitcoin").click(function()
@@ -87,7 +89,6 @@ function loadgraphwithcoin(type)
     }); 
     },
     error: function(xhr) {
-      error("Unable to access the server!");
-    }
+      error("Unable to access the server!");    }
   });
 }

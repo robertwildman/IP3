@@ -7,11 +7,22 @@ body{
     background-image: url("../Images/Dark-Wallpaper-1.jpg");
     background-size: cover;
     color: #fff;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+h2 {
+    border-style: solid;
+    border-color: #D4aF37;
+    border-width: 0px 0px 3px 0px;
 }
 .modal
 {
     color:#000;
 }
+pre{
+    color:#fff;
+}
+
 /*
     page-id-001 - Earthquakes
     ---------------------
@@ -21,7 +32,8 @@ body{
     display: flex;
     flex-direction: column wrap;
     flex-wrap: wrap;
-    padding-top: 3%;
+
+    padding-top: 2%;
     text-align: center;
 }
 
@@ -56,6 +68,13 @@ body{
     margin: 2px;
     padding: 3px;
     color: #fff;
+
+    /* ALT to look like overview page buttons 
+            border-radius: 25px;
+        border: solid #D4aF37;
+        background-color: #333232;
+        color: white;
+        */
 }
 
 @media screen and (max-width: 850px) {
@@ -144,7 +163,7 @@ body{
     display: flex;
     flex-direction: column wrap;
     flex-wrap: wrap;
-    padding-top: 3%;
+    padding-top: 0.5%;
     padding-left: 3%;
     text-align: center;
 }
@@ -157,15 +176,40 @@ body{
 
 .page-id-003 .buttonCC {
     border-radius: 25px;
-    border: solid #3d3c3c;
-    background-color: #3d3c3c;
+    border: solid #D4aF37;
+    background-color: #333232;
     color: white;
+}
+
+.page-id-003 .Graph-Cont{
+    position: relative;
+    width: 100%;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    margin: 0.5%;
 }
 
 /*
     page-id-004 - City Bikes
     ---------------------
 */
+
+.page-id-004 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 0.5%;
+    text-align: center;
+}
+
+/* .page-id-004 .cbtitle { --OPTIONAL TITLE--
+    width: 100%;
+    text-align: left;
+    margin: 1%;
+} */
 
 /*
     page-id-005 - Petition [Adrian]
@@ -179,6 +223,11 @@ body{
 {
     float: left;
 }
+
+.page-id-005 .Background {
+    background-color: #3d3c3c;
+}
+
 /*
     page-id-006 - Postcode [Adrian]
     ----------------------
@@ -249,9 +298,93 @@ body{
 }
 
 /*
-    page-id-007 - About [Lewis]
+    page-id-007 - Overview/Splashscreen [Lewis]
     ---------------------
 */
+.page-id-007 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 0.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+}
+
+.page-id-007 a{
+    color: #fff
+}
+
+.page-id-007 .Sect1{
+    padding:1%;
+    width: 50%;
+    float: left;
+}
+
+.page-id-007 .Sect2{
+    padding:1%;
+    width: 50%;
+    float: left;
+}
+
+
+@media screen and (max-width: 850px){
+
+}
+
+.page-id-007 .visualisation-container{
+    width: 100%;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    margin: 0.5%;
+}
+
+.page-id-007 .tutorial-container{
+    width: 100%;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    margin: 0.5%;
+} 
+
+.page-id-007 .Vis-Head{
+    width: 100%;
+}
+
+.page-id-007 .Vis-Cont{
+    width: 50%;
+    margin: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+ .page-id-007 .Vis-Cont:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+}
+
+.page-id-007 .Tut-Head{
+    width: 100%;
+}
+
+.page-id-007 .Tut-Cont{
+    width: 50%;
+    margin: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.page-id-007 .Tut-Cont:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+}
+
 
 /*
     page-id-008 - Tutorial 01
@@ -277,3 +410,23 @@ body{
     page-id-012 - Tutorial 05
     ---------------------
 */
+
+/* page-id-013 - Authors [Lewis]
+
+*/
+
+.page-id-013 .flex-container {
+    display: flex;
+    flex-direction: column wrap;
+    flex-wrap: wrap;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+}
+
+.page-id-013 img{
+    border-radius: 100%;
+  }
+

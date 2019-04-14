@@ -116,6 +116,7 @@ function findnearby(intype)
             },
             error: function(xhr) {
                 error("Error connecting to the server!");
+
             }
         });
 }
@@ -213,6 +214,7 @@ function displayinfo(postCode)
         },
         error: function(xhr) {
             error("Error connecting to the server!");
+
         }
     });
 }

@@ -20,7 +20,50 @@
         <h3> Cryptocurreny </h3>
     </div>
     <div id="bikesdiv">
-        <h3> Bikes </h3>
+        <h3> City Bikes </h3>
+        <a href="https://api.citybik.es/v2/"> API Documentation</a> <br>
+        <div class="dataset">
+            <h4> API endpoint: <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a><h4>
+                Input: No inputs needed. <br> 
+                Output layout: </p>
+                <pre>
+ "networks" : [
+     {
+        "company": [
+            "Company Name(s) in array"
+        ],
+        "href": "Link to information of network",
+        "id": "Network ID",
+        "location": {
+            "city": "City name",
+            "country": "Country in 2 Letter Form",
+            "latitude": Latitude,
+            "Longitude": Longitude
+        },
+        "name": "Name of the network"
+        }
+ ]
+                </pre>
+                <p> Output: </p>
+                <pre>
+"networks": [
+    {
+        "company": [
+            "Nextbike GmbH"
+        ],
+        "href": "/v2/networks/norisbike-nurnberg",
+        "id": "norisbike-nurnberg",
+        "location": {
+            "city": "Nürnberg",
+            "country": "DE",
+            "latitude": 49.4479,
+            "longitude": 11.0814
+        },
+        "name": "NorisBike"
+    }
+]
+            </pre>
+        </div>
     </div>
     <div id="petitiondiv">
         <h3> Petition </h3>
