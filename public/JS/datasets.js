@@ -12,7 +12,7 @@ $(document).ready(function(){
 });
 function iclick(id)
 {
-    $("#di"+id).show();
+    $("#di"+id).toggle();
     $("#dt"+id).hide();
     $("#do"+id).hide();
     $("#du"+id).hide();
@@ -20,7 +20,7 @@ function iclick(id)
 function tclick(id)
 {
     $("#di"+id).hide();
-    $("#dt"+id).show();
+    $("#dt"+id).toggle();
     $("#do"+id).hide();
     $("#du"+id).hide();
 }
@@ -28,13 +28,13 @@ function oclick(id)
 {
     $("#di"+id).hide();
     $("#dt"+id).hide();
-    $("#do"+id).show();
+    $("#do"+id).toggle();
     $("#du"+id).hide();
 }
 function uclick(id)
 {
     $("#di"+id).hide();
     $("#dt"+id).hide();
-    $("#du"+id).show();
+    $("#du"+id).toggle();
     $("#do"+id).hide();
 }

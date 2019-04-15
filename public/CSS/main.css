@@ -408,6 +408,7 @@ h2 {
     padding-bottom: 25px;
     background: #fff;
     color: #000;
+    word-wrap: break-word;
 }
 .page-id-011 .databuttonholder {
     padding-left: 15px;

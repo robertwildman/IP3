@@ -182,8 +182,72 @@
                 </ul>
             </div>
         </div>
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h5>Coinparika</h5>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.coinpaprika.com/#tag/Coins/paths/~1coins~1{coin_id}~1ohlcv~1latest~1/get"> API Documentation</a>
+                <br> 
+                API Endpoint:  <a href=" https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical?start=2019-01-01&limit=200">  https://api.coinpaprika.com/v1/coins/{CoinID}/ohlcv/historical?start=2019-01-01 </a>
+                </p>
+            </div>
+            <div class="databuttonholder"> 
+                <button type="button" class="databutton" onclick="iclick(3);"> Input </button>
+                <button type="button" class="databutton"  onclick="tclick(3);"> Template</button>
+                <button type="button" class="databutton"  onclick="oclick(3);"> Output </button>
+                <button type="button" class="databutton"  onclick="uclick(3);"> Project Use </button>
+            </div>
+            <div class="datainfo datainput" id="di3">
+            </div>
+            <div class="datainfo datatemplate" id="dt3">
+                <pre>
+                <code>
+                    {
+        "time_open": "UTC zulu time of time open",
+        "time_close": "UTC  zulu time of time closed",
+        "open": USD price opening,
+        "high": USD price at peak,
+        "low": USD price at low,
+        "close": USD price opening,
+        "volume": Volume of the Coin,
+        "market_cap": Market Cap of coin
+    }
 
-    </div>
+                </code>
+                </pre>
+            </div>
+            <div class="datainfo dataoutput" id="do3">
+                <pre>
+                    <code>
+                        {
+        "time_open": "2019-02-01T00:00:00Z",
+        "time_close": "2019-02-01T23:59:59Z",
+        "open": 3450.05223403,
+        "high": 3488.34258219,
+        "low": 3418.77109044,
+        "close": 3476.45924705,
+        "volume": 3235735301,
+        "market_cap": 60418263486
+
+        }
+
+                    </code>
+                    </pre>
+            </div>
+            <div class="datainfo datause" id="du3">
+                <p>In this project we use this api to get the following data and then display this data onto a map for the user to pick a network from.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Network Name </li>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Network ID </li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- End of Dataset holder-->
 
 
 
