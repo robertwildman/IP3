@@ -19,6 +19,10 @@ h2 {
 .modal {
     color:#000;
 }
+.gauage
+{
+    float:left;
+}
 
 /*
     page-id-001 - Earthquakes
@@ -364,7 +368,8 @@ h2 {
         margin-top: 1%;
     }
 
-    .page-id-006 .gaugeholder {
+    .page-id-006 #gaugeholder {
+        width:100%;
     }
 
     .page-id-006 .gauge {
