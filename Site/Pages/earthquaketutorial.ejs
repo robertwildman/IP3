@@ -8,9 +8,9 @@
 <link rel="stylesheet" type="text/css" media="screen" href="CSS\earthquaketutorial.css"/>
   <title>Tutorial</title>
 </head>
-<body>
+<body class="page page-id-009">
   <% include ../Sections/nav%>
-  <div class="wrapper">
+  <div class="flex_container">
       <h1>Earthquake data fundamentals</h1>
 
       <h4>
@@ -19,6 +19,7 @@
 
       <br/>
 
+    <div class="section_1">
       <p>
         The free dictionary defines earthquake as "A sudden movement of the earth's crust caused by the release of stress accumulated along geologic faults or by volcanic activity" The Free Dictionary (2019).
         Faults are cracks in the crust of the earth that occur between continental plates.
@@ -46,8 +47,9 @@
         </li>
       </ul>
       
-      <br/>
+    </div>
 
+    <div class="code_snippet">
       <h3>Earthquake data fundamentals</h3>
 
       <br/>
@@ -59,7 +61,7 @@
       </p>
 
       <pre>
-        <code style="color:brown">
+        <code>
             {
               "type": "FeatureCollection",
               "metadata": {
@@ -122,25 +124,24 @@
       </p>
 
       
-      <br/>
+    </div>
 
+    <div class="section_2">
       <h3>How to access earthquake data</h3>
-
-      <br/>
 
       <p>
         The data that was demonstrated above can be found at the USGS website linked above.
         A direct link to the feeds can be found <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">here.</a>
       </p>
       
-      <br/>
+    </div>
 
+    <div class="section_ref">
       <h3>References</h3>
-
-      <br/>
 
       <p>https://www.thoughtco.com/fault-types-with-diagrams-3879102</p>
       <p>https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php</p>
+    </div>
   </div>
 </body>
 </html>

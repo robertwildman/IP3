@@ -7,9 +7,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tutorial</title>
 </head>
-<body>
+<body class="page page-id-010">
   <% include ../Sections/nav%>
-  <div class="wrapper">
+  <div class="flex-container">
       <h1>Weather data fundamentals</h1>
 
       <h4>
@@ -18,14 +18,15 @@
 
       <br/>
 
+    <div class="section_1">
       <p>Weather data can range from very basic to very complex. 
         In its simplest form weather data can simply indicate the temperature outside, more complex data can include measurements such as humidity, amount or precipitation and UV index to name a few examples.
         The data provided online through apis is usually available in JSON and XML format, although this differs highly between service providers.
         Weather API's such as Apixu can provide current future and past weather data in both JSON and XML. 
       </p>
+    </div>
 
-      <br/>
-
+    <div class="section_2">
       <h4>Accessing weather data</h4>
 
       <br/>
@@ -55,8 +56,9 @@
         The completed Url should look like this. http://api.apixu.com/v1/current.json?key=YOURKEYHERE&q=glasgow
       </p>
 
-      <br/>
-      
+    </div>
+     
+    <div class="code_snippet">
       <h4>Current data</h4>
 
       <br/>
@@ -121,10 +123,12 @@
         The bulk of the weather data is contained within the current section. The data fields are fairly self explanatory, with the exception of the condition field.
         The condition section is used to inform users what corresponding icon should be shown along with the weather information.
       </p>
+    </div>
 
-      <br/>
+    <div class="section_ref">
       <h4>References</h4>
       <p>https://www.apixu.com/</p>
+    </div>
   </div>
 </body>
 </html>
