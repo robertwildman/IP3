@@ -7,7 +7,7 @@ let markers = [];
 
 let useLocation = false;
 
-let apixuUrl = "http://api.apixu.com/v1/current.json?key=";
+let apixuUrl = "https://api.apixu.com/v1/current.json?key=";
 let apixuKey = "fd7ede7ab4f24f97ab7205326193001";
 
 let apixuConditions;

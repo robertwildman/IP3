@@ -205,6 +205,10 @@ body{
     page-id-005 - Petition 
     ---------------------
 */
+.page-id-005 
+{
+    color:#fff;
+}
 
     .page-id-005 body {
         padding: 0;
@@ -245,7 +249,7 @@ body{
         width: 350px;
         margin-top:75px;
         margin-left:10px;
-        background-color: transparent;
+        background-color: #3d3c3c;
         color: #fff;
     }
 
@@ -256,7 +260,7 @@ body{
         z-index: 10;
         margin-top:75px;
         margin-right:10px;
-        background-color: transparent;
+        background-color: #3d3c3c;
     }
 
     .page-id-005 .pettionname {
@@ -293,7 +297,10 @@ body{
         ----------------------
         Flexbox
     */
-
+    .gauage
+    {
+        float: left;
+    }
     .page-id-006 .flex-container {
         display: flex;
         flex-direction: column;
@@ -528,6 +535,32 @@ body{
 
 /*
     page-id-011 - Tutorial 04
+    ---------------------
+*/
+.page-id-012 .dataitem {
+    width:400px;
+    float:left; 
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-bottom: 25px;
+    background: #fff;
+    color: #000;
+    word-wrap: break-word;
+}
+.page-id-012 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-012 .databutton {
+    width: 180px;
+}
+.page-id-012 .datahead {
+    text-align: center;
+}
+.page-id-012 .dataholder {
+    margin-top: 10px;
+}
+/*
+    page-id-012 - Tutorial 05
     ---------------------
 */
 
