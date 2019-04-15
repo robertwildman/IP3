@@ -9,7 +9,7 @@ var csv = require('csv-parser');
 //Port for the server
 var port = 3000;
 //Toggle on and off for catched google place data
-var devmode = true;
+var devmode = false;
 //Setting the view enging
 app.set('view engine', 'ejs');
 //Setting where the views will be

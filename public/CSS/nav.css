@@ -85,10 +85,10 @@
 }
 
 /*
-    After Screen Size <= 850 pixels, Top Navigation Bar Becomes A Drop Down Menu
+    After Screen Size <= 886 pixels, Top Navigation Bar Becomes A Drop Down Menu
 */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 982px) {
     .horizontal_nav_bar a:not(:first-child), .dropdown .dropbtn {
         display: none;
     }
@@ -98,7 +98,7 @@
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 982px) {
     .horizontal_nav_bar.responsive {
         position: relative;
     }

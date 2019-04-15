@@ -202,15 +202,6 @@ function displayinfo(postCode)
                 valueFontColor: "#fff",
                 levelColors:["#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FF00"]
             });
-            var tableset = "<h3> Ranking for the Postcode Based on the SIMD Ranking </h3> <h6> For all ranks: 1st most deprived, 6,976 is least deprived. </h6> <table class='table table-striped table-dark' style='width: 400px; float: left; margin-left: 2px; margin-right: 2px;'> "
-            tableset += "<tr><td> SIMD 2016 Rank </td><td>"+ response.SIMD16_rank +"/6,976</td></tr>";
-            tableset += "<tr><td> Domain Rank </td><td>"+ response.Domain_rank +"/6,976</td></tr>";
-            tableset += "<tr><td> Employment Rank </td><td>"+ response.Employment_rank +"/6,976</td></tr>";
-            tableset += "<tr><td> Health Rank </td><td>"+ response.Health_rank +"/6,976</td></tr>";
-            tableset += "<tr><td> Education Rank </td><td>"+ response.Education_rank +"/6,976</td></tr>";
-            tableset += "<tr><td> Housing Rank </td><td>"+ response.Housing_rank +"/6,976</td></tr>";
-            tableset += "<tr><td> Crime Rank </td><td>"+ response.Crime_rank +"/6,976</td></tr>";
-            $('#infoholder').append(tableset);
         },
         error: function(xhr) {
             error("Error connecting to the server!");
