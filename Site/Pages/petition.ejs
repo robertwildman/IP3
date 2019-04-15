@@ -92,11 +92,13 @@
         <div class="petition_info">
             <h4 class="pettionname" id="pettiontitle"></h4>
             <button type="button" class="btn btn-primary" id="newpetition" data-toggle="modal" data-target="#petitionModal">New Petition</button>
-            <p id="mp"> </p>
-            <p id="cons"> </p>
-            <p id="signs"> </p>
+            <p id="info"> </p>
         </div>
         <div class="peition_ranking" id="legend">
+            <input type="radio" name="legendtype" value="1" checked="checked"> Percentage<br>
+            <input type="radio" name="legendtype" value="2"> Signatures <br>
+            <div class="legendholder" id="legendholder">
+            </div>
         </div>
         <div id="mapid" style=""></div>
     </div>
