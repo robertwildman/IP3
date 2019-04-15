@@ -249,7 +249,7 @@ body{
         width: 350px;
         margin-top:75px;
         margin-left:10px;
-        background-color: transparent;
+        background-color: #3d3c3c;
         color: #fff;
     }
 
@@ -260,7 +260,7 @@ body{
         z-index: 10;
         margin-top:75px;
         margin-right:10px;
-        background-color: transparent;
+        background-color: #3d3c3c;
     }
 
     .page-id-005 .pettionname {
