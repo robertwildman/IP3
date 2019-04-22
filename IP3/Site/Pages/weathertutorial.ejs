@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<% include ../Sections/head%>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tutorial</title>
+</head>
+<body class="page page-id-010">
+  <% include ../Sections/nav%>
+  <div class="flex-container">
+      <h1>Weather data fundamentals</h1>
+
+      <h4>
+        The purpose of this page is to introduce weather data as provided by Apixu
+      </h4>
+
+      <br/>
+
+    <div class="section_1">
+      <p>Weather data can range from very basic to very complex. 
+        In its simplest form weather data can simply indicate the temperature outside, more complex data can include measurements such as humidity, amount or precipitation and UV index to name a few examples.
+        The data provided online through apis is usually available in JSON and XML format, although this differs highly between service providers.
+        Weather API's such as Apixu can provide current future and past weather data in both JSON and XML. 
+      </p>
+    </div>
+
+    <div class="section_2">
+      <h4>Accessing weather data</h4>
+
+      <br/>
+  
+      <p>The basis of accessing data through an API like Apixu begins with the URL.</p>
+      <p>In the case of Apixu the base URL for the API is http://api.apixu.com/v1. 
+        The base url is important but for us to get any data we have to take a few additional steps.</p>
+      <p>
+        To access the data we need to add a method call to the base url to define what we want to retrieve.
+        For the purpose of this tutorial we are going to look at current weather information in Glasgow.
+        This is done by adding current.json to the end of the base url. 
+      </p>
+
+      <p>
+        The url right now should look like http://api.apixu.com/v1/current.json
+      </p>
+
+      <p>
+        The next step in the process is getting an API key. API keys are used to identify, control and monitor users of an API.
+         In the case of Apixu the key is provided within the url as shown here <span style="color:palevioletred">http://api.apixu.com/v1/current.json?key=KEYGOESHERE</span>.
+      </p>
+
+      <br/>
+
+      <p>The final thing necessary is the location. The location can be queried either by name or latitude and longitude. This tutorial is going to use location name.
+        Location query is added by tagging a &q= parameter to the end of the url.
+        The completed Url should look like this. http://api.apixu.com/v1/current.json?key=YOURKEYHERE&q=glasgow
+      </p>
+
+    </div>
+     
+    <div class="code_snippet">
+      <h4>Current data</h4>
+
+      <br/>
+
+      <p>The rest of this tutorial will go through current data returned from the Apixu API, if you are interested in other methods like forecasts or past data you can access the documentation for Apixu <a href="https://www.apixu.com/doc/">here</a>
+      </p>
+
+      <br/>
+
+      <p>
+        By running the query defined above the API returns this data.
+      </p>
+
+      <pre>
+        <code style="color:brown">
+            {
+              "location": {
+                "name": "Glasgow",
+                "region": "Glasgow City",
+                "country": "United Kingdom",
+                "lat": 55.86,
+                "lon": -4.25,
+                "tz_id": "Europe/London",
+                "localtime_epoch": 1555189859,
+                "localtime": "2019-04-13 22:10"
+              },
+              "current": {
+                "last_updated_epoch": 1555189234,
+                "last_updated": "2019-04-13 22:00",
+                "temp_c": 6,
+                "temp_f": 42.8,
+                "is_day": 0,
+                "condition": {
+                  "text": "Clear",
+                  "icon": "//cdn.apixu.com/weather/64x64/night/113.png",
+                  "code": 1000
+                },
+                "wind_mph": 15,
+                "wind_kph": 24.1,
+                "wind_degree": 100,
+                "wind_dir": "E",
+                "pressure_mb": 1027,
+                "pressure_in": 30.8,
+                "precip_mm": 0,
+                "precip_in": 0,
+                "humidity": 52,
+                "cloud": 0,
+                "feelslike_c": 1.9,
+                "feelslike_f": 35.4,
+                "vis_km": 10,
+                "vis_miles": 6,
+                "uv": 0,
+                "gust_mph": 18.6,
+                "gust_kph": 29.9
+              }
+            }
+        </code>
+      </pre>
+
+      <p>
+        The data above is divided in to two main parts. The location section has meta information like local time, timezone as well as latitude and longitude.
+        The bulk of the weather data is contained within the current section. The data fields are fairly self explanatory, with the exception of the condition field.
+        The condition section is used to inform users what corresponding icon should be shown along with the weather information.
+      </p>
+    </div>
+
+    <div class="section_ref">
+      <h4>References</h4>
+      <p>https://www.apixu.com/</p>
+    </div>
+  </div>
+</body>
+</html>

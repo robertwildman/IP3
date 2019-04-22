@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../Sections/head%>
+</head>
+<body>
+    <% include ../Sections/nav%>
+    <h1><%= message %> </h1>
+    <form>
+        <input class="form-control" id="stationname"type="text" placeholder="Enter Station Name" aria-label="Search">
+        <button type="button" id="lookup"class="btn btn-primary">Search</button>
+    </form>
+    <div id="listholder">
+    </div>
+    <div id="extrainfo">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="/JS/transport.js"></script>
+</body>
+</html>
