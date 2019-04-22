@@ -567,7 +567,39 @@ h2 {
     .page-id-011 pre {
         color: red;
     }
+/* page-id-012 - Datasets 
+*/
+.page-id-012 .dataitem {
+    max-width: 800px;
+    float:left; 
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    background: #212529;
+    color: #fff;
+    word-wrap: break-word;
+}
+.page-id-012 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-012 .databutton {
+    width: 180px;
+}
+.page-id-012 .datahead {
+    text-align: center;
+}
+.page-id-012 .dataholder {
+    margin-top: 10px;
+}
+.page-id-012 pre {
+    color: red;
+}
 
+/*
+    page-id-012 - Tutorial 05
+    ---------------------
+*/
 /* page-id-013 - Authors
    --------------------- 
 */

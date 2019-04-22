@@ -24,13 +24,6 @@ var pc_sheet_name_list = pcworkbook.SheetNames;
 var all_postcodes = XLSX.utils.sheet_to_json(pcworkbook.Sheets[pc_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Look up Table");
 
-//Loading in the data to with the postcode infomaion 
-console.log("Loading in the Postcode Data Table");
-var pcdworkbook = XLSX.readFile('Data/PCData.xlsx');
-var pcd_sheet_name_list = pcdworkbook.SheetNames;
-var all_postcodes_data = XLSX.utils.sheet_to_json(pcdworkbook.Sheets[pcd_sheet_name_list[0]]);
-console.log("Done Loading in the Postcode Data Table");
-
 console.log("Loading in the Postcode Rank Table");
 var pcrworkbook = XLSX.readFile('Data/PCRank.xlsx');
 var pcr_sheet_name_list = pcrworkbook.SheetNames;
@@ -153,22 +146,13 @@ app.get('/api/postcode/info', (req, res) => {
       console.log(item.DZ);
     }
   });
-  all_postcodes_data.forEach(function(item)
-  {
-    var testdz = item.Data_Zone; 
-    if(testdz === dataZone)
-    {
-      json = item; 
-      console.log(item);
-    }
-  });
   all_postcodes_rank.forEach(function(item)
   {
     var testdz = item.Data_Zone; 
     if(testdz === dataZone)
     {
       console.log(item);
-      json = Object.assign(json, item);
+      json = item;
     }
   });
   console.log(json);
