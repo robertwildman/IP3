@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../Sections/head%>
+</head>
+<body class="page-id-015">
+    <% include ../Sections/error_catch%>
+    <% include ../Sections/nav%>
+    <div class="dataholder">
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>jQuery</h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://api.jquery.com/"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> We use jQuery in most of the pages on the website as it's a very helpfull library to deal with javscript problems. From event handling to AJAX jQuery is used, this library has helped us create the rich websites without having to do alot of the heavy handling and programming to complete simple tasks like listening for a click on a button.  
+                </p>
+                <h5>Project use: </h5>
+                <p> 
+                    We use jQuery to handle different events like a hoover or mouseclick, This allows us to change the website based on the user's input without having to refresh pages. <br> 
+                    An example of this is: 
+                </p>
+                    <pre>
+                        <code>
+                        $('#cryptodate').on('change', function() {
+                            loadgraphwithcoin();
+                        });
+                        </code>
+                    </pre>
+                <p> 
+                    With this code above we are looking for a change event in the dropdown menu. When this happens it calls a function which calls another function called loadgraphwithcoin(); <br>
+                    This allows us to change the coin and restart functions based on a event from the user. <br>
+                    Another use of jQuery in the program is to get the value of textfield. This can be helpfully when sending request away. 
+                </p>
+                <pre> 
+                    <code>
+                        $("#cryptodate").val();
+                    </code>
+                </pre>
+                <p> 
+                    This gets the current value of the dropdown menu with the ID cryptodate and we can assigned this to an value to use in the program. 
+                    Another use of jQuery is the AJAX Libary. Which can be found on the <a href="/javascripttutorial"> Javascript Tutorial </a>
+                </p>
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>Bootstrap</h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> We have tried to stay away from using bootstrap within the project in favour for our own personal design however bootstrap is a very helpful tool and library that we couldn't not use it. Bootstrap is a set of CSS and Javscript files that allow for a simple and easy apporch to design and fits around the site. </p> 
+                <h5>Project use: </h5>
+                <p> 
+                    We use bootstrap in only a few places on the websites. We use bootstrap to display a modal, This model is very helpful to pop up to the user, This modal is used as an error catcher and to display any issue with the program. 
+                </p>
+                <pre> 
+                    <code>
+                        &lt;div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true"&gt;
+                            &lt;div class="modal-dialog" role="document"&gt;
+                                &lt;div class="modal-content"&gt;
+                                    &lt;div class="modal-header"&gt;
+                                        &lt;h5 class="modal-title"&gt;Error!&lt;/h5&gt;
+                                        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                        &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                        &lt;/button&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="modal-body"&gt;
+                                        &lt;h6 id="errortextholder"&gt;&lt;/h4&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>Chart.JS</h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://www.chartjs.org/docs/latest/"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> This is a lightweight and easy to use library for creating different types of charts in javascript. </p>
+                <h5>Project use: </h5>
+                <p> We used this library in the project to create the charts on the crypto currency page. With the simple tools and easy to understand documention it allowed for a quick and easy installion of the graphs. <p>
+                <pre> 
+                <code> 
+                    chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: days,
+                        datasets: [{
+                            data: value,
+                            backgroundColor: "#D4aF37",
+                            borderColor:"white"
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        tooltips: {
+                        mode: 'index',
+                        intersect: false
+                        },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                        },
+                        scales: {
+                        xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                            }
+                        }],
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                            display: true,
+                            labelString: 'Price (USD)'
+                            },
+                        }]
+                        },
+                        legend: {
+                            display: false
+                        }
+                    }
+                    }); 
+                </code> 
+                </pre>
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>Leaflet</h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://leafletjs.com/reference-1.4.0.html"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> Simple and easy to use library to create maps and had very good documention which allowed us to learn the library quickly without many issues. </p> 
+                <h5>Project use: </h5>
+                <p> This library was used multiple times in the websites on the citybikes, postcode and petition pages as the javascript library allowed for quick implementation. 
+                <br> 
+                Below is a sample code which allows the user to define a map and add a third party mapping data to the map, We used openstreetmap for the mapping. 
+                </p>
+                <pre> 
+                <code> 
+                //Find the citymap div and set the lat and long to glasgow zoomed at 8
+                mymap = L.map('citymap').setView(["55.882244", "-4.098274"], 8);
+                //Setting the map to the Open Street Map using url and access token
+                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    maxZoom: 18,
+                    id: 'mapbox.streets',
+                    accessToken: 'accessToken'
+                }).addTo(mymap);
+                </code>
+                </pre>
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>Leaflet Marker Cluster </h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://github.com/Leaflet/Leaflet.markercluster"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> This library was super useful and is hosted on GitHub. This open source code was very helpful in making sure the map wasn't over loaded with markers </p>
+                <h5>Project use: </h5>
+                <p> This library helped with the displaying of the map using Leaflet, it allowed us to have all the markers on a map without having to display them all at one time. Was very easy to install with only a few lines of code and worked on top of the leaflet library. </p>
+                <pre>
+                    <code> 
+                        var stationgroup = L.markerClusterGroup();
+                        var marker = L.marker([value.latitude, value.longitude]).addTo(stationgroup);
+                        stationgroup.addTo(mymap);
+                    </code>
+                </pre>
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>Express</h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://expressjs.com/en/guide/routing.html"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> This library provides a minimal and flexible node.js web application framework allowing for routing of incoming requests. </p> 
+                <h5>Project use: </h5>
+                <p> In this project we used express to do all the routing for the appilcation including the api sections allowing us to have a server setup to deal with all requests. 
+                <br>
+                    In the example below it shows how you can use RESTful api to get an incoming request and then ask the templating engine to return a webpage to the user also starting the server on the port 3000
+                </p> 
+                <pre>
+                <code> 
+                    app.get('/crypto', (req, res) => {
+                        res.render('Pages/crypto', {title: 'Cryptocurrency'});
+                    });
+                    app.use(express.static(__dirname + '/public'));
+                    app.listen(3000, () => console.log(`Example app listening on port ${port}!`));
+                </code>
+                </pre> 
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>EJS - Embedded JavaScript templating </h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://ejs.co/#docs"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> A this library is a templating engine which allows us to create sections which can be changed once and updated through out the website. </p> 
+                <h5>Project use: </h5>
+                <p> In this project the use of the EJS was to allow for sections of code to be added to the webpage when it got built allowing the code to be the same throughout the website without having to change each file every time. 
+                <br> 
+                In the example below it shows how you can add a EJS file into another EJS. It will take the code from the nav.ejs file and add it in where this line of code is. 
+                </p>
+                <pre> 
+                <code>
+                    &lt;% include ../Sections/nav %&gt;
+                </code>
+                </pre>
+            </div>
+        </div><!-- End of item-->
+        <div class="dataitem"><!-- Item --> 
+            <div class="dataheader"> 
+                <h4>XLSX</h4> 
+            </div>
+            <div class="databody">
+                <h5> Library infomation </h5>
+                <p> <a href="https://www.npmjs.com/package/xlsx"> Documention </a> </p>
+                <h5>Description: </h5>
+                <p> This library is used when you need to access excel files and the content inside them </p>
+                <h5>Project use: </h5>
+                <p> For the project we used this to read excel files and then have that data exposed using an api.<br> 
+                    In the example below you will see that we read in the file and select the first book and copy the contents of this book to a variable to use later 
+                </p>
+                <pre>
+                <code> 
+                    var pcrworkbook = XLSX.readFile('Data/PCRank.xlsx');
+                    var pcr_sheet_name_list = pcrworkbook.SheetNames;
+                    var all_postcodes_rank = XLSX.utils.sheet_to_json(pcrworkbook.Sheets[pcr_sheet_name_list[0]]);
+                </code>
+                </pre>
+            </div>
+        </div><!-- End of item-->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+</body>
+</html>

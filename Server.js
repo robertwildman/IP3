@@ -88,6 +88,9 @@ app.get('/weathertutorial', (req, res) => {
 app.get('/javascripttutorial', (req, res) => {
   res.render('Pages/javascripttutorial', {title: 'JavaScript Tutorial'})
 });
+app.get('/libraries', (req, res) => {
+  res.render('Pages/libraries', {title: 'Libraries Tutorial'})
+});
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
   {
