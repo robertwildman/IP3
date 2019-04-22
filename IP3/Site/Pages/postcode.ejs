@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../Sections/head%>
+</head>
+<body class="page page-id-006">
+    <% include ../Sections/error_catch%>
+    <% include ../Sections/nav%>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="crossorigin=""></script>
+    <script src="/JS/raphael-2.1.4.min.js"></script>  
+    <script src="/JS/justgage.js"></script>  
+    <script src="/JS/Postcode.js"></script>   
+
+    <div class="flex-container">
+        <div class="PCform">
+            <form>
+                <input class="form-control" id="pc"type="text" placeholder="Enter Postcode" aria-label="Search" value="G4 0BA">
+                <button type="button" id="pcsearch"class="btn btn-primary">Search</button>
+            </form>
+        </div>
+
+        <div class="buttons">
+            <button type="button" id="pcBAR"class="pc_sidebuttons">Bar</button>
+            <button type="button" id="pcCafe"class="pc_sidebuttons">Cafe</button>        
+            <button type="button" id="pcRestaurant"class="pc_sidebuttons">Restaurant</button> 
+            <button type="button" id="pcTransit"class="pc_sidebuttons">Bus Stop/Train Stations </button> 
+            <button type="button" id="pcDepartment"class="pc_sidebuttons">Department Stores</button> 
+            <button type="button" id="pcSupermarket"class="pc_sidebuttons">Supermarkets</button>
+            <button type="button" id="pcHouse"class="pc_sidebuttons">Houses to buy!</button>
+        </div>
+
+        <div id="mapid" style="height: 400px; width:800px;"></div>
+
+        <div class="mapinfo">    
+            <table id="simpletable" class='table table-striped table-dark' style='width: 1000px;  margin-left: 2px; margin-right: 2px;' >
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="listholder"></div>
+        <div id="gaugeholder">
+            <div id="simdgauge" class="200x160px gauage"></div>
+            <div id="domaingauge" class="200x160px gauage"></div>
+            <div id="employgauge" class="200x160px gauage"></div>
+            <div id="healthgauge" class="200x160px gauage"></div>
+            <div id="educationgauge" class="200x160px gauage"></div>
+            <div id="housinggauge" class="200x160px gauage"></div>
+            <div id="crimegauge" class="200x160px gauage"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

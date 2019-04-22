@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../Sections/head%>
+</head>
+<body class="page-id-012">
+    <% include ../Sections/error_catch%>
+    <% include ../Sections/nav%>
+    <div class="dataholder">
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h5> City Bikes - Networks </h5>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.citybik.es/v2/"> API Documentation</a>
+                <br> 
+                API Endpoint:  <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a>
+                </p>
+            </div>
+            <div class="databuttonholder"> 
+                <button type="button" class="databutton" onclick="iclick(1);"> Input </button>
+                <button type="button" class="databutton"  onclick="tclick(1);"> Template</button>
+                <button type="button" class="databutton"  onclick="oclick(1);"> Output </button>
+                <button type="button" class="databutton"  onclick="uclick(1);"> Project Use </button>
+            </div>
+            <div class="datainfo datainput" id="di1">
+                <p> No input is needed for this request to take place </p> 
+            </div>
+            <div class="datainfo datatemplate" id="dt1">
+                <pre>
+ "networks" : [
+     {
+        "company": [
+            "Company Name(s) in array"
+        ],
+        "href": "Link to information of network",
+        "id": "Network ID",
+        "location": {
+            "city": "City name",
+            "country": "Country in 2 Letter Form",
+            "latitude": Latitude,
+            "Longitude": Longitude
+        },
+        "name": "Name of the network"
+        }
+ ]
+                </pre>
+            </div>
+            <div class="datainfo dataoutput" id="do1">
+                            <pre>
+"networks": [
+    {
+        "company": [
+            "Nextbike GmbH"
+        ],
+        "href": "/v2/networks/norisbike-nurnberg",
+        "id": "norisbike-nurnberg",
+        "location": {
+            "city": "Nürnberg",
+            "country": "DE",
+            "latitude": 49.4479,
+            "longitude": 11.0814
+        },
+        "name": "NorisBike"
+    }
+]
+            </pre>
+            </div>
+            <div class="datainfo datause" id="du1">
+                <p>In this project we use this api to get the following data and then display this data onto a map for the user to pick a network from.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Network Name </li>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Network ID </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h5>City Bikes - Stations </h5>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.citybik.es/v2/"> API Documentation</a>
+                <br> 
+                API Endpoint:  <a href="https://api.citybik.es/v2/networks/visa-frankfurt"> https://api.citybik.es/v2/networks/{ID} </a>
+                </p>
+            </div>
+            <div class="databuttonholder"> 
+                <button type="button" class="databutton" onclick="iclick(2);"> Input </button>
+                <button type="button" class="databutton"  onclick="tclick(2);"> Template</button>
+                <button type="button" class="databutton"  onclick="oclick(2);"> Output </button>
+                <button type="button" class="databutton"  onclick="uclick(2);"> Project Use </button>
+            </div>
+            <div class="datainfo datainput" id="di2">
+                <p> The input for the request is ID. This is the ID of the network your looking to get the stations for. <br> Can be found by using City Bikes Network api call. </p> 
+            </div>
+            <div class="datainfo datatemplate" id="dt2">
+                <pre> 
+    "network": {
+         "company": [
+                "Company Name(s) in array"
+            ],
+            "href": "Link to information of network",
+            "id": "Network ID",
+            "location": {
+                "city": "City name",
+                "country": "Country in 2 Letter Form",
+                "latitude": Latitude,
+                "Longitude": Longitude
+            },
+            "name": "Name of the network",,
+        "stations": [
+            {
+                "empty_slots": Number of free slots / Null if none,
+                "extra": {
+                    "bike_uids": [
+                        "UID of bikes in the station”
+                    ],
+                    "number": "Station Number"
+                },
+                "free_bikes": How many Bikes can be rented,
+                "id": "ID of station",
+                "latitude": Latitude of Station ,
+                "longitude": Longitude of Station,
+                "name": "Name of Station",
+                "timestamp": "UTC Timecode of last update!"
+            }
+        ]
+        </pre>
+            </div>
+            <div class="datainfo dataoutput" id="do2">
+            <pre>
+             "network": {
+        "company": [
+            "Nextbike GmbH"
+        ],
+        "href": "/v2/networks/visa-frankfurt",
+        "id": "visa-frankfurt",
+        "location": {
+            "city": "Frankfurt",
+            "country": "DE",
+            "latitude": 50.1072,
+            "longitude": 8.66375
+        },
+        "name": "VISA",
+        "stations": [
+            {
+                "empty_slots": null,
+                "extra": {
+                    "bike_uids": [
+                        "38046",
+                        "38206",
+                        "38979",
+                        "38865"
+                    ],
+                    "number": "4260",
+                    "uid": "46"
+                },
+                "free_bikes": 4,
+                "id": "a1500c71e6a60e8e6ce616e9446d69af",
+                "latitude": 50.099554541956,
+                "longitude": 8.6850410699844,
+                "name": "4260 - Südbahnhof / Hedderichstr.",
+                "timestamp": "2019-04-11T21:09:42.960000Z"
+            }
+        ]
+            </pre>
+            </div>
+            <div class="datainfo datause" id="du2">
+                <p>We use this call to get all the stations in a network. We then display the stations on a map based on the location given by the API.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Station Name </li>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Free Bikes(Number) </li>
+                    <li> Empty Slots </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h5>Coinparika</h5>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.coinpaprika.com/#tag/Coins/paths/~1coins~1{coin_id}~1ohlcv~1latest~1/get"> API Documentation</a>
+                <br> 
+                API Endpoint:  <a href=" https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical?start=2019-01-01&limit=200">  https://api.coinpaprika.com/v1/coins/{CoinID}/ohlcv/historical?start=2019-01-01 </a>
+                </p>
+            </div>
+            <div class="databuttonholder"> 
+                <button type="button" class="databutton" onclick="iclick(3);"> Input </button>
+                <button type="button" class="databutton"  onclick="tclick(3);"> Template</button>
+                <button type="button" class="databutton"  onclick="oclick(3);"> Output </button>
+                <button type="button" class="databutton"  onclick="uclick(3);"> Project Use </button>
+            </div>
+            <div class="datainfo datainput" id="di3">
+            </div>
+            <div class="datainfo datatemplate" id="dt3">
+                <pre>
+                <code>
+                    {
+        "time_open": "UTC zulu time of time open",
+        "time_close": "UTC  zulu time of time closed",
+        "open": USD price opening,
+        "high": USD price at peak,
+        "low": USD price at low,
+        "close": USD price opening,
+        "volume": Volume of the Coin,
+        "market_cap": Market Cap of coin
+    }
+
+                </code>
+                </pre>
+            </div>
+            <div class="datainfo dataoutput" id="do3">
+                <pre>
+                    <code>
+                        {
+        "time_open": "2019-02-01T00:00:00Z",
+        "time_close": "2019-02-01T23:59:59Z",
+        "open": 3450.05223403,
+        "high": 3488.34258219,
+        "low": 3418.77109044,
+        "close": 3476.45924705,
+        "volume": 3235735301,
+        "market_cap": 60418263486
+
+        }
+
+                    </code>
+                    </pre>
+            </div>
+            <div class="datainfo datause" id="du3">
+                <p>In this project we use this api to get the following data and then display this data onto a map for the user to pick a network from.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Network Name </li>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Network ID </li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- End of Dataset holder-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="crossorigin=""></script>
+    <script src="/JS/datasets.js"></script> 
+</body>
+</html>
