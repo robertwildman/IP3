@@ -9,63 +9,70 @@
     <div class="dataholder">
         <div class="dataitem">
             <div class="datahead"> 
-                <h5> City Bikes - Networks </h5>
+                <h4> City Bikes - Networks </h4>
             </div>
             <div class="databody">
                 <p> 
                 <a href="https://api.citybik.es/v2/"> API Documentation</a>
                 <br> 
                 API Endpoint:  <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a>
+                <br> 
+                API Sample Request:  <a href="https://api.citybik.es/v2/networks"> https://api.citybik.es/v2/networks </a>
                 </p>
             </div>
-            <div class="databuttonholder"> 
-                <button type="button" class="databutton" onclick="iclick(1);"> Input </button>
-                <button type="button" class="databutton"  onclick="tclick(1);"> Template</button>
-                <button type="button" class="databutton"  onclick="oclick(1);"> Output </button>
-                <button type="button" class="databutton"  onclick="uclick(1);"> Project Use </button>
-            </div>
             <div class="datainfo datainput" id="di1">
+                <h5> Input: </h5>
                 <p> No input is needed for this request to take place </p> 
             </div>
             <div class="datainfo datatemplate" id="dt1">
-                <pre>
- "networks" : [
-     {
-        "company": [
-            "Company Name(s) in array"
-        ],
-        "href": "Link to information of network",
-        "id": "Network ID",
-        "location": {
-            "city": "City name",
-            "country": "Country in 2 Letter Form",
-            "latitude": Latitude,
-            "Longitude": Longitude
-        },
-        "name": "Name of the network"
-        }
- ]
-                </pre>
-            </div>
-            <div class="datainfo dataoutput" id="do1">
-                            <pre>
-"networks": [
-    {
-        "company": [
-            "Nextbike GmbH"
-        ],
-        "href": "/v2/networks/norisbike-nurnberg",
-        "id": "norisbike-nurnberg",
-        "location": {
-            "city": "Nürnberg",
-            "country": "DE",
-            "latitude": 49.4479,
-            "longitude": 11.0814
-        },
-        "name": "NorisBike"
-    }
-]
-            </pre>
+                <h5> Output: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Field Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> company </td>
+                        <td> Company Name(s) in array </td>
+                        <td> ["Nextbike GmbH"] </td>
+                    </tr>
+                    <tr>
+                        <td>href</td>
+                        <td>Link to information of network</td>
+                        <td>/v2/networks/nextbike-glasgow</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Network ID</td>
+                        <td>nextbike-glasgow</td>
+                    </tr>
+                    <tr>
+                        <td>city</td>
+                        <td>City Name</td>
+                        <td> Glasgow </td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td>Country in 2 Letter Form</td>
+                        <td> GB </td>
+                    </tr>
+                    <tr>
+                        <td>latitude</td>
+                        <td>Latitude of Network Center point</td>
+                        <td> 55.8589 </td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>Longitude of Network Center point</td>
+                        <td> -4.25549 </td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Name of the network</td>
+                        <td> Nextbike </td>
+                    </tr>
+                </table>
             </div>
             <div class="datainfo datause" id="du1">
                 <p>In this project we use this api to get the following data and then display this data onto a map for the user to pick a network from.</p>
@@ -77,7 +84,7 @@
                     <li> Network ID </li>
                 </ul>
             </div>
-        </div>
+        </div> <!--End of dataitem-->
         <div class="dataitem">
             <div class="datahead"> 
                 <h5>City Bikes - Stations </h5>
@@ -86,89 +93,120 @@
                 <p> 
                 <a href="https://api.citybik.es/v2/"> API Documentation</a>
                 <br> 
-                API Endpoint:  <a href="https://api.citybik.es/v2/networks/visa-frankfurt"> https://api.citybik.es/v2/networks/{ID} </a>
+                API Endpoint:  https://api.citybik.es/v2/networks/{ID}
+                <br> 
+                API Sample Request:  <a href="https://api.citybik.es/v2/networks/nextbike-glasgow"> https://api.citybik.es/v2/networks/nextbike-glasgow </a>
                 </p>
             </div>
-            <div class="databuttonholder"> 
-                <button type="button" class="databutton" onclick="iclick(2);"> Input </button>
-                <button type="button" class="databutton"  onclick="tclick(2);"> Template</button>
-                <button type="button" class="databutton"  onclick="oclick(2);"> Output </button>
-                <button type="button" class="databutton"  onclick="uclick(2);"> Project Use </button>
-            </div>
             <div class="datainfo datainput" id="di2">
-                <p> The input for the request is ID. This is the ID of the network your looking to get the stations for. <br> Can be found by using City Bikes Network api call. </p> 
+                <h5> Input: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>This is the ID of the network your looking to get the stations for. Can be found by using City Bikes Network api call. </td>
+                        <td> nextbike-glasgow </td>
+                    </tr>
+                </table>
             </div>
             <div class="datainfo datatemplate" id="dt2">
-                <pre> 
-    "network": {
-         "company": [
-                "Company Name(s) in array"
-            ],
-            "href": "Link to information of network",
-            "id": "Network ID",
-            "location": {
-                "city": "City name",
-                "country": "Country in 2 Letter Form",
-                "latitude": Latitude,
-                "Longitude": Longitude
-            },
-            "name": "Name of the network",,
-        "stations": [
-            {
-                "empty_slots": Number of free slots / Null if none,
-                "extra": {
-                    "bike_uids": [
-                        "UID of bikes in the station”
-                    ],
-                    "number": "Station Number"
-                },
-                "free_bikes": How many Bikes can be rented,
-                "id": "ID of station",
-                "latitude": Latitude of Station ,
-                "longitude": Longitude of Station,
-                "name": "Name of Station",
-                "timestamp": "UTC Timecode of last update!"
-            }
-        ]
-        </pre>
-            </div>
-            <div class="datainfo dataoutput" id="do2">
-            <pre>
-             "network": {
-        "company": [
-            "Nextbike GmbH"
-        ],
-        "href": "/v2/networks/visa-frankfurt",
-        "id": "visa-frankfurt",
-        "location": {
-            "city": "Frankfurt",
-            "country": "DE",
-            "latitude": 50.1072,
-            "longitude": 8.66375
-        },
-        "name": "VISA",
-        "stations": [
-            {
-                "empty_slots": null,
-                "extra": {
-                    "bike_uids": [
-                        "38046",
-                        "38206",
-                        "38979",
-                        "38865"
-                    ],
-                    "number": "4260",
-                    "uid": "46"
-                },
-                "free_bikes": 4,
-                "id": "a1500c71e6a60e8e6ce616e9446d69af",
-                "latitude": 50.099554541956,
-                "longitude": 8.6850410699844,
-                "name": "4260 - Südbahnhof / Hedderichstr.",
-                "timestamp": "2019-04-11T21:09:42.960000Z"
-            }
-        ]
-            </pre>
+             <h5> Output: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Field Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                   <tr>
+                        <td> company </td>
+                        <td> Company Name(s) in array </td>
+                        <td> ["Nextbike GmbH"] </td>
+                    </tr>
+                    <tr>
+                        <td>href</td>
+                        <td>Link to information of network</td>
+                        <td>/v2/networks/nextbike-glasgow</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Network ID</td>
+                        <td>nextbike-glasgow</td>
+                    </tr>
+                    <tr>
+                        <td>city</td>
+                        <td>City Name</td>
+                        <td> Glasgow </td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td>Country in 2 Letter Form</td>
+                        <td> GB </td>
+                    </tr>
+                    <tr>
+                        <td>latitude</td>
+                        <td>Latitude of Network Center point</td>
+                        <td> 55.8589 </td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>Longitude of Network Center point</td>
+                        <td> -4.25549 </td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Name of the network</td>
+                        <td> Nextbike </td>
+                    </tr>
+                    <tr>
+                        <td>stations.empty_slots</td>
+                        <td> Number of free slots / Null if none </td>
+                        <td> 8 </td>
+                    </tr>
+                    <tr>
+                        <td>stations.extra.bike_uids</td>
+                        <td> UID of bikes in the station </td>
+                        <td> ["47258","47568"] </td>
+                    </tr>
+                    <tr>
+                        <td>stations.extra.number</td>
+                        <td> Station Number </td>
+                        <td> 8401 </td>
+                    </tr>
+                    <tr>
+                        <td>stations.free_bikes</td>
+                        <td> How many Bikes can be rented </td>
+                        <td> 2 </td>
+                    </tr>
+                    <tr>
+                        <td>stations.id</td>
+                        <td> ID of station </td>
+                        <td> 5ad606cb8638281dd770f79ded946e3e </td>
+                    </tr>
+                    <tr>
+                        <td>stations.latitude</td>
+                        <td> Latitude of Station </td>
+                        <td> 55.860727478485 </td>
+                    </tr>
+                    <tr>
+                        <td>stations.longitude</td>
+                        <td> Longitude of Station </td>
+                        <td> -4.2586451768875 </td>
+                    </tr>
+                    <tr>
+                        <td>stations.name</td>
+                        <td> Name of Station </td>
+                        <td> Central Station </td>
+                    </tr>
+                    <tr>
+                        <td> stations.timestamp </td>
+                        <td> UTC Timecode of last update </td>
+                        <td> 2019-04-21T14:42:59.538000Z </td>
+                    </tr>
+                </table>
             </div>
             <div class="datainfo datause" id="du2">
                 <p>We use this call to get all the stations in a network. We then display the stations on a map based on the location given by the API.</p>
@@ -184,66 +222,764 @@
         </div>
         <div class="dataitem">
             <div class="datahead"> 
-                <h5>Coinparika</h5>
+                <h4>Coinparika</h4>
             </div>
             <div class="databody">
                 <p> 
                 <a href="https://api.coinpaprika.com/#tag/Coins/paths/~1coins~1{coin_id}~1ohlcv~1latest~1/get"> API Documentation</a>
                 <br> 
-                API Endpoint:  <a href=" https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical?start=2019-01-01&limit=200">  https://api.coinpaprika.com/v1/coins/{CoinID}/ohlcv/historical?start=2019-01-01 </a>
+                API Endpoint:  https://api.coinpaprika.com/v1/coins/{CoinID}/ohlcv/historical
+                <br> 
+                API Sample Request:  <a href=" https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical?start=2019-01-01&limit=200">  https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical?start=2019-01-01 </a>
                 </p>
             </div>
-            <div class="databuttonholder"> 
-                <button type="button" class="databutton" onclick="iclick(3);"> Input </button>
-                <button type="button" class="databutton"  onclick="tclick(3);"> Template</button>
-                <button type="button" class="databutton"  onclick="oclick(3);"> Output </button>
-                <button type="button" class="databutton"  onclick="uclick(3);"> Project Use </button>
-            </div>
             <div class="datainfo datainput" id="di3">
+                <h5> Input: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td>CoinID</td>
+                        <td>This will be a pre assiged ID that is needed to identify the coin. </td>
+                        <td> btc-bitcoin </td>
+                    </tr>
+                    <tr>
+                        <td>start</td>
+                        <td>This will be a date set in the format yyyy-mm-dd, The date is the starting date for collecting data</td>
+                        <td>2019-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>limit</td>
+                        <td> This is the ammount of days returned. Default is 1 for 1 day </td>
+                        <td> 31 </td>
+                    </tr>
+                </table>
             </div>
             <div class="datainfo datatemplate" id="dt3">
-                <pre>
-                <code>
-                    {
-        "time_open": "UTC zulu time of time open",
-        "time_close": "UTC  zulu time of time closed",
-        "open": USD price opening,
-        "high": USD price at peak,
-        "low": USD price at low,
-        "close": USD price opening,
-        "volume": Volume of the Coin,
-        "market_cap": Market Cap of coin
-    }
-
-                </code>
-                </pre>
-            </div>
-            <div class="datainfo dataoutput" id="do3">
-                <pre>
-                    <code>
-                        {
-        "time_open": "2019-02-01T00:00:00Z",
-        "time_close": "2019-02-01T23:59:59Z",
-        "open": 3450.05223403,
-        "high": 3488.34258219,
-        "low": 3418.77109044,
-        "close": 3476.45924705,
-        "volume": 3235735301,
-        "market_cap": 60418263486
-
-        }
-
-                    </code>
-                    </pre>
+                <h5>Output: </h5>
+                <table class="table table-dark">
+                   <tr>
+                       <th> Field Name </th>
+                       <th> Description </th>
+                       <th> Example </th>
+                   </tr>
+                   <tr>
+                       <td>time_open </td>
+                       <td>UTC zulu time of time open</td>
+                       <td>2019-01-01T00:00:00Z</td>
+                   </tr>
+                   <tr>
+                       <td>time_close </td>
+                       <td>UTC zulu time of time closed</td>
+                       <td>2019-01-01T23:59:59Z</td>
+                   </tr>
+                   <tr>
+                       <td>open </td>
+                       <td>USD price opening</td>
+                       <td>3743.13383814</td>
+                   </tr>
+                   <tr>
+                       <td>high </td>
+                       <td>USD price at peak</td>
+                       <td>3848.768792</td>
+                   </tr>
+                   <tr>
+                       <td>low </td>
+                       <td> USD price at lowest </td>
+                       <td>3695.32467935</td>
+                   </tr>
+                   <tr>
+                       <td>close </td>
+                       <td>USD price at close</td>
+                       <td>3846.6792974 </td>
+                   </tr>
+                   <tr>
+                       <td>volume</td>
+                       <td>Volume of the Coin</td>
+                       <td>3062073034</td>
+                   </tr>
+                   <tr>
+                       <td>market_cap </td>
+                       <td>Market Cap of coin</td>
+                       <td>65338972677</td>
+                   </tr>
+               </table>
             </div>
             <div class="datainfo datause" id="du3">
-                <p>In this project we use this api to get the following data and then display this data onto a map for the user to pick a network from.</p>
+                <h5> Project use </h5>
+                <p>In this project we use this api to get the following data and then display this data onto a chart for the user.</p>
                 <h6> Data Used: </h6>
                 <ul>
-                    <li> Network Name </li>
+                    <li> time_open </li>
+                    <li> close </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem">
+            <div class="datahead"> 
+                <h4> Postcodes.io </h4>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="https://api.postcodes.io/docs"> API Documentation</a>
+                <br> 
+                API Endpoint: https://api.postcodes.io/postcodes </a>
+                <br> 
+                API Sample Request:  <a href="https://api.postcodes.io/postcodes/G40BA"> https://api.postcodes.io/postcodes/:postcode </a>
+                </p>
+            </div>
+            <div class="datainfo datainput" id="di1">
+                <h5> Input: </h5>
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> postcode </td>
+                        <td> The Postcode that you wish to get infomation from </td>
+                        <td> G40BA </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datatemplate" id="dt1">
+                <h5> Output: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Field Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> Status </td>
+                        <td> Status of the request </td>
+                        <td> 200 </td>
+                    </tr>
+                    <tr>
+                        <td> Postcode </td>
+                        <td> Postcode of the Request </td>
+                        <td> G4 0BA </td>
+                    </tr>
+                    <tr>
+                        <td>quality</td>
+                        <td>Positional Quality. Shows the status of the assigned grid reference.</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>eastings</td>
+                        <td>Eastings</td>
+                        <td> 259296 </td>
+                    </tr>
+                    <tr>
+                        <td> northings </td>
+                        <td> Northings </td>
+                        <td> 666080 </td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td>Country</td>
+                        <td> Scotland </td>
+                    </tr>
+                    <tr>
+                        <td>nhs_ha </td>
+                        <td>Strategic Health Authority</td>
+                        <td> Greater Glasgow and Clyde </td>
+                    </tr>
+                    <tr>
+                        <td>admin_county </td>
+                        <td> County</td>
+                        <td> null </td>
+                    </tr>
+                    <tr>
+                        <td>admin_district  </td>
+                        <td> The current district/unitary authority</td>
+                        <td> Glasgow City </td>
+                    </tr>
+                    <tr>
+                        <td>admin_ward </td>
+                        <td> The current administrative/electoral area </td>
+                        <td> Anderston/City/Yorkhill </td>
+                    </tr>
+                    <tr>
+                        <td> longitude </td>
+                        <td> Longitude of the Postcode </td>
+                        <td> 55.86729 </td>
+                    </tr>
+                    <tr>
+                        <td> latitude </td>
+                        <td> Latitude of the Postcode</td>
+                        <td> -4.250057 </td>
+                    </tr>
+                    <tr>
+                        <td> parliamentary_constituency  </td>
+                        <td> Westminster Parliamentary Constituency</td>
+                        <td> Glasgow Central </td>
+                    </tr>
+                    <tr>
+                        <td> european_electoral_region </td>
+                        <td> European Electoral Region (EER)</td>
+                        <td> Scotland </td>
+                    </tr>
+                    <tr>
+                        <td> primary_care_trust  </td>
+                        <td> Primary Care Trust (PCT) </td>
+                        <td> Glasgow City Community Health Partnership </td>
+                    </tr>
+                    <tr>
+                        <td> region </td>
+                        <td> Region</td>
+                        <td> null </td>
+                    </tr>
+                    <tr>
+                        <td> lsoa </td>
+                        <td> 2011 Census lower layer super output area (LSOA)</td>
+                        <td> City Centre West - 05 </td>
+                    </tr>
+                    <tr>
+                        <td> msoa </td>
+                        <td> 2011 Census middle layer super output area (MSOA) </td>
+                        <td> City Centre West </td>
+                    </tr>
+                    <tr>
+                        <td> ced </td>
+                        <td> County Electoral District</td>
+                        <td> null </td>
+                    </tr>
+                    <tr>
+                        <td> ccg  </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> Glasgow City Community Health Partnership </td>
+                    </tr>
+                    <tr>
+                        <td> nuts </td>
+                        <td> Nomenclature of Units for Territorial Statistics (NUTS) / Local Administrative Units (LAU) areas </td>
+                        <td> Glasgow City </td>
+                    </tr>
+                    <tr>
+                        <td> codes.admin_district  </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> S12000046 </td>
+                    </tr>
+                    <tr>
+                        <td> codes.admin_county  </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> S99999999 </td>
+                    </tr>
+                    <tr>
+                        <td> codes.admin_ward  </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> S13002976 </td>
+                    </tr>
+                    <tr>
+                        <td> codes.parish   </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> S99999999 </td>
+                    </tr>
+                    <tr>
+                        <td> codes.ccg   </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> S03000043 </td>
+                    </tr>
+                    <tr>
+                        <td> codes.nuts </td>
+                        <td> Clinical Commissioning Group</td>
+                        <td> UKM82 </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datause" id="du1">
+                <h4> Project Use: </h4>
+                <p> In this project we use this api to get the following data and then display a map of the postcode and display other infomation in a table for the user. </p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Postcode </li>
                     <li> Latitude </li>
                     <li> Longitude </li>
-                    <li> Network ID </li>
+                    <li> Country </li>
+                    <li> Parliamentary Constituency </li>
+                </ul>
+            </div>
+        </div> <!--End of dataitem-->
+        <div class="dataitem"> <!-- Local API /Nearby -->
+            <div class="datahead"> 
+                <h4>Local API /Nearby </h4>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="/datasets"> API Documentation</a>
+                <br> 
+                API Endpoint:  /api/postcode
+                <br> 
+                API Sample Request:  <a href="/api/postcode/nearby/?type=bar&lat=55.86729&long=-4.250057"> /api/postcode/nearby/?type=bar&lat=55.86729&long=-4.250057 </a>
+                </p>
+            </div>
+            <div class="datainfo datainput" id="di3">
+                <h5> Input: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> Lat</td>
+                        <td> This will be the Latitude of the area you want to search for. </td>
+                        <td> 55.86729 </td>
+                    </tr>
+                    <tr>
+                        <td> Long </td>
+                        <td> This will be the Longitude of the area you want to search for.</td>
+                        <td> -4.250057 </td>
+                    </tr>
+                    <tr>
+                        <td> Type </td>
+                        <td> This is the type of request you would like. Type list found <a href="https://developers.google.com/places/supported_types">here</a>.</td>
+                        <td> bar </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datatemplate" id="dt3">
+                <h5>Output: </h5>
+                <table class="table table-dark">
+                   <tr>
+                       <th> Field Name </th>
+                       <th> Description </th>
+                       <th> Example </th>
+                   </tr>
+                   <tr>
+                       <td> Results </td>
+                       <td> This is all the results in an array</td>
+                       <td> Array of Results </td>
+                   </tr>
+                   <tr>
+                       <td> Lat </td>
+                       <td> The latitude of the place </td>
+                       <td> 55.8620314 </td>
+                   </tr>
+                   <tr>
+                       <td> Long </td>
+                       <td> The Longitude of the place</td>
+                       <td> -4.2529332999 </td>
+                   </tr>
+                   <tr>
+                       <td> Name </td>
+                       <td> This is the name of the place. </td>
+                       <td> Carlton George Hotel </td>
+                   </tr>
+                   <tr>
+                       <td> rating </td>
+                       <td> The user rating if available from Google user's reviews. Out of 5 </td>
+                       <td> 4.4 </td>
+                   </tr>
+               </table>
+            </div>
+            <div class="datainfo datause" id="du3">
+                <h5> Project use </h5>
+                <p> In this project we use this api to get the following data and display the data on a map for the user to click and see more infomation.</p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> Latitude </li>
+                    <li> Longitude </li>
+                    <li> Name </li>
+                    <li> Rating </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem"> <!-- Local API /info-->
+            <div class="datahead"> 
+                <h4>Local API /info </h4>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="/datasets"> API Documentation</a>
+                <br> 
+                API Endpoint:  /api/postcode
+                <br> 
+                API Sample Request:  <a href="/api/postcode/info?postcode=G4 0BA"> /api/postcode/info?postcode=G4 0BA </a>
+                </p>
+            </div>
+            <div class="datainfo datainput" id="di3">
+                <h5> Input: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> Postcode</td>
+                        <td> Postcode needed to perform the search. Must have space between outward and inward codes.</td>
+                        <td> G4 0BA </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datatemplate" id="dt3">
+                <h5>Output: </h5>
+                <table class="table table-dark">
+                   <tr>
+                       <th> Field Name </th>
+                       <th> Description </th>
+                       <th> Example </th>
+                   </tr>
+                   <tr>
+                       <td> Data_zone </td>
+                       <td> This is the datazone of the postcode, where all the ranks are based on. </td>
+                       <td> S01010270 </td>
+                   </tr>
+                   <tr>
+                       <td> SIMD16_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on overall rank. Between 1 - 6976 </td>
+                       <td> 331 </td>
+                   </tr>
+                   <tr>
+                       <td> Domain_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on domain rank. Between 1 - 6976 </td>
+                       <td> 439 </td>
+                   </tr>
+                   <tr>
+                       <td> Employment_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on employment rank. Between 1 - 6976 </td>
+                       <td> 297 </td>
+                   </tr>
+                   <tr>
+                       <td> Health_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on health rank. Between 1 - 6976 </td>
+                       <td> 135 </td>
+                   </tr>
+                   <tr>
+                       <td> Education_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on education rank. Between 1 - 6976 </td>
+                       <td> 1333 </td>
+                   </tr>
+                   <tr>
+                       <td> Housing_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on housing rank. Between 1 - 6976 </td>
+                       <td> 569.5 </td>
+                   </tr>
+                   <tr>
+                       <td> Crime_rank </td>
+                       <td> Rank of the Datazone compared to the rest of scotland based on crime rank. Between 1 - 6976 </td>
+                       <td> 375 </td>
+                   </tr>
+               </table>
+            </div>
+            <div class="datainfo datause" id="du3">
+                <h5> Project use </h5>
+                <p> In this project we use this api to get the following data and display the infomation in Gauges with a scale from 1 - 6976 </p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> SIMD16_rank </li>
+                    <li> Domain_rank </li>
+                    <li> Employment_rank </li>
+                    <li> Health_rank </li>
+                    <li> Education_rank </li>
+                    <li> Housing_rank </li>
+                    <li> Crime_rank </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem"> <!-- Local API /housing -->
+            <div class="datahead"> 
+                <h4>Local API /housing</h4>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="/datasets"> API Documentation</a>
+                <br> 
+                API Endpoint:  /api/postcode/housing
+                <br> 
+                API Sample Request:  <a href="/api/postcode/housing?lat=55.86729&long=-4.250057"> /api/postcode/housing?lat=55.86729&long=-4.250057 </a>
+                </p>
+            </div>
+            <div class="datainfo datainput" id="di3">
+                <h5> Input: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> Lat</td>
+                        <td> This will be the Latitude of the area you want to search for. </td>
+                        <td> 55.86729 </td>
+                    </tr>
+                    <tr>
+                        <td> Long </td>
+                        <td> This will be the Longitude of the area you want to search for.</td>
+                        <td> -4.250057 </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datatemplate" id="dt3">
+                <h5>Output: </h5>
+                <table class="table table-dark">
+                   <tr>
+                       <th> Field Name </th>
+                       <th> Description </th>
+                       <th> Example </th>
+                   </tr>
+                   <tr>
+                       <td>title </td>
+                       <td>Title of the property </td>
+                       <td>Woodlands (Glasgow), G4 - Reception</td>
+                   </tr>
+                   <tr>
+                       <td>img_url </td>
+                       <td>Link to a small image of the property to be displayed.</td>
+                       <td><a href="https://imgs.nestimg.com/2_bedroom_flat_for_sale_in_woodlands_glasgow_111284738329857964.jpg">https://imgs.nestimg.com/2_bedroom_flat_for_sale_in_woodlands_glasgow_111284738329857964.jpg</a></td>
+                   </tr>
+                   <tr>
+                       <td>latitude </td>
+                       <td>The latitude of the property</td>
+                       <td>55.872425</td>
+                   </tr>
+                   <tr>
+                       <td>longitude </td>
+                       <td>The longitude of the property</td>
+                       <td>-4.262393</td>
+                   </tr>
+                   <tr>
+                       <td>summary </td>
+                       <td>Brief summary of the property</td>
+                       <td>This secluded development is tucked away off st georges cross and p...</td>
+                   </tr>
+                   <tr>
+                       <td>price </td>
+                       <td>The current asking price of the property</td>
+                       <td>£127,000</td>
+                   </tr>
+                   <tr>
+                       <td>listing_url</td>
+                       <td>URL to the orginal listing. </td>
+                       <td><a href ="https://www.nestoria.co.uk/detail-int/0000000111284738329857964/title/5/1-1?serpUid=&pt=1&ot=1&l=g1&did=45_high1&utm_source=api&utm_medium=external">https://www.nestoria.co.uk/detail-int/0000000111284738329857964/title/5/1-1?serpUid=&pt=1&ot=1&l=g1&did=45_high1&utm_source=api&utm_medium=external </a></td>
+                   </tr>
+               </table>
+            </div>
+            <div class="datainfo datause" id="du3">
+                <h5> Project use </h5>
+                <p>In this project we use this api to get the following data and then display this data onto the map and allow the user to select properties based on location. </p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> title </li>
+                    <li> img_url </li>
+                    <li> latitude </li>
+                    <li> longitude </li>
+                    <li> summary </li>
+                    <li> price </li>
+                    <li> listing_url </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem"> <!-- Petition Overview api -->
+            <div class="datahead"> 
+                <h4> data.parliament.uk Petition API </h4>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="http://eldaddp.azurewebsites.net/meta/epetitions.json?_view=ePetitionsListViewer&_sort=-numberOfSignature"> API Documentation</a>
+                <br> 
+                API Endpoint: https://lda.data.parliament.uk/epetitions.json </a>
+                <br> 
+                API Sample Request:  <a href="https://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer&_pageSize=100&_sort=-numberOfSignatures&_page=0"> https://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer&_pageSize=10&_sort=-numberOfSignatures&_page=0 </a>
+                </p>
+            </div>
+            <div class="datainfo datainput" id="di1">
+                <h5> Input: </h5>
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> pageSize </td>
+                        <td> The ammount of petitions you would like to be returend per a page.</td>
+                        <td> 100 </td>
+                    </tr>
+                    <tr>
+                        <td> sort </td>
+                        <td> How you would like the data to be sorted.</td>
+                        <td> -numberOfSignatures </td>
+                    </tr>
+                    <tr>
+                        <td> page </td>
+                        <td> The page of the request that you would like to receive. Starts at 0. </td>
+                        <td> 0 </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datatemplate" id="dt1">
+                <h5> Output: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Field Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> About </td>
+                        <td> Link to the internal data api </td>
+                        <td> http://data.parliament.uk/resources/1075160 </td>
+                    </tr>
+                    <tr>
+                        <td> created </td>
+                        <td> Time value of when the petition was created.  </td>
+                        <td> 2019-02-14T12:14:59.326Z </td>
+                    </tr>
+                    <tr>
+                        <td>identifier</td>
+                        <td>This is the petition ID. Used to locate the petition at later dates</td>
+                        <td>241584</td>
+                    </tr>
+                    <tr>
+                        <td> label </td>
+                        <td> This is the title of the petition. </td>
+                        <td> Revoke Article 50 and remain in the EU. </td>
+                    </tr>
+                    <tr>
+                        <td> numberOfSignatures </td>
+                        <td> Amount of signatures the petition has received. </td>
+                        <td> 6077572 </td>
+                    </tr>
+                    <tr>
+                        <td>sponsorPrinted</td>
+                        <td>Name of the person that created the petition if available </td>
+                        <td> Margaret Anne Georgiadou </td>
+                    </tr>
+                    <tr>
+                        <td>status </td>
+                        <td> This is the status of the petition. If the petition is open it can be signed. </td>
+                        <td> open </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datause" id="du1">
+                <h4> Project Use: </h4>
+                <p> In this project we use this api to get the following data and then input the data into a dropdown menu for the user to select what petition they wish to see. </p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> identifier </li>
+                    <li> label </li>>
+                </ul>
+            </div>
+        </div>
+        <div class="dataitem"> <!-- Petition Overview api -->
+            <div class="datahead"> 
+                <h4> data.parliament.uk Petition API </h4>
+            </div>
+            <div class="databody">
+                <p> 
+                <a href="http://eldaddp.azurewebsites.net/meta/epetitions.json?_view=ePetitionsListViewer&_sort=-numberOfSignature"> API Documentation</a>
+                <br> 
+                API Endpoint: https://petition.parliament.uk/petitions/ </a>
+                <br> 
+                API Sample Request:  <a href="https://petition.parliament.uk/petitions/241584.json"> https://petition.parliament.uk/petitions/241584.json </a>
+                </p>
+            </div>
+            <div class="datainfo datainput" id="di1">
+                <h5> Input: </h5>
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Input Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> Petition ID  </td>
+                        <td> The ID of the petition you wish to get the signatures for.</td>
+                        <td> 241584 </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datatemplate" id="dt1">
+                <h5> Output: </h5> 
+                <table class="table table-dark"> 
+                    <tr>
+                        <th> Field Name </th>
+                        <th> Description </th>
+                        <th> Example </th>
+                    </tr>
+                    <tr>
+                        <td> id </td>
+                        <td> The Petition ID  </td>
+                        <td> 241584</td>
+                    </tr>
+                    <tr>
+                        <td> action </td>
+                        <td> This is the title of the petition </td>
+                        <td> Revoke Article 50 and remain in the EU </td>
+                    </tr>
+                    <tr>
+                        <td>background</td>
+                        <td> Gives a reason for the petition being created. </td>
+                        <td>The government repeatedly claims exiting the EU is 'the will of the people'.....</td>
+                    </tr>
+                    <tr>
+                        <td> government_response </td>
+                        <td> This is the response from the government gives alot of infomation on debates and writen work.</td>
+                        <td> This Government will not revoke Article 50. </td>
+                    </tr>
+                    <tr>
+                        <td>signatures_by_country</td>
+                        <td>This section gives a breakdown country by country of signatures of that country. </td>
+                        <td> Array </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_country.name </td>
+                        <td> The name of the country. </td>
+                        <td> Afghanistan </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_country.code </td>
+                        <td> Gives the country's two letter code. </td>
+                        <td> AF </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_country.signature_count </td>
+                        <td> Gives the Signature Count of the country </td>
+                        <td> 23 </td>
+                    </tr>
+                    <tr>
+                        <td>signatures_by_constituency</td>
+                        <td>This section gives a breakdown constituency by constituency of signatures of that constituency. </td>
+                        <td> Array </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_constituency.name </td>
+                        <td> The name of the Westminster Constituency. </td>
+                        <td> Edinburgh East </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_constituency.ons_code </td>
+                        <td> The ons_code of the constituency. Helpfully when linking data. </td>
+                        <td> S14000022 </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_constituency.mp </td>
+                        <td> Gives the current member of parliament for the constituency</td>
+                        <td> Tommy Sheppard MP </td>
+                    </tr>
+                    <tr>
+                        <td> signatures_by_constituency.signature_count </td>
+                        <td> Gives the current number of signatures for the constituency</td>
+                        <td> 19510 </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo datause" id="du1">
+                <h4> Project Use: </h4>
+                <p> In this project we use this api to get the following data and then input the data into a dropdown menu for the user to select what petition they wish to see. </p>
+                <h6> Data Used: </h6>
+                <ul>
+                    <li> signatures_by_constituency.name  </li>
+                    <li> signatures_by_constituency.ons_code </li>
+                    <li> signatures_by_constituency.mp </li>
+                    <li> signatures_by_constituency.signature_count </li>
                 </ul>
             </div>
         </div>

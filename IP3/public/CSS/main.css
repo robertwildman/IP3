@@ -106,7 +106,7 @@ h2 {
 
 .page-id-002 .flex-container {
     display: flex;
-
+    
     flex-wrap: wrap;
     padding-top: 1%;
     padding-left: 3%;
@@ -187,7 +187,7 @@ h2 {
 .page-id-003 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-left: 3%;
     text-align: center;
 }
@@ -205,10 +205,11 @@ h2 {
     color: white;
 }
 
-.page-id-003 .dropdown #cryptocoin # {
+.page-id-003 .dropdown #cryptocoin, #cryptodate {
     position: relative; 
-    height: 40px;
+    height: 25px;
     border-radius: 20px;
+    border: solid #3d3c3c;
 }
 
 /*
@@ -461,204 +462,204 @@ h2 {
     ---------------------
 */
 
-    .page-id-008 .flex-container {
-        margin: 1%;
-    }
+.page-id-008 .flex-container {
+    margin: 1%;
+}
 
-    .page-id-008 .section_1, .section_2, .section_ref{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-008 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-008 .code_snippet{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-008 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-008 pre {
-        color: red;
-    }
-
-/*
-    page-id-009 - Earthquake Data Tut
-    ---------------------
-*/
-
-    .page-id-009 .flex-container {
-        margin: 1%;
-    }
-
-
-    .page-id-009 .section_1, .section_2, .section_ref{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
-
-    .page-id-009 .code_snippet{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
-
-    .page-id-009 pre {
-        color: red;
-    }
+.page-id-008 pre {
+    color: red;
+}
 
 /*
-    page-id-010 - Weather Data Tut
-    ---------------------
+page-id-009 - Earthquake Data Tut
+---------------------
 */
 
-    .page-id-010 .flex-container {
-        margin: 1%;
-    }
+.page-id-009 .flex-container {
+    margin: 1%;
+}
 
-    .page-id-010 .section_1, .section_2, .section_ref{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
 
-    .page-id-010 .code_snippet{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-009 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-010 pre {
-        color: red;
-    }
+.page-id-009 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-009 pre {
+    color: red;
+}
 
 /*
-    page-id-011 - JS Data Tut
-    ---------------------
+page-id-010 - Weather Data Tut
+---------------------
 */
 
-    .page-id-011 .flex-container {
-        margin: 1%;
-    }
+.page-id-010 .flex-container {
+    margin: 1%;
+}
 
-    .page-id-011 .section_1, .section_2, .section_ref{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-010 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-011 .code_snippet{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-010 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-011 pre {
-        color: red;
-    }
+.page-id-010 pre {
+    color: red;
+}
 
-    /*
-    page-id-012 - APIs Tut
-    ---------------------
+/*
+page-id-011 - JS Data Tut
+---------------------
 */
 
-    .page-id-012 .flex-container {
-        margin: 1%;
-    }
+.page-id-011 .flex-container {
+    margin: 1%;
+}
 
-    .page-id-012 .section_1, .section_2, .section_ref{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-011 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-012 .code_snippet{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-011 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
 
-    .page-id-012 pre {
-        color: red;
-    }
+.page-id-011 pre {
+    color: red;
+}
 
-    /*
-    page-id-014 - Libraries Data Tut
-    ---------------------
+/*
+page-id-012 - APIs Tut
+---------------------
 */
 
-    .page-id-014 .flex-container {
-        margin: 1%;
-    }
+.page-id-012 .dataitem {
+    max-width: 800px;
+    float:left; 
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    background: #212529;
+    color: #fff;
+    word-wrap: break-word;
+}
+.page-id-012 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-012 .databutton {
+    width: 180px;
+}
+.page-id-012 .dataheader {
+    text-align: center;
+}
+.page-id-012 .dataholder {
+    margin-top: 10px;
+}
+.page-id-012 pre {
+    color: red;
+    white-space: normal;
+}
 
-    .page-id-014 .section_1, .section_2, .section_ref{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+/*
+page-id-014 - Libraries Data Tut
+---------------------
+*/
 
-    .page-id-014 .code_snippet{
-        background-color: #3d3c3c;
-        border-radius: 25px;
-        border-style: solid;
-        border-color: #333232;
-        border-width: 6px 6px 6px 6px;
-        padding: 2%;
-        margin: 1%;
-    }
+.page-id-014 .flex-container {
+    margin: 1%;
+}
 
-    .page-id-014 pre {
-        color: red;
-    }
+.page-id-014 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-014 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-014 pre {
+    color: red;
+}
 
 /* page-id-013 - Authors
-   --------------------- 
+--------------------- 
 */
-
 .page-id-013 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -672,3 +673,46 @@ h2 {
 .page-id-013 img{
     border-radius: 100%;
   }
+  /* page-id-015 - Datasets 
+*/
+.page-id-015 .dataitem {
+    max-width: 800px;
+    float:left; 
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    background: #212529;
+    color: #fff;
+    word-wrap: break-word;
+}
+.page-id-015 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-015 .databutton {
+    width: 180px;
+}
+.page-id-015 .dataheader {
+    text-align: center;
+}
+.page-id-015 .dataholder {
+    margin-top: 10px;
+}
+.page-id-015 pre {
+    color: red;
+    white-space: normal;
+}
+
+ /* page-id-016 - Lat Long
+*/
+.page-id-016 .text-holder {
+    text-align: center;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
