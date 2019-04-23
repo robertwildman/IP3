@@ -3,33 +3,33 @@ $(function(){
   let users = [
     {
       Name: "Janne Antila",
-      picture: "../IMAGES/TEMP-REMOVE/User.png",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ea suscipit labore, ratione omnis voluptatum maxime nisi adipisci eaque, doloremque deserunt similique? Laudantium cum unde aperiam rerum obcaecati, eveniet aliquam itaque accusamus suscipit ex neque reiciendis deserunt explicabo iure eaque nesciunt autem quis sit animi optio facilis ipsum? Maiores et quia dolorum repellat, nulla debitis minima voluptate, sit, voluptates aliquid beatae quas itaque eveniet! Assumenda, dolor quaerat sunt corporis obcaecati, nesciunt error provident qui, magni cumque mollitia consequatur nemo exercitationem?<"
+      picture: "../IMAGES/Janne.jpg",
+      description: "Janne was the second developer for the project. He was responsible for developing most of the static pages as well as the weather and earthquake pages"
     },
     {
       Name: "Benjamin Hollywood",
-      picture: "../IMAGES/TEMP-REMOVE/User.png",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ea suscipit labore, ratione omnis voluptatum maxime nisi adipisci eaque, doloremque deserunt similique? Laudantium cum unde aperiam rerum obcaecati, eveniet aliquam itaque accusamus suscipit ex neque reiciendis deserunt explicabo iure eaque nesciunt autem quis sit animi optio facilis ipsum? Maiores et quia dolorum repellat, nulla debitis minima voluptate, sit, voluptates aliquid beatae quas itaque eveniet! Assumenda, dolor quaerat sunt corporis obcaecati, nesciunt error provident qui, magni cumque mollitia consequatur nemo exercitationem?<"
+      picture: "../IMAGES/Benjamin.jpeg",
+      description: "Benjamin was the mastermind behind organising documentation for the group. He was responsible for designing the overall appearance of the documentation and the poster deliverable"
     },
     {
       Name: "Robert Wildman",
-      picture: "../IMAGES/TEMP-REMOVE/User.png",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ea suscipit labore, ratione omnis voluptatum maxime nisi adipisci eaque, doloremque deserunt similique? Laudantium cum unde aperiam rerum obcaecati, eveniet aliquam itaque accusamus suscipit ex neque reiciendis deserunt explicabo iure eaque nesciunt autem quis sit animi optio facilis ipsum? Maiores et quia dolorum repellat, nulla debitis minima voluptate, sit, voluptates aliquid beatae quas itaque eveniet! Assumenda, dolor quaerat sunt corporis obcaecati, nesciunt error provident qui, magni cumque mollitia consequatur nemo exercitationem?<"
+      picture: "../IMAGES/Robert.png",
+      description: "Robert was the technical lead for the group. Robert decided what technology stack would be used for the project and how pages would be implemented"
     },
     {
       Name: "Lewis Bohme",
-      picture: "../IMAGES/TEMP-REMOVE/User.png",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ea suscipit labore, ratione omnis voluptatum maxime nisi adipisci eaque, doloremque deserunt similique? Laudantium cum unde aperiam rerum obcaecati, eveniet aliquam itaque accusamus suscipit ex neque reiciendis deserunt explicabo iure eaque nesciunt autem quis sit animi optio facilis ipsum? Maiores et quia dolorum repellat, nulla debitis minima voluptate, sit, voluptates aliquid beatae quas itaque eveniet! Assumenda, dolor quaerat sunt corporis obcaecati, nesciunt error provident qui, magni cumque mollitia consequatur nemo exercitationem?<"
+      picture: "../IMAGES/Lewis.jpeg",
+      description: "Lewis worked on the project as a designer with Adrian. His main task was designing the navigation for the application"
     },
     {
       Name: "Adrian McAulay",
-      picture: "../IMAGES/TEMP-REMOVE/User.png",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ea suscipit labore, ratione omnis voluptatum maxime nisi adipisci eaque, doloremque deserunt similique? Laudantium cum unde aperiam rerum obcaecati, eveniet aliquam itaque accusamus suscipit ex neque reiciendis deserunt explicabo iure eaque nesciunt autem quis sit animi optio facilis ipsum? Maiores et quia dolorum repellat, nulla debitis minima voluptate, sit, voluptates aliquid beatae quas itaque eveniet! Assumenda, dolor quaerat sunt corporis obcaecati, nesciunt error provident qui, magni cumque mollitia consequatur nemo exercitationem?<"
+      picture: "../IMAGES/Adrian.png",
+      description: "Adrian was the second designer of the project. He worked on the CSS extensively with Lewis to produce a responsive UI for the project"
     },
     {
       Name: "Stephen Wrath",
-      picture: "../IMAGES/TEMP-REMOVE/User.png",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ea suscipit labore, ratione omnis voluptatum maxime nisi adipisci eaque, doloremque deserunt similique? Laudantium cum unde aperiam rerum obcaecati, eveniet aliquam itaque accusamus suscipit ex neque reiciendis deserunt explicabo iure eaque nesciunt autem quis sit animi optio facilis ipsum? Maiores et quia dolorum repellat, nulla debitis minima voluptate, sit, voluptates aliquid beatae quas itaque eveniet! Assumenda, dolor quaerat sunt corporis obcaecati, nesciunt error provident qui, magni cumque mollitia consequatur nemo exercitationem?"
+      picture: "../IMAGES/Stephen.png",
+      description: "Stephen worked mainly on the documentation of the project. He was responsible for coordinating the groups efforts for the deliverables of the module"
     }
   ];
   /**
