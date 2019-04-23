@@ -31,12 +31,12 @@
     color: #D4aF37;
 } 
 
-.horizontal_nav_bar .dropdown-menu{
+.horizontal_nav_bar .dropdown{
     float: left;
-    overflow: hidden;
+    position: static;
 }
 
-.horizontal_nav_bar .dropdwn{
+.horizontal_nav_bar .dropbtn{
     background-color: #3d3c3c;
     border: none;
     display: block;
@@ -46,21 +46,23 @@
     margin: 0;
 }
 
-.horizontal_nav_bar .dropdwn .dropdown-menu{
+.horizontal_nav_bar .dropbtn .dropdown{
     border: none;
     outline: none;
     color: #fff;
     background-color: #3d3c3c;
+    display: block;
+    text-align: left;
 }
 
-.horizontal_nav_bar .dropdown-item{
+.horizontal_nav_bar .dropdown-content{
     display: none;
     position: absolute;
     background-color: #3d3c3c;
     z-index: 1;
 }
 
-.horizontal_nav_bar .dropdown-item a{
+.horizontal_nav_bar .dropdown-content a{
     display: block;
     color: white;
     text-align: center;
@@ -68,12 +70,12 @@
     float: none;
 }
 
-.horizontal_nav_bar .dropdown-menu:hover .dropdown-item{
+.horizontal_nav_bar .dropdown:hover .dropdown-content{
     display: block;
     color: #D4aF37;
 }
 
-.horizontal_nav_bar .dropdwn:hover{
+.horizontal_nav_bar .dropbtn:hover{
     color: #D4aF37;
     background-color: #111;
 }
@@ -83,11 +85,11 @@
 }
 
 /*
-    After Screen Size <= 850 pixels, Top Navigation Bar Becomes A Drop Down Menu
+    After Screen Size <= 886 pixels, Top Navigation Bar Becomes A Drop Down Menu
 */
 
-@media screen and (max-width: 850px) {
-    .horizontal_nav_bar a:not(:first-child), .dropdown-menu .dropdwn {
+@media screen and (max-width: 982px) {
+    .horizontal_nav_bar a:not(:first-child), .dropdown .dropbtn {
         display: none;
     }
     .horizontal_nav_bar a.icon {
@@ -96,7 +98,7 @@
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 982px) {
     .horizontal_nav_bar.responsive {
         position: relative;
     }
@@ -110,13 +112,13 @@
         display: block;
         text-align: left;
     }
-    .horizontal_nav_bar.responsive .dropdown-menu {
+    .horizontal_nav_bar.responsive .dropdown {
         float: none;
     }
-    .horizontal_nav_bar.responsive .dropdown-item {
+    .horizontal_nav_bar.responsive .dropdown-content {
         position: relative;
     }
-    .horizontal_nav_bar.responsive .dropdown-menu .dropdwn {
+    .horizontal_nav_bar.responsive .dropdown .dropbtn {
         display: block;
         width: 100%;
         text-align: left;

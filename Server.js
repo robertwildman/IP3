@@ -9,7 +9,7 @@ var csv = require('csv-parser');
 //Port for the server
 var port = 3000;
 //Toggle on and off for catched google place data
-var devmode = true;
+var devmode = false;
 //Setting the view enging
 app.set('view engine', 'ejs');
 //Setting where the views will be
@@ -23,13 +23,6 @@ var pc_sheet_name_list = pcworkbook.SheetNames;
 //Grabbing the first sheet and loading the data into a variable 
 var all_postcodes = XLSX.utils.sheet_to_json(pcworkbook.Sheets[pc_sheet_name_list[0]]);
 console.log("Done Loading in the Postcode Look up Table");
-
-//Loading in the data to with the postcode infomaion 
-console.log("Loading in the Postcode Data Table");
-var pcdworkbook = XLSX.readFile('Data/PCData.xlsx');
-var pcd_sheet_name_list = pcdworkbook.SheetNames;
-var all_postcodes_data = XLSX.utils.sheet_to_json(pcdworkbook.Sheets[pcd_sheet_name_list[0]]);
-console.log("Done Loading in the Postcode Data Table");
 
 console.log("Loading in the Postcode Rank Table");
 var pcrworkbook = XLSX.readFile('Data/PCRank.xlsx');
@@ -83,6 +76,9 @@ app.get('/', (req, res) => {
 app.get('/geojsontutorial', (req, res) => {
   res.render('Pages/geojsontutorial', {title: 'GeoJson Tutorial'})
 });
+app.get('/datasets', (req, res) => {
+  res.render('Pages/datasets', {title: 'Data Sets Tutorial'})
+});
 app.get('/earthquaketutorial', (req, res) => {
   res.render('Pages/earthquaketutorial', {title: 'Earthquake Tutorial'})
 });
@@ -91,6 +87,9 @@ app.get('/weathertutorial', (req, res) => {
 });
 app.get('/javascripttutorial', (req, res) => {
   res.render('Pages/javascripttutorial', {title: 'JavaScript Tutorial'})
+});
+app.get('/libraries', (req, res) => {
+  res.render('Pages/libraries', {title: 'Libraries Tutorial'})
 });
 app.get('/api/postcode/nearby/', (req, res) => {
   if(devmode == true)
@@ -150,22 +149,13 @@ app.get('/api/postcode/info', (req, res) => {
       console.log(item.DZ);
     }
   });
-  all_postcodes_data.forEach(function(item)
-  {
-    var testdz = item.Data_Zone; 
-    if(testdz === dataZone)
-    {
-      json = item; 
-      console.log(item);
-    }
-  });
   all_postcodes_rank.forEach(function(item)
   {
     var testdz = item.Data_Zone; 
     if(testdz === dataZone)
     {
       console.log(item);
-      json = Object.assign(json, item);
+      json = item;
     }
   });
   console.log(json);

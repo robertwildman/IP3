@@ -7,10 +7,105 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tutorial</title>
 </head>
-<body>
+<body class="page page-id-011">
   <% include ../Sections/nav%>
-  <div class="wrapper">
+  <div class="flex-container">
+      <h1>JavaScript data accessing and processing</h1>
 
+      <h4>
+        The purpose of this page is to introduce techniques that can be used to access and process data available from REST API's.
+      </h4>
+
+      <br/>
+
+    <div class="section_1">
+      <p>
+        JavaScript has a wide variety of methods for retrieving data from remote servers and websites. This tutorial will focus on two Asynchronous JavaScript and XML methods (Ajax) that have been utilised in this project.
+        The first method we will examining is the fetch API supported by most modern browsers.
+        Mozilla web docs define Fetch api as a way of making requests and retrieving resources.
+        A basic Fetch request consists of two parts, request and a response.
+      </p>
+    </div>
+
+    <div class="code_snippet">
+      <p>
+        The syntax for fetch is as follows
+      </p>
+
+      <pre>
+        <code>
+          fetch(https://www.exampleurl.co.uk/exampleapi)
+          .then(handle response)
+          .catch(potential errors);
+        </code>
+      </pre>
+
+      <p>
+        As seen here the syntax is fairly simple. The method works by fetching results and processing them in a daisy chain.
+        In a real life usage scenario fetch usually has at least two .then methods, the first one to return a json object and the second one to process the json object. 
+        This can be seen here in an example where we are retrieving weather conditions from Apixu.
+      </p>
+
+      <pre>
+        <code>
+          fetch('http://www.apixu.com/doc/Apixu_weather_conditions.json')
+          .then(response => response.json())
+          .then(response => {
+            apixuConditions = response;
+          })
+        </code>
+      </pre>
+
+      <p>
+        In the example above the results form the Apixu conditions api in to a previously created global variable called apixuConditions.
+        As we can see, retrieving non complicated results can be simple and efficient.
+      </p>
+      
+    </div>
+
+    <div class="code_snippet"> 
+      <p>The next method we are going to look at is ajax as provided by jQuery. 
+         The method looks as follows.
+      </p>
+
+      <pre>
+        <code>
+          $.ajax({
+            url: "https://lda.data.parliament.uk/epetitions.json?_view=ePetitionsListViewer",
+            type: "get",
+            success: function(response) {
+                    $.each(response.result.items, function(index, value) {
+                    var drop = '&lt;option value="'+value.identifier._value+'"&gt;'+ value.label._value +'&lt;/option&gt;'
+                    $('#petitiondrop').append(drop);
+                });                   
+            },
+            error: function(xhr) {
+                error("Issue with request!");
+                console.log(xhr);
+            }
+          });
+        </code>
+      </pre>
+
+      <p>As seen here the syntax is very similar between both of these methods. The jQuery ajax requires a type to be defined for every call,
+        whereas fetch defaults type to be get unless the user changes this. The jQuery ajax does not utilise diasy chaining in the same manner as fetch does,
+        all logic is handled within the main method confines.
+      </p>
+
+      <p>
+        Both method provide a feasible way of accessing data sources, as well as processing these data conveniently within the methods as necessary.
+        
+      </p>
+    </div>  
+
+    <div class="section_ref">
+      <h4>References</h4>
+
+      <br/>
+
+      <p>https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</p>
+      <p>https://api.jquery.com/</p>
+    </div>
   </div>
 </body>
 </html>

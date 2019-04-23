@@ -15,12 +15,14 @@ h2 {
     border-color: #D4aF37;
     border-width: 0px 0px 3px 0px;
 }
-.modal
-{
+
+.modal {
     color:#000;
 }
-
-
+.gauage
+{
+    float:left;
+}
 
 /*
     page-id-001 - Earthquakes
@@ -29,10 +31,8 @@ h2 {
   
 .page-id-001 .flex-container {
     display: flex;
-    flex-direction: column wrap;
     flex-wrap: wrap;
-
-    padding-top: 2%;
+    padding-top: 3%;
     text-align: center;
 }
 
@@ -67,13 +67,6 @@ h2 {
     margin: 2px;
     padding: 3px;
     color: #fff;
-
-    /* ALT to look like overview page buttons 
-            border-radius: 25px;
-        border: solid #D4aF37;
-        background-color: #333232;
-        color: white;
-        */
 }
 
 @media screen and (max-width: 850px) {
@@ -87,13 +80,21 @@ h2 {
 
     .page-id-001 .flex-container {
         display: flex;
-        flex-direction: column wrap;
     }
 
     .page-id-001 #map{
         width: 800px;
         height: 600px;
         margin: 10px;
+    }
+
+    .page-id-001 .dynamic{
+        background-color: #3d3c3c;
+        border: solid #3d3c3c;
+        border-radius: 20px;
+        margin: 1px;
+        padding: 1px;
+        color: #fff;
     }
 
 }
@@ -105,7 +106,7 @@ h2 {
 
 .page-id-002 .flex-container {
     display: flex;
-    flex-direction: column wrap;
+    
     flex-wrap: wrap;
     padding-top: 1%;
     padding-left: 3%;
@@ -117,9 +118,10 @@ h2 {
 }
 
 .page-id-002 #map{
-    width: calc(99vw - 280px);
-    height: 100%;
-    position: absolute;
+    position: relative;
+    padding-bottom: 75%;
+    overflow: hidden;
+    width: 75vw;
 }
 
 .page-id-002 .latlon, #location {
@@ -136,22 +138,46 @@ h2 {
     background-color: #3d3c3c;
     color: white;
 }
+
+.page-id-002 .mapcontainer {
+    height: auto;
+    width: auto;
+}
+
   
 @media (max-width: 850px) {
-    .page-id-002 .flex-container {
-        display: flex;
-        flex-direction: column wrap;
-    }
-
     .page-id-002 .mapcontainer {
-        height: auto;
-        width: auto;
-
+        padding-top: 2%;
+        padding-right: 2%;
     }
 
     .page-id-002 #map {
-        height: 90%;
+        width: 95vw;
     }
+
+    .page-id-002 #weatherResult {
+        float: right;
+        padding-left: 35px;
+        padding-top: 20px;
+    }
+
+    .page-id-002 .controlpanel {
+        float: left;
+    }
+
+}
+
+@media (max-width: 543px) {
+    .page-id-002 #weatherResult {
+        padding-right: 100px;
+        padding-left: 100px; 
+    }
+
+    .page-id-002 .controlpanel {
+        padding-right: 40px;
+        padding-left: 40px; 
+    }
+
 }
 
 /*
@@ -160,9 +186,8 @@ h2 {
 */
 .page-id-003 .flex-container {
     display: flex;
-    flex-direction: column wrap;
     flex-wrap: wrap;
-    padding-top: 0.5%;
+    padding-top: 2%;
     padding-left: 3%;
     text-align: center;
 }
@@ -175,20 +200,16 @@ h2 {
 
 .page-id-003 .buttonCC {
     border-radius: 25px;
-    border: solid #D4aF37;
-    background-color: #333232;
+    border: solid #3d3c3c;
+    background-color: #3d3c3c;
     color: white;
 }
 
-.page-id-003 .Graph-Cont{
-    position: relative;
-    width: 100%;
-    background-color: #3d3c3c;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: #333232;
-    border-width: 6px 6px 6px 6px;
-    margin: 0.5%;
+.page-id-003 .dropdown #cryptocoin, #cryptodate {
+    position: relative; 
+    height: 25px;
+    border-radius: 20px;
+    border: solid #3d3c3c;
 }
 
 /*
@@ -196,101 +217,162 @@ h2 {
     ---------------------
 */
 
-.page-id-004 .flex-container {
-    display: flex;
-    flex-direction: column wrap;
-    flex-wrap: wrap;
-    padding-top: 0.5%;
-    text-align: center;
-}
-
-/* .page-id-004 .cbtitle { --OPTIONAL TITLE--
-    width: 100%;
-    text-align: left;
-    margin: 1%;
-} */
-
 /*
-    page-id-005 - Petition [Adrian]
+    page-id-005 - Petition 
     ---------------------
 */
 .page-id-005 
 {
-    color:#000;
+    color:#fff;
 }
 
-.page-id-005 .Background {
-    background-color: #3d3c3c;
-}
+    .page-id-005 body {
+        padding: 0;
+        margin: 0;
+    }
 
-/*
-    page-id-006 - Postcode [Adrian]
-    ----------------------
-    Flexbox
-*/
+    .page-id-005 html, body {
+        height: 100%-30px;
+        width: 100vw;
+    }
 
-.page-id-006 .flex-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 800px;
-    padding-top: 5%; 
-}
+    .page-id-005 .modal-body, .modal-header, #petitiondrop{
+        background-color: #3d3c3c;
+        color: #000;
+        border-color: #3d3c3c;
+    }
 
-.page-id-006 .PCform {
-    padding-bottom: 30px;
-    padding-left: 3%; 
-    padding-right: 3%; 
-}
+    .page-id-005 #petitiondrop {
+        background-color: #a3a2a2;
+    }
 
-.page-id-006 .buttons {
-    padding-left: 3%; 
-    align-self: center;
-    padding-bottom: 400px;
-}
-.page-id-006 #mapid {
-    
-}
+    .page-id-005 button.close {
+        color: #a3a2a2;
+    }
 
-.page-id-006 .mapinfo {
-    padding-top: 3%; 
-    align-self: center;
-}
+    .page-id-005 .leaflet-container {
+        position: absolute;
+        height: calc(100% - 70px);
+        width: 100%;
+        background-color:rgba(255,0,0,0.0);
+    }
 
-/*
-    Map Filter Buttons
-    Postcode Search Bar and Button
-*/
+    .page-id-005 .petition_info {
+        float:left;
+        z-index: 10;
+        padding: 5px;
+        position: absolute;
+        width: 350px;
+        margin-top:75px;
+        margin-left:10px;
+        background-color: #3d3c3c;
+        color: #fff;
+    }
 
+    .page-id-005 .peition_ranking {
+        float:right;
+        width: 220px;
+        position: relative;
+        z-index: 10;
+        margin-top:75px;
+        margin-right:10px;
+        background-color: #3d3c3c;
+    }
 
+    .page-id-005 .pettionname {
+        text-align: center;
+    }
 
-.page-id-006 .buttons .pc_sidebuttons{
-    display: block;
-    background-color: #3d3c3c;
-    padding: 5px 12px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 25px; 
-    border: solid #3d3c3c;
-    margin-bottom: 5px;
-    color: white;
-}
+    .page-id-005 .color-box {
+        width: 30px;
+        height: 30px;
+        float: left;
+    }
 
-.page-id-006 #pcsearch {
-    border-radius: 25px;
-    border: solid #3d3c3c;
-    background-color: #3d3c3c;
-    color: white;
-}
+    .page-id-005 .ranking-row {
+        height: 30px;
+        margin-bottom: 2px;
+    }
 
-.page-id-006 #pc {
-    border-radius: 25px;
-    border: solid #3d3c3c;
-    background-color: #3d3c3c;
-    color: white;
-    text-align: center;
-}
+    .page-id-005 .ranking-text {
+        margin-left: 40px;
+    }
+
+    .page-id-005 .wrapper {
+        position: absolute;
+        width:100%;
+        height: calc(100% - 60px);
+    }
+
+    .page-id-005 #mapid {
+        position:fixed;
+    }
+
+    /*
+        page-id-006 - Postcode 
+        ----------------------
+        Flexbox
+    */
+  
+    .page-id-006 .flex-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .page-id-006 #pc.form-control {
+        float: left;
+        width: 25%;
+        border-radius: 25px;
+        padding-left: 5px;
+        margin-right: 10px;
+    }
+
+    .page-id-006 .PCform {
+        margin-top: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .page-id-006 .buttons {
+        margin-top: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+        max-width: 100%;
+    }
+
+    .page-id-006 .buttons .pc_sidebuttons{
+        background-color: #3d3c3c;
+        padding: 5px 12px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 25px; 
+        border: solid #3d3c3c;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .page-id-006 #mapid {
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .page-id-006 .mapinfo {
+        width: 100%;
+        overflow-y: visable;
+        min-height: 0.01%;
+        margin-left: 2%;
+        margin-right: 15%;
+        margin-top: 1%;
+    }
+
+    .page-id-006 #gaugeholder {
+        width:100%;
+    }
+
+    .page-id-006 .gauge {
+        float: left;
+    }
 
 /*
     page-id-007 - Overview/Splashscreen [Lewis]
@@ -298,7 +380,6 @@ h2 {
 */
 .page-id-007 .flex-container {
     display: flex;
-    flex-direction: column wrap;
     flex-wrap: wrap;
     padding-top: 0.5%;
     padding-left: 3%;
@@ -320,11 +401,6 @@ h2 {
     padding:1%;
     width: 50%;
     float: left;
-}
-
-
-@media screen and (max-width: 850px){
-
 }
 
 .page-id-007 .visualisation-container{
@@ -382,37 +458,210 @@ h2 {
 
 
 /*
-    page-id-008 - Tutorial 01
+    page-id-008 - GeoJSON Tutorial
     ---------------------
 */
+
+.page-id-008 .flex-container {
+    margin: 1%;
+}
+
+.page-id-008 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-008 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-008 pre {
+    color: red;
+}
 
 /*
-    page-id-009 - Tutorial 02
-    ---------------------
+page-id-009 - Earthquake Data Tut
+---------------------
 */
+
+.page-id-009 .flex-container {
+    margin: 1%;
+}
+
+
+.page-id-009 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-009 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-009 pre {
+    color: red;
+}
 
 /*
-    page-id-010 - Tutorial 03
-    ---------------------
+page-id-010 - Weather Data Tut
+---------------------
 */
+
+.page-id-010 .flex-container {
+    margin: 1%;
+}
+
+.page-id-010 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-010 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-010 pre {
+    color: red;
+}
 
 /*
-    page-id-011 - Tutorial 04
-    ---------------------
+page-id-011 - JS Data Tut
+---------------------
 */
+
+.page-id-011 .flex-container {
+    margin: 1%;
+}
+
+.page-id-011 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-011 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-011 pre {
+    color: red;
+}
 
 /*
-    page-id-012 - Tutorial 05
-    ---------------------
+page-id-012 - APIs Tut
+---------------------
 */
 
-/* page-id-013 - Authors [Lewis]
+.page-id-012 .dataitem {
+    max-width: 800px;
+    float:left; 
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    background: #212529;
+    color: #fff;
+    word-wrap: break-word;
+}
+.page-id-012 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-012 .databutton {
+    width: 180px;
+}
+.page-id-012 .dataheader {
+    text-align: center;
+}
+.page-id-012 .dataholder {
+    margin-top: 10px;
+}
+.page-id-012 pre {
+    color: red;
+    white-space: normal;
+}
 
+/*
+page-id-014 - Libraries Data Tut
+---------------------
 */
 
+.page-id-014 .flex-container {
+    margin: 1%;
+}
+
+.page-id-014 .section_1, .section_2, .section_ref{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-014 .code_snippet{
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.page-id-014 pre {
+    color: red;
+}
+
+/* page-id-013 - Authors
+--------------------- 
+*/
 .page-id-013 .flex-container {
     display: flex;
-    flex-direction: column wrap;
     flex-wrap: wrap;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
@@ -424,4 +673,46 @@ h2 {
 .page-id-013 img{
     border-radius: 100%;
   }
+  /* page-id-015 - Datasets 
+*/
+.page-id-015 .dataitem {
+    max-width: 800px;
+    float:left; 
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    background: #212529;
+    color: #fff;
+    word-wrap: break-word;
+}
+.page-id-015 .databuttonholder {
+    padding-left: 15px;
+}
+.page-id-015 .databutton {
+    width: 180px;
+}
+.page-id-015 .dataheader {
+    text-align: center;
+}
+.page-id-015 .dataholder {
+    margin-top: 10px;
+}
+.page-id-015 pre {
+    color: red;
+    white-space: normal;
+}
 
+ /* page-id-016 - Lat Long
+*/
+.page-id-016 .text-holder {
+    text-align: center;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
+}

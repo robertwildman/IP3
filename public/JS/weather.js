@@ -7,7 +7,7 @@ let markers = [];
 
 let useLocation = false;
 
-let apixuUrl = "http://api.apixu.com/v1/current.json?key=";
+let apixuUrl = "https://api.apixu.com/v1/current.json?key=";
 let apixuKey = "fd7ede7ab4f24f97ab7205326193001";
 
 let apixuConditions;
@@ -38,7 +38,7 @@ $(function() {
    */
   let fetchConditions = function(){
     if(!apixuConditions){
-      fetch('http://www.apixu.com/doc/Apixu_weather_conditions.json')
+      fetch('https://www.apixu.com/doc/Apixu_weather_conditions.json')
       .then(response => response.json())
       .then(response => {
         apixuConditions = response;

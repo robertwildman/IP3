@@ -10,7 +10,6 @@ $.ajax({
     success: function(response) {
         console.log(response);
         $.each(response.result.items, function(index, value) {
-            console.log(value.label);
             //Adding it to the petition array
             var drop = '<option value="'+value.identifier._value+'">'+ value.label._value +'</option>'
             $('#petitiondrop').append(drop);
@@ -41,6 +40,9 @@ $('#petitiondrop').change(function () {
   }).change();
 //Showing popup for petiton modal.
 $('#petitionModal').modal('show');
+$('input[type=radio][name=legendtype]').change(function() {
+    buildmap();
+});
 });
 //Loads in the pettion from the ID Given.
 function loadPetition(id)
@@ -57,20 +59,23 @@ function loadPetition(id)
                 //Adding it to the petition array
                 petitionData.push(value);
             }); 
-            //Build the legend
-            max = gethigh()/8;
-            //Empty Legend Div and then display the colors and Values 
-            $("#legend").empty();
-            $("#legend").append('<div class="ranking-row"> <div class ="color-box" style="background-color: #800026"></div> <p class="ranking-text"> '+ Math.round([max*7]) + '+ </p> </div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #BD0026"></div> <p class="ranking-text"> '+ Math.round([max*6])  + ' - ' + (Math.round([max*7])  - 1) +'</p></div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #E31A1C"></div> <p class="ranking-text"> '+ Math.round([max*5])  + ' - ' + (Math.round([max*6])  - 1) +'</p></div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FC4E2A"></div> <p class="ranking-text"> '+ Math.round([max*4])  + ' - ' + (Math.round([max*5])  - 1) +'</p></div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FD8D3C"></div> <p class="ranking-text"> '+ Math.round([max*3])  + ' - ' + (Math.round([max*4])  - 1) +'</p></div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FEB24C"></div> <p class="ranking-text"> '+ Math.round([max*2])  + ' - ' + (Math.round([max*3]) - 1) +'</p></div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FED976"></div> <p class="ranking-text"> ' + Math.round([max*1])  + ' - ' + (Math.round([max*2])  - 1) +' </p></div>');
-            $("#legend").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FFEDA0"></div> <p class="ranking-text"> 0 - '+ (Math.round([max*1])  - 1) +' </p> </div>');
-            //Reload the map with the new data
-            reloadmap();
+            //Adding the pop to the constituency 
+            $.getJSON( "convertcsv.json", function(json) {
+                $.each(json, function(index, jvalue) {
+                    $.each(petitionData, function(index, value) {
+                        if(value.ons_code == jvalue.ons_code)
+                        {
+                            var tempjson = petitionData[index];
+
+                            tempjson.pop = jvalue.pop;
+                            tempjson.percentage = Math.round(((value.signature_count / jvalue.pop) * 100) * 100) / 100;
+                            petitionData[index] = tempjson;
+                        }
+                    });
+                });   
+                //Builds the map based on the inputted data 
+                buildmap();
+            });
         },
         error: function(xhr) {
             //Let the users know that the request failed
@@ -78,6 +83,48 @@ function loadPetition(id)
 
         }
     });
+}
+
+//Builds the map 
+function buildmap()
+{
+    //Will check the radio buttons to see what legend to have. 
+    var type = $("input[name='legendtype']:checked").val();
+    if(type == 1)
+    {
+        //This will be a percentage legend and map color  
+        max = gethigh(1)/8;
+        $("#legendholder").empty();
+        $("#legendholder").append('<div class="ranking-row"> <div class ="color-box" style="background-color: #800026"></div> <p class="ranking-text"> '+ Math.round([max*7] * 100) / 100 + '%+ </p> </div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #BD0026"></div> <p class="ranking-text"> '+ Math.round([max*6] * 100) / 100  + '% - ' + (Math.round(([max*7] * 100) / 100 ) - 0.01) +'% </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #E31A1C"></div> <p class="ranking-text"> '+ Math.round([max*5] * 100) / 100  + '% - ' + (Math.round(([max*6] * 100) / 100)  - 0.01) +'% </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FC4E2A"></div> <p class="ranking-text"> '+ Math.round([max*4] * 100) / 100 + '% - ' + (Math.round(([max*5] * 100) / 100 ) - 0.01) +'% </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FD8D3C"></div> <p class="ranking-text"> '+ Math.round([max*3] * 100) / 100  + '% - ' + (Math.round(([max*4] * 100) / 100)  - 0.01) +'% </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FEB24C"></div> <p class="ranking-text"> '+ Math.round([max*2] * 100) / 100  + '% - ' + (Math.round(([max*3] * 100) / 100 ) - 0.01) +'% </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FED976"></div> <p class="ranking-text"> ' + Math.round([max*1] * 100) / 100  + '% - ' + (Math.round(([max*2] * 100) / 100)  - 0.01) +'% </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FFEDA0"></div> <p class="ranking-text"> 0% - '+ (Math.round(([max*1] * 100) / 100)  - 0.01) +'% </p> </div>');
+
+    }else 
+    {
+        //This will be a Sign based legend and map color    
+        //Build the legend
+        max = gethigh(2)/8;
+        //Empty Legend Div and then display the colors and Values 
+        $("#legendholder").empty();
+        $("#legendholder").append('<div class="ranking-row"> <div class ="color-box" style="background-color: #800026"></div> <p class="ranking-text"> '+ Math.round([max*7]) + '+ </p> </div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #BD0026"></div> <p class="ranking-text"> '+ Math.round([max*6])  + ' - ' + (Math.round([max*7])  - 1) +'</p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #E31A1C"></div> <p class="ranking-text"> '+ Math.round([max*5])  + ' - ' + (Math.round([max*6])  - 1) +'</p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FC4E2A"></div> <p class="ranking-text"> '+ Math.round([max*4])  + ' - ' + (Math.round([max*5])  - 1) +'</p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color: #FD8D3C"></div> <p class="ranking-text"> '+ Math.round([max*3])  + ' - ' + (Math.round([max*4])  - 1) +'</p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FEB24C"></div> <p class="ranking-text"> '+ Math.round([max*2])  + ' - ' + (Math.round([max*3]) - 1) +'</p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FED976"></div> <p class="ranking-text"> ' + Math.round([max*1])  + ' - ' + (Math.round([max*2])  - 1) +' </p></div>');
+        $("#legendholder").append('<div class="ranking-row"> <div class = "color-box" style="background-color:#FFEDA0"></div> <p class="ranking-text"> 0 - '+ (Math.round([max*1])  - 1) +' </p> </div>');
+
+    }
+ //Reload the map with the new data
+ console.log(gethigh());
+
+ reloadmap();
 }
 //Styles the sections of the map'
 function style(feature) {
@@ -88,7 +135,14 @@ function style(feature) {
         if(value.ons_code == feature.properties.PCON13CD)
         {
             //If on file Change the colornum to number of signatures
-            colornum = value.signature_count;
+            var type = $("input[name='legendtype']:checked").val();
+            if(type == 1)
+            {
+                colornum = value.percentage;
+            }else{
+                colornum = value.signature_count;
+            }
+            
     
         }
     });
@@ -117,19 +171,39 @@ function getColor(d) {
                       '#FFEDA0';
 }
 //Get highest number 
-function gethigh()
+function gethigh(type)
 {
-    //Sets high to default one so it can be compared. 
-    var high = 1;
-    //For each data in petition data check to see if signatures is higher then high variable set high to the signatures
-    $.each(petitionData, function(index, value) {
-        if(value.signature_count > high)
-        {
-            high = value.signature_count;
-        }
-    });
-    //Returns high
-    return high;
+    if(type == 1)
+    {
+        //This will be percentage 
+        //Sets high to default one so it can be compared. 
+        var high = 0;
+        //For each data in petition data check to see if percentage is higher then high variable set high to the percentage
+        $.each(petitionData, function(index, value) {
+            if(value.percentage > high)
+            {
+                
+                high = value.percentage;
+            }
+        });
+        //Returns high
+        return high;
+    }else{
+        //This will be signuatures 
+        //Sets high to default one so it can be compared. 
+        var high = 0;
+        //For each data in petition data check to see if signatures is higher then high variable set high to the signatures
+        $.each(petitionData, function(index, value) {
+            if(value.signature_count > high)
+            {
+                
+                high = value.signature_count;
+            }
+        });
+        //Returns high
+        return high;
+    }
+    
 }
 //Function for when Section of map is hoovered over
 function highlightFeature(e) {
@@ -140,9 +214,8 @@ function highlightFeature(e) {
         if(value.ons_code == layer.feature.properties.PCON13CD)
         {
             //Displays the new data on the petition infomation div
-            $("#mp").text("MP: " + value.mp);
-            $("#cons").text("Constituency: " + value.name);
-            $("#signs").text("Signatures: " + value.signature_count);
+            $("#info").empty();
+            $("#info").append("MP: " + value.mp + "<br> Constituency: " + value.name + "<br> Signatures: " + value.signature_count + "<br> Population: " + value.pop + "<br> Percentage " + value.percentage+"%");
     
         }
     });
