@@ -187,7 +187,7 @@ h2 {
 .page-id-003 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-left: 3%;
     text-align: center;
 }
@@ -205,10 +205,11 @@ h2 {
     color: white;
 }
 
-.page-id-003 .dropdown #cryptocoin {
+.page-id-003 .dropdown #cryptocoin, #cryptodate {
     position: relative; 
-    height: 40px;
+    height: 25px;
     border-radius: 20px;
+    border: solid #3d3c3c;
 }
 
 /*
@@ -701,4 +702,17 @@ page-id-014 - Libraries Data Tut
 .page-id-015 pre {
     color: red;
     white-space: normal;
+}
+
+ /* page-id-016 - Lat Long
+*/
+.page-id-016 .text-holder {
+    text-align: center;
+    background-color: #3d3c3c;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #333232;
+    border-width: 6px 6px 6px 6px;
+    padding: 2%;
+    margin: 1%;
 }
