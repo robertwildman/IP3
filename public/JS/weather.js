@@ -19,14 +19,14 @@ $(function() {
    * Disable and clear the input box / boxes for the option that is not in focus
    */
   $('#location').focusin(function(){
-    $('.latlon').prop('disabled', true).val('');
+    $('.latlon').val('');
     useLocation = true;
   }).focusout(function(){
     $('.latlon').prop('disabled', false)
   });
 
   $('.latlon').focusin(function(){
-    $('#location').prop('disabled', true).val('');
+    $('#location').val('');
     useLocation = false;
   }).focusout(function(){
     $('#location').prop('disabled', false)
