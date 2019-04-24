@@ -31,14 +31,17 @@ h2 {
   
 .page-id-001 .flex-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     padding-top: 3%;
     text-align: center;
 }
 
 .page-id-001 #map{
-    width: calc(100vw - 275px);
-    height: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    position: absolute !important;
+    margin-left: 250px;
 }
   
 .page-id-001 #title{
@@ -70,22 +73,26 @@ h2 {
 }
 
 @media screen and (max-width: 850px) {
-    
-    .page-id-001 .buttonbyfeed{
-        overflow: hidden;
-        display: block;
-        text-align: center;
-        float: left;
+    .page-id-001 .flex-container {
+        flex-direction: column;
     }
 
-    .page-id-001 .flex-container {
-        display: flex;
+    .page-id-001 .buttonbyfeed{
+        overflow: hidden;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .page-id-001 #buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .page-id-001 #map{
-        width: 800px;
-        height: 600px;
-        margin: 10px;
+        width: auto;
+        height: 100vh;
+        position: relative !important;
     }
 
     .page-id-001 .dynamic{
@@ -106,7 +113,6 @@ h2 {
 
 .page-id-002 .flex-container {
     display: flex;
-    
     flex-wrap: wrap;
     padding-top: 1%;
     padding-left: 3%;
